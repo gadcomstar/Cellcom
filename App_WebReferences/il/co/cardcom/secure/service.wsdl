@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cardcom.co.il/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://cardcom.co.il/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ממשקים למערכת אישורית זהב</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cardcom.co.il/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="PerfromBillVerySimple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SumToBill" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardOwnerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedParameters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerfromBillVerySimpleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerfromBillVerySimpleResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Response">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResposeCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternalDealNumber" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="shvaRespons" type="tns:ShvaRespons" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceResponse" type="tns:InvResponse" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShvaRespons">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_Status_1" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Filler_4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Card_Number_5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Mutag_24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Sulac_25" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Service_Code_26" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_J_Parameter_29" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Tokef_30" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Response_Id_34" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Response_CVV_35" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_Sum_36" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_New_Info_44" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Sum_Stars_52" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Card_Type_Code_60" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_deal_Type_61" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Credit_Type_63" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_UCAF_CAVV_64" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Coin_Type_65" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_deal_Type_66" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Club_Code_68" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Call_reson_69" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Source_approval_70" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Approval_Number_71" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_First_Payment_Sum_78" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Const_Patment_86" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Number_Of_Payments_94" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_File_Number_96" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Cash_Registery_98" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Cash_Registery_Sudar_101" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Card_Name_104" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_Abrod_card_119" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_User_Info_120" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_IsHever" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="_IsJ2ChackIsValid" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InvResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceType" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PerfromBillSimple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SumToBill" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardOwnerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CVV" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedParameters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerfromBillSimpleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerfromBillSimpleResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerfromBillStandatd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SumToBill" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardValidityYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardOwnerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CVV" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dealType" type="tns:DealType" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumOfPayments" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_eciType" type="tns:EciType" />
+            <s:element minOccurs="0" maxOccurs="1" name="EciCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedParameters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="DealType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Obligation" />
+          <s:enumeration value="Acquittal" />
+          <s:enumeration value="Cancellation" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EciType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Empty" />
+          <s:enumeration value="SetOr3DSecure" />
+          <s:enumeration value="SslPartialSecure" />
+          <s:enumeration value="SslOnly" />
+          <s:enumeration value="NonSecure" />
+          <s:enumeration value="Non_Secure_But_Support" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PerfromBillStandatdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerfromBillStandatdResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerfromBillFullCustome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedParameters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerfromBillFullCustomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerfromBillFullCustomeResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceSendinvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceSendinvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSendinvoiceResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceSendInvoice2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceSendInvoice2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSendInvoice2Result" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDebitOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newCustomer" type="tns:NewCustomer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NewCustomer">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RowID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegisteredBusinessNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PoBox" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhLine" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VatFree" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commants" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceByMail" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteUniqueID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserIDForUpdateOnly" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="creditVisaInfo" type="tns:CreditVisaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="creditBankInfo" type="tns:CreditBankInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="debitOrderInfo" type="tns:ArrayOfDebitOrderInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomeFieldsDescription" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomeFieldsValue" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="SupplierID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupplierName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SupplierCommision" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreditVisaInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardMonth" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardYear" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardOwnerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidateCardNumber" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovalNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreditBankInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BankNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Snif" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="accountType" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountNumber" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDebitOrderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DebitOrderInfo" nillable="true" type="tns:DebitOrderInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DebitOrderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Decription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NextDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalNumOfPayments" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConstCostNoVat" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsInvoiceCreate" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConstCoinID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartmentID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalDebitCoinID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeIntervalID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AgentID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Add" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsConstCostIncludeVAT" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDebitOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddDebitOrderResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShvaReferenceNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShvaReferenceNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShvaReferenceNumberResult" type="tns:ResponseReferenceNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseReferenceNumber">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResposeCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referrence" type="tns:ArrayOfReferrenceData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReferrenceData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReferrenceData" nillable="true" type="tns:ReferrenceData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReferrenceData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Internal" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Reference" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransmitDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetShvaReferenceNumberFull">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShvaReferenceNumberFullResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShvaReferenceNumberFullResult" type="tns:ResponseReferenceNumberFull" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseReferenceNumberFull">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResposeCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referrence" type="tns:ArrayOfReferrenceDataFull" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReferrenceDataFull">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReferrenceDataFull" nillable="true" type="tns:ReferrenceDataFull" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReferrenceDataFull">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Internal" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHTNUA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHASHR" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHMATB" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHISKA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHADDINGTWO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHAMNT" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHADDING" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHPYNR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHPY1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHPY9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHPOIN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHCCCY" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHISK1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHMKOR" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHAPPR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHHUL" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHCNAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHFILE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHSHFT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHSEQN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHMASF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SHSOHN" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHASMH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Massage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHRECD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHTRND" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHTRNH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHMSLK" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateTexInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceHead" type="tns:InvExtHead" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceLines" type="tns:ArrayOfInvExtHeadLines" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cash" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomeLine" type="tns:ArrayOfRciExtCustome" />
+            <s:element minOccurs="0" maxOccurs="1" name="Chacks" type="tns:ArrayOfRciExtCheque" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealNumber" type="tns:ArrayOfRciExtDealNum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InvExtHead">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustAddresLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustAddresLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustLinePH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustMobilePH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Languge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoinID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendByEmail" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExtIsVatFree" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManualInvoiceNumber" type="s:integer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInvExtHeadLines">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InvExtHeadLines" nillable="true" type="tns:InvExtHeadLines" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InvExtHeadLines">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPriceIncludeVAT" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsVatFree" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRciExtCustome">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RciExtCustome" nillable="true" type="tns:RciExtCustome" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RciExtCustome">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TranDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="asmacta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sum" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRciExtCheque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RciExtCheque" nillable="true" type="tns:RciExtCheque" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RciExtCheque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChequeNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BankNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SnifNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCheque" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sum" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRciExtDealNum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RciExtDealNum" nillable="true" type="tns:RciExtDealNum" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RciExtDealNum">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DealNumber" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateTexInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTexInvoiceResult" type="tns:InvResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenExpireDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTokenResult" type="tns:ResponseTokens" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseTokens">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Token" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SuspendedDealDeposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="termianl" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardInfo" type="tns:ExtCreditCardInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="extendedParameters" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceHead" type="tns:InvExtHead" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceLines" type="tns:ArrayOfInvExtHeadLines" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtCreditCardInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SumToBill" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardValidityMMYY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdentityNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChackType" type="tns:CardChackType" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardInfoGroup" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CvvForJ5" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardOwnerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CoinId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CardChackType">
+        <s:restriction base="s:string">
+          <s:enumeration value="J2" />
+          <s:enumeration value="J5" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SuspendedDealDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuspendedDealDepositResult" type="tns:ResponseSuspendedDeal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseSuspendedDeal">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealGroup" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceResponse" type="tns:InvResponse" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternalDealNumber" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SuspendedDealActivateOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="termianl" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="suspendedDealID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuspendedDealActivateOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuspendedDealActivateOneResult" type="tns:ResponseSuspendedDeal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateLowProfileDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalnumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lowprofileParams" type="tns:ExtLowProfileParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtLowProfileParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Operation" type="tns:OperationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SumToBill" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Languge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuccessRedirectUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorRedirectUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IndicatorUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HideCreditCardUserId" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HideCVV" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateTokenSalt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTokenDeleteDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealJValidateType" nillable="true" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealGroup" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCreateInvoice" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceHead" type="tns:InvExtHead" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceLines" type="tns:ArrayOfInvExtHeadLines" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNumOfPayments" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinNumOfPayments" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoinID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendadParametrs" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTokenJValidateType" nillable="true" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditType" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="HideCardOwnerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultNumOfPayments" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="APILevel" type="s:integer" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OperationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BillOnly" />
+          <s:enumeration value="BillAndCreateToken" />
+          <s:enumeration value="CreateTokenOnly" />
+          <s:enumeration value="SuspendDealOnly" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateLowProfileDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateLowProfileDealResult" type="tns:ResponseCreateLowProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseCreateLowProfile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LowProfileCode" nillable="true" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLowProfileIndicator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalnumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LowProfileCode" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLowProfileIndicatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLowProfileIndicatorResult" type="tns:ResponseLowProfileIndicator" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseLowProfileIndicator">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Indicator" type="tns:ExtLowProfileIndicator" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShvaResponce" type="tns:ExtShvaParams" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtLowProfileIndicator">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Terminal_Number" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="lowprofilecode" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Operation" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProssesEndOK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DealRespone" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternalDealNumber" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TokenResponse" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Token" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="TokenExDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardValidityYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardValidityMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardOwnerID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealResponseCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuspendedDealGroup" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceResponseCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceType" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TokenApprovalNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtShvaParams">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status1" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sulac25" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JParameter29" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tokef30" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sum36" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SumStars52" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovalNumber71" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstPaymentSum78" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstPayment86" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberOfPayments94" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbroadCard119" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardTypeCode60" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mutag24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardOwnerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardToken" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolderIdentityNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PerfromBillVerySimpleSoapIn">
+    <wsdl:part name="parameters" element="tns:PerfromBillVerySimple" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillVerySimpleSoapOut">
+    <wsdl:part name="parameters" element="tns:PerfromBillVerySimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillSimpleSoapIn">
+    <wsdl:part name="parameters" element="tns:PerfromBillSimple" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillSimpleSoapOut">
+    <wsdl:part name="parameters" element="tns:PerfromBillSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillStandatdSoapIn">
+    <wsdl:part name="parameters" element="tns:PerfromBillStandatd" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillStandatdSoapOut">
+    <wsdl:part name="parameters" element="tns:PerfromBillStandatdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillFullCustomeSoapIn">
+    <wsdl:part name="parameters" element="tns:PerfromBillFullCustome" />
+  </wsdl:message>
+  <wsdl:message name="PerfromBillFullCustomeSoapOut">
+    <wsdl:part name="parameters" element="tns:PerfromBillFullCustomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceSendinvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InvoiceSendinvoice" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceSendinvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InvoiceSendinvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceSendInvoice2SoapIn">
+    <wsdl:part name="parameters" element="tns:InvoiceSendInvoice2" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceSendInvoice2SoapOut">
+    <wsdl:part name="parameters" element="tns:InvoiceSendInvoice2Response" />
+  </wsdl:message>
+  <wsdl:message name="AddDebitOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDebitOrder" />
+  </wsdl:message>
+  <wsdl:message name="AddDebitOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDebitOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShvaReferenceNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShvaReferenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetShvaReferenceNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShvaReferenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShvaReferenceNumberFullSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShvaReferenceNumberFull" />
+  </wsdl:message>
+  <wsdl:message name="GetShvaReferenceNumberFullSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShvaReferenceNumberFullResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTexInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTexInvoice" />
+  </wsdl:message>
+  <wsdl:message name="CreateTexInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTexInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateToken" />
+  </wsdl:message>
+  <wsdl:message name="CreateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuspendedDealDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:SuspendedDealDeposit" />
+  </wsdl:message>
+  <wsdl:message name="SuspendedDealDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:SuspendedDealDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuspendedDealActivateOneSoapIn">
+    <wsdl:part name="parameters" element="tns:SuspendedDealActivateOne" />
+  </wsdl:message>
+  <wsdl:message name="SuspendedDealActivateOneSoapOut">
+    <wsdl:part name="parameters" element="tns:SuspendedDealActivateOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateLowProfileDealSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateLowProfileDeal" />
+  </wsdl:message>
+  <wsdl:message name="CreateLowProfileDealSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateLowProfileDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLowProfileIndicatorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLowProfileIndicator" />
+  </wsdl:message>
+  <wsdl:message name="GetLowProfileIndicatorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLowProfileIndicatorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="PerfromBillVerySimple">
+      <wsdl:input message="tns:PerfromBillVerySimpleSoapIn" />
+      <wsdl:output message="tns:PerfromBillVerySimpleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillSimple">
+      <wsdl:input message="tns:PerfromBillSimpleSoapIn" />
+      <wsdl:output message="tns:PerfromBillSimpleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillStandatd">
+      <wsdl:input message="tns:PerfromBillStandatdSoapIn" />
+      <wsdl:output message="tns:PerfromBillStandatdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillFullCustome">
+      <wsdl:input message="tns:PerfromBillFullCustomeSoapIn" />
+      <wsdl:output message="tns:PerfromBillFullCustomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendinvoice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">שולח מקור/ העתק נאמן למקור בדואר ללקוח חשבונית מס קבלה בלבד</wsdl:documentation>
+      <wsdl:input message="tns:InvoiceSendinvoiceSoapIn" />
+      <wsdl:output message="tns:InvoiceSendinvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendInvoice2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">שולח מקור/ העתק נאמן למקור בדואר ללקוח ברמה של חברה  סוג חשבונית : 1 חשבונית מס 2 חשבונית זיכוי</wsdl:documentation>
+      <wsdl:input message="tns:InvoiceSendInvoice2SoapIn" />
+      <wsdl:output message="tns:InvoiceSendInvoice2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDebitOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">הוספת לקוח חדש למערכת הוראת קבע</wsdl:documentation>
+      <wsdl:input message="tns:AddDebitOrderSoapIn" />
+      <wsdl:output message="tns:AddDebitOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">קבלת מסספר שידור של שבא בלבד</wsdl:documentation>
+      <wsdl:input message="tns:GetShvaReferenceNumberSoapIn" />
+      <wsdl:output message="tns:GetShvaReferenceNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumberFull">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">קבלת מסספר שידור של שבא - מלא</wsdl:documentation>
+      <wsdl:input message="tns:GetShvaReferenceNumberFullSoapIn" />
+      <wsdl:output message="tns:GetShvaReferenceNumberFullSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTexInvoice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> הפקת חשבונית מס קבלה. סוג חשבונית 1: חשבונית מס , 2 חשבונית זיכוי , 3 קבלה מלקר, 4 קבלה זיכוי מלקר</wsdl:documentation>
+      <wsdl:input message="tns:CreateTexInvoiceSoapIn" />
+      <wsdl:output message="tns:CreateTexInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">יצירת אסימון לכרטיס אשראי, תוקף אסימון MMYY או MMYYYY</wsdl:documentation>
+      <wsdl:input message="tns:CreateTokenSoapIn" />
+      <wsdl:output message="tns:CreateTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealDeposit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">שמירת פרטים לעסקה מושהת</wsdl:documentation>
+      <wsdl:input message="tns:SuspendedDealDepositSoapIn" />
+      <wsdl:output message="tns:SuspendedDealDepositSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealActivateOne">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">בצע חיוב לעסקה מושהת  (אין צורך להעביר סיסמה , לא בשימוש)</wsdl:documentation>
+      <wsdl:input message="tns:SuspendedDealActivateOneSoapIn" />
+      <wsdl:output message="tns:SuspendedDealActivateOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLowProfileDeal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">קבלת פרטים לביצוע עסקה בפרופיל נמוך</wsdl:documentation>
+      <wsdl:input message="tns:CreateLowProfileDealSoapIn" />
+      <wsdl:output message="tns:CreateLowProfileDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLowProfileIndicator">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">קבלת תשובה לעסקה בפרופיל נמוך</wsdl:documentation>
+      <wsdl:input message="tns:GetLowProfileIndicatorSoapIn" />
+      <wsdl:output message="tns:GetLowProfileIndicatorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PerfromBillVerySimple">
+      <soap:operation soapAction="http://cardcom.co.il/PerfromBillVerySimple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillSimple">
+      <soap:operation soapAction="http://cardcom.co.il/PerfromBillSimple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillStandatd">
+      <soap:operation soapAction="http://cardcom.co.il/PerfromBillStandatd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillFullCustome">
+      <soap:operation soapAction="http://cardcom.co.il/PerfromBillFullCustome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendinvoice">
+      <soap:operation soapAction="http://cardcom.co.il/InvoiceSendinvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendInvoice2">
+      <soap:operation soapAction="http://cardcom.co.il/InvoiceSendInvoice2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDebitOrder">
+      <soap:operation soapAction="http://cardcom.co.il/AddDebitOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumber">
+      <soap:operation soapAction="http://cardcom.co.il/GetShvaReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumberFull">
+      <soap:operation soapAction="http://cardcom.co.il/GetShvaReferenceNumberFull" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTexInvoice">
+      <soap:operation soapAction="http://cardcom.co.il/CreateTexInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateToken">
+      <soap:operation soapAction="http://cardcom.co.il/CreateToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealDeposit">
+      <soap:operation soapAction="http://cardcom.co.il/SuspendedDealDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealActivateOne">
+      <soap:operation soapAction="http://cardcom.co.il/SuspendedDealActivateOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLowProfileDeal">
+      <soap:operation soapAction="http://cardcom.co.il/CreateLowProfileDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLowProfileIndicator">
+      <soap:operation soapAction="http://cardcom.co.il/GetLowProfileIndicator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PerfromBillVerySimple">
+      <soap12:operation soapAction="http://cardcom.co.il/PerfromBillVerySimple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillSimple">
+      <soap12:operation soapAction="http://cardcom.co.il/PerfromBillSimple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillStandatd">
+      <soap12:operation soapAction="http://cardcom.co.il/PerfromBillStandatd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfromBillFullCustome">
+      <soap12:operation soapAction="http://cardcom.co.il/PerfromBillFullCustome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendinvoice">
+      <soap12:operation soapAction="http://cardcom.co.il/InvoiceSendinvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceSendInvoice2">
+      <soap12:operation soapAction="http://cardcom.co.il/InvoiceSendInvoice2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDebitOrder">
+      <soap12:operation soapAction="http://cardcom.co.il/AddDebitOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumber">
+      <soap12:operation soapAction="http://cardcom.co.il/GetShvaReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShvaReferenceNumberFull">
+      <soap12:operation soapAction="http://cardcom.co.il/GetShvaReferenceNumberFull" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTexInvoice">
+      <soap12:operation soapAction="http://cardcom.co.il/CreateTexInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateToken">
+      <soap12:operation soapAction="http://cardcom.co.il/CreateToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealDeposit">
+      <soap12:operation soapAction="http://cardcom.co.il/SuspendedDealDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendedDealActivateOne">
+      <soap12:operation soapAction="http://cardcom.co.il/SuspendedDealActivateOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLowProfileDeal">
+      <soap12:operation soapAction="http://cardcom.co.il/CreateLowProfileDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLowProfileIndicator">
+      <soap12:operation soapAction="http://cardcom.co.il/GetLowProfileIndicator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ממשקים למערכת אישורית זהב</wsdl:documentation>
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="https://secure.cardcom.co.il/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="https://secure.cardcom.co.il/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

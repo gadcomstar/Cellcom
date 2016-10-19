@@ -1,0 +1,3233 @@
+﻿html {
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    background: #eceded;
+}
+/* http://www.fontsquirrel.com/fonts/lato */
+@font-face {
+    font-family: 'lato';
+    src: url('../images/ttf/Lato-Reg.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'latoblack';
+    src: url('../images/ttf/Lato-Bla.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'latobold';
+    src: url('../images/ttf/Lato-Bol.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'latolight';
+    src: url('../images/ttf/Lato-lig.ttf') format('truetype');
+}
+img {
+border:none;
+}
+.masterbgclass {
+    /*background: #ebebeb url('../images/HomeImages/Background.png') no-repeat;*/
+    background: #ebebeb url('../images/HomeImages/sitebg.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.CPele {
+    float: left;
+}
+
+.displaynone {
+    display: none;
+}
+
+.statsBackDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: arial;
+    font-size: 16px;
+}
+
+.HeaderDiv {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.BodyDiv {
+    width: 100%;
+    text-align: center;
+}
+
+.btnClass {
+    border: 1px solid black;
+    padding: 2px 5px;
+    border-radius: 7px;
+    background-color: #117BC0;
+    color: white;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 7px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*input[type=text], input[type=password] {
+   
+    border: none;
+    background: url('../images/HomeImages/Input_Background.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 0 10px;
+    width: 270px;
+    height: 38px;
+}*/
+
+input:focus {
+    outline: none;
+}
+
+.OuterHolder {
+    width: 100%;
+    height: 100%;
+}
+
+.InnerHolder {
+    width: 940px;
+    height: 100%;
+    margin: auto;
+}
+
+.ControlpanelDiv {
+    max-width: 100%;
+    min-height: 260px;
+    /*border: 1px solid black;*/
+    border-top: none;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 25px;
+    /*background-color: #D0E5F0;*/
+    background: url('../images/HomeImages/HeaderBackground.png');
+    height: 260px;
+    background-size: 100% 100%;
+    padding: 35px 15px 35px 15px;
+}
+
+.CPElement {
+    display: inline-block;
+    height: 120px;
+    overflow: hidden;
+}
+
+.SharesStats {
+    width: 195px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 68px;
+}
+
+.ImgDiv {
+    width: 175px;
+    height: 175px;
+    background-color: white;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    border: 5px solid #fff;
+}
+
+imgDIV img {
+    max-width: 180px;
+    max-height: 180px;
+    margin: auto;
+    display: table;
+}
+
+.CPElement.StatsDiv {
+    vertical-align: top;
+    vertical-align: top;
+    width: 300px;
+    border-right: 2px solid white;
+}
+
+    .CPElement.StatsDiv .StatsItem {
+    }
+
+.CPElement.BadgeDiv {
+    width: 300px;
+    float: right;
+}
+
+.LogOutBtn {
+    clear: right;
+    border: none;
+    text-decoration: none;
+    font-family: Tahoma,Arial;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    float: right;
+}
+
+.DefaultBadgeText {
+    text-align: center;
+    font-family: Tahoma,Arial;
+    overflow: hidden;
+    font-size: 11px;
+    width: 59px;
+    height: 25px;
+    position: inherit;
+    margin: auto;
+}
+
+.MissionWaitingHolder {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    min-height: 250px;
+    margin-bottom: 15px;
+    float: left;
+    position: relative;
+}
+
+.MissionDoneHolder {
+    background-color: white;
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    float: left;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.MissionDoneholderclass {
+    float: left;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+}
+
+.LoginHeaderDiv {
+    width: 485px;
+    /*height: 307px;*/
+    margin-top: 45px;
+    /*background: url('../images/HomeImages/login_Header_Background.png') no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+
+.LoginFormDiv {
+    width: 364px;
+    height: 357px;
+    margin-top: 30px;
+    /*width: 100%;*/
+    /*height: 534px;*/
+    background: url('../images/HomeImages/loginformbg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.LoginBodyClass2 {
+    /*background:#ebebeb url('../images/HomeImages/Background.png') no-repeat;*/
+}
+
+.LoginBodyClass {
+    /*background:#ebebeb url('../images/HomeImages/Background.png') no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+
+.tempatureClass {
+    width: 136px;
+    height: 240px;
+    background: url('../images/siteimages/HotnessBar.png') no-repeat center center;
+    position: absolute;
+    top: 0px;
+    max-width: 100%;
+}
+
+.blueclass {
+    position: absolute;
+    top: 0px;
+    height: 170px;
+    width: 20px;
+    background: #82d7f7;
+    top: 10px;
+    left: 55px;
+}
+
+.grayclass {
+    position: absolute;
+    top: 0px;
+    height: 170px;
+    width: 20px;
+    background: #dcdee0;
+    top: 10px;
+    left: 55px;
+}
+
+.CloseIconMail {
+    background: url('../images/HomeImages/closeMailPopUp.png');
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.CloseIconFacebook {
+    background: url('../images/HomeImages/closeFacebookPopUp.png');
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.UserIMG {
+    max-width: 100%;
+}
+
+.tempatureHolderClass {
+    margin-right: 15px;
+    height: 240px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    width: 136px;
+    /*background: #deedf6;*/
+    position: relative;
+    float: left;
+    margin-top: 18px;
+}
+
+.FieldsDiv {
+    padding-top: 35px;
+    padding-left: 35px;
+    width: 340px;
+}
+
+.GirlDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    font-size: 0;
+}
+
+.ForgotPasswordDiv {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+
+.ForgotBtnClass {
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial;
+    display: block;
+    float: right;
+    margin-right: 47px;
+    position: relative;
+    z-index: 5;
+}
+
+.RequieredFileds {
+    color: #fff;
+    font-family: arial;
+    font-size: 13px;
+    margin-bottom: 20px;
+    float: left;
+    /*margin-left:65px;*/
+}
+
+.FormItemText {
+    color: #3394D0;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.btnLoginClass {
+    width: 156px;
+    height: 30px;
+    background: #f0ab00;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    font-family: Arial;
+    line-height: 30px;
+    font-weight: bold;
+    /*width: 131px;*/
+    /*height: 46px;*/
+    /*background: url('../images/HomeImages/LoginBtn_Background.png') no-repeat;*/
+    /*border: none;*/
+    /*margin-right: 10px;*/
+    cursor: pointer;
+}
+
+.btnLoginFacebookClass {
+    background: url('../images/HomeImages/facebooklogin.png') no-repeat;
+    width: 155px;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.lblLoginStatusClass {
+    /*padding-left: 90px;*/
+}
+
+/*#region Login */
+
+
+.loginOuterHolder {
+    height: 95px;
+    background-color: #EBEBEB;
+    border-bottom: 2px solid white;
+}
+
+.LogoImageclass {
+    width: 420px;
+    height: 94px;
+    cursor: pointer;
+    background: url('../images/HomeImages/LoginLogo.png') no-repeat;
+    display: block;
+}
+
+.loginInnerHolder {
+    position: relative;
+    height: 95px;
+}
+
+.logintexttitleclass {
+    font-family: Arial;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 35px;
+    color: white;
+}
+
+.logintextcontentclass {
+    font-family: Arial;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 27px;
+    color: white;
+}
+
+.FormItemFieldholder {
+    background: url('../images/HomeImages/logintextpixel.png');
+    width: 220px;
+    height: 25px;
+    padding: 5px 10px;
+}
+
+.FormItemField {
+    /*background:url('../images/HomeImages/logintextpixel.png') ;*/
+    width: 220px;
+    height: 25px;
+    border: none;
+    color: white;
+    font-family: Arial;
+    font-size: 18px;
+    background: none;
+    position: relative;
+    z-index: 5;
+    /*padding:5px 10px;*/
+}
+
+    .FormItemField::-webkit-input-placeholder { /* WebKit browsers */
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+    }
+
+    .FormItemField:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+    }
+
+    .FormItemField::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+    }
+
+    .FormItemField:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: white;
+        font-family: Arial;
+        font-size: 18px;
+    }
+
+.logincontentholder {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 2;
+}
+
+.logincontentholder2 {
+    width: 1000px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.loginuserclass {
+    background: url('../images/HomeImages/loginmail.png') no-repeat left center;
+    width: 240px;
+    padding-left: 55px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.loginuserclass2 {
+    background: url('../images/HomeImages/loginpassword.png') no-repeat left center;
+    width: 240px;
+    padding-left: 55px;
+    height: 35px;
+}
+
+.Requiredfieldclass {
+    font-family: Arial;
+    font-size: 16px;
+    color: white;
+    float: left;
+}
+
+.loginorline {
+    width: 60px;
+    height: 20px;
+    border-bottom: solid 1px white;
+    float: left;
+}
+
+.GirlWIthFlagclass {
+    width: 462px;
+    height: 778px;
+}
+
+.logincentertext {
+    width: 100%;
+    height: 40px;
+}
+
+.loginstatusclass {
+    font-size: 11px;
+    color: white;
+    display: block;
+    float: left;
+    margin-left: 80px;
+}
+
+/*#endregion */
+
+/*#region JoinUs */
+
+.loginstatusclassMobile {
+    display: none;
+}
+
+.joinussectionholder {
+    width: 570px;
+    float: left;
+}
+
+.joinusholder {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    height: 100%;
+}
+
+.joinusbtnholder {
+    float: left;
+    clear: both;
+}
+
+/*#endregion */
+
+/*#region Default */
+
+.rightlogoclass {
+    /*height: 66px;*/
+    min-width: 207px;
+    text-align: right;
+    float: right;
+    margin-top: 10px;
+    display: none;
+}
+
+.lbl_User_Nameclass {
+    font-size: 34px;
+    font-family: Tahoma,Arial;
+    font-weight: bold;
+}
+
+.personalzoneclass {
+    font-size: 14px;
+    font-family: arial;
+    line-height: 16px;
+}
+
+.MissionsAppendclass {
+    background: url('../images/HomeImages/MissionsAppendingLogo.png') no-repeat left center;
+    width: 356px;
+    height: 37px;
+    text-align: left;
+    font-size: 27px;
+    line-height: 32px;
+    font-family: Tahoma,Arial;
+    color: white;
+    padding: 25px 60px 15px 30px;
+    margin: 10px;
+    float: left;
+}
+
+.GoForItAgainButton {
+    float: right;
+    margin-top: -2px;
+    padding: 2px 10px 2px 10px;
+    background: #fcab1a;
+    border-radius: 20px;
+    font-family: Arial;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.missionaccomplished {
+    background: url('../images/HomeImages/MissionsExcecutedLogo.png') no-repeat left center;
+    width: 403px;
+    height: 37px;
+    text-align: left;
+    font-size: 27px;
+    line-height: 32px;
+    font-family: Tahoma,Arial;
+    color: white;
+    padding: 20px 60px 20px 30px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.missiontitleclass {
+    text-decoration: none;
+    color: #3460a0;
+    font-size: 22px;
+    font-family: Tahoma,Arial;
+    font-weight: bold;
+    line-height: 27px;
+    display: block;
+    float: left;
+    width: 60%;
+}
+
+.missionShortDesc {
+    text-decoration: none;
+    color: #737373;
+    font-size: 16px;
+    font-family: Tahoma,Arial;
+    float: left;
+    width: 536px;
+    height: 62px;
+    overflow: hidden;
+}
+
+.missiontitleclassa {
+    text-decoration: none;
+    color: #3460a0;
+    font-size: 22px;
+    font-family: Tahoma,Arial;
+    font-weight: bold;
+    line-height: 27px;
+    display: block;
+    width: 450px;
+    height: 55px;
+    margin-bottom: 5px;
+    float: left;
+    overflow: hidden;
+}
+
+.MissionTag {
+    background-color: #CCCCCC;
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 30px;
+    font-family: tahoma,Arial;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: solid 1px #999999;
+    position: relative;
+    float: right;
+}
+
+.missioncontentclass {
+    width: 60%;
+    height: 55px;
+    overflow: hidden;
+    color: #818285;
+    margin: -70px 0px 0px 0px;
+    font-family: Arial;
+    font-size: 17px;
+    line-height: 18px;
+    float: left;
+}
+
+.goforitclass {
+    width: 71px;
+    height: 54px;
+    background: #007bc6;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: Tahoma,Arial;
+    font-weight: bold;
+    line-height: 23px;
+    text-decoration: none;
+    padding: 18px 10px 7px 10px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.missiondateclass {
+    color: #00AEF1;
+    font-size: 19px;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 5px;
+    float: left;
+}
+
+.missiondateclass2 {
+    float: right;
+    font-family: Tahoma,Arial;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fcab1a;
+}
+
+.datemissionholderclass {
+    width: 60%;
+    border-top: 2px solid #BBBBBD;
+    float: left;
+    margin-top: -5px;
+}
+
+.MissionDetails {
+    float: left;
+    width: 600px;
+    height: 160px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.accomplishdateclass {
+    float: left;
+    width: 60%;
+    border-bottom: 1px solid #595959;
+    color: #00AEF1;
+    font-size: 16px;
+    font-family: Arial;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    margin-top: -12px;
+}
+
+.marginCPele {
+    margin-right: 35px;
+    width: 400px;
+}
+
+.topgraysection {
+    width: 100%;
+    background-color: #EBEBEB;
+    border-bottom: 2px solid white;
+    float: left;
+}
+
+.orangestrap {
+    width: 100%;
+    float: left;
+    height: 56px;
+    background-color: #faa81a;
+}
+
+.orangestrapholder {
+    width: 940px;
+    margin: auto;
+}
+
+.orangestrapclose {
+    background: url('../images/HomeImages/closestrap.png') no-repeat left center;
+    float: right;
+    width: 31px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.orangestraptext {
+    float: left;
+    color: white;
+    background: url('../images/ConnectImages/ThankYouIcon.png') no-repeat left center;
+    padding: 10px;
+    font-size: 24px;
+    font-family: Tahoma,Arial;
+    padding-left: 60px;
+}
+
+.topgraysectionauto {
+    width: 940px;
+    margin: auto;
+}
+
+.topgraysectionfloat {
+    width: 940px;
+    float: left;
+    padding-top: 10px;
+    /*padding-bottom: 30px;*/
+}
+
+.logoimgholderclass {
+    float: left;
+    margin: 10px;
+}
+
+.defaultcenterclass {
+    width: 940px;
+    margin: auto;
+}
+
+.defaultcenterclass2 {
+    float: left;
+    width: 940px;
+}
+
+.defmissionimageholder, .defmissionimageholder2 {
+    width: 195px;
+    height: 150px;
+    overflow: hidden;
+    float: left;
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.WaitingMissionContent {
+    float: left;
+    height: 200px;
+}
+
+.MiddleContent {
+    float: left;
+    width: 600px;
+    height: 150px;
+    margin-right: 15px;
+}
+
+.missiondateholder {
+    float: left;
+    width: 100%;
+    margin-top: 33px;
+}
+
+.font45 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.MissionDoneclass {
+    float: right;
+    margin-right: 55px;
+}
+
+.missionimagedefclass {
+    max-height: 150px;
+    /*max-width: 225px;*/
+}
+
+.badgelistheader {
+    background-color: #007bc6;
+    padding: 5px 20px;
+    color: white;
+    font-size: 24px;
+    font-family: Tahoma,Arial;
+    border-radius: 20px;
+    line-height: 28.8px;
+    float: left;
+}
+
+.badgeseeall, .badgeseeall2 {
+    float: right;
+    font-size: 14px;
+    font-family: Tahoma,Arial;
+    color: #1e7bd0;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.badgeseeall2 {
+    display: none;
+}
+
+.badgeareaclass {
+    float: left;
+    width: 320px;
+    position: relative;
+}
+
+.badgelinstholder {
+    float: left;
+    width: 100%;
+}
+
+.badgelistitemclass {
+    float: left;
+    margin: 5px;
+    font-size: 9px;
+    width: 70px;
+    margin-top: -3px;
+}
+
+.badgeimageclass {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+
+.tdbadgeimageclassimg {
+    margin: auto;
+    display: table;
+    float: none;
+    margin-top: 20px;
+    position: relative;
+    vertical-align: top;
+}
+
+.tdbadgeimageclass {
+    width: 100%;
+    height: 90px;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.NewBadgeRibbon {
+    width: 59px;
+    height: 46px;
+    background: url('../images/badges/NewBadgeRibbon.png');
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.ShareBadge {
+    width: 62px;
+    height: 22px;
+    background: url('../images/badges/ShareBadgeIcon.png') top right no-repeat;
+    position: absolute;
+    top: -20px;
+    display: none;
+}
+
+.ShareBadges {
+    width: 62px;
+    height: 22px;
+    background: url('../images/badges/ShareBadgeIcon.png') top center no-repeat;
+    position: absolute;
+    display: none;
+    margin-left: 52px;
+}
+
+.SignByFacebookclass {
+    background-color: #005da9;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Tahoma,Arial;
+    font-size: 14px;
+    padding: 1px 0px;
+    cursor: pointer;
+    margin: 3px 0px;
+}
+
+.SignBymailclass {
+    background-color: #faa81a;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Tahoma,Arial;
+    font-size: 14px;
+    padding: 1px 0px;
+    padding-left: 4px;
+    cursor: pointer;
+    margin: 3px 0px;
+}
+
+.mailerrortext {
+    font-size: 12px;
+    color: white;
+}
+
+.fbExistsMessage {
+    width: 740px;
+    float: left;
+    margin-top: 15px;
+    margin-left: -275px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*#endregion */
+
+/*#region Mission */
+
+/*html {
+            min-height: 100%;
+            background: url('images/Mission_Images/Background.png') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        body {
+            margin: auto;
+            padding: 0px;
+        }*/
+.missionholderouter {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.missionholderinner {
+    width: 800px;
+    float: left;
+}
+
+.ContainerDiv {
+    width: 800px;
+    direction: rtl;
+    font-family: Arial;
+    text-align: center;
+    float: left;
+}
+
+.MissionHolder {
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.RightHolder {
+    display: inline-block;
+    max-width: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.RightHolder2 {
+    display: inline-block;
+    max-width: 370px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.LeftHolder {
+    display: inline-block;
+    text-align: left;
+    padding-top: 25px;
+    vertical-align: top;
+    max-width: 420px;
+    direction: ltr;
+    float: left;
+    position: relative;
+}
+
+.Clearer {
+    float: none;
+    clear: both;
+}
+
+.ButtonClass {
+    display: inline-block;
+    min-width: 50px;
+    min-height: 50px;
+    /*margin-left: 25px;*/
+}
+
+.bubbleDiv {
+    width: 159px;
+    height: 36px;
+    background: url('../images/Mission_Images/New_Bubble.png') no-repeat;
+    font-size: 17px;
+    padding-top: 13px;
+    color: white;
+    text-align: center;
+}
+/* Fancy*/
+#fancybox-content {
+    padding-top: 29px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    background-image: url('../images/Mission_Images/Fancy_Upper_Back.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#fancybox-close {
+    top: -1px;
+    right: -45px;
+    bottom: auto;
+    left: auto;
+    background-image: url('../images/Mission_Images/Fancy_Close.png');
+}
+
+#frmRedAlert {
+    background-color: transparent;
+}
+
+.readFullHolder {
+    /*background: url('../images/Mission_Images/ReadFull_Green.png') no-repeat;*/
+    /*width: 159px;*/
+    height: 31px;
+    display: block;
+    text-decoration: none;
+    line-height: 23px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0px 10px;
+    color: white;
+    font-size: 13px;
+    float: left;
+    margin-bottom: 175px;
+    /*background-size: 100% 100%;*/
+}
+
+.Boy_Imageclass {
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    margin-right: -90%;
+    margin-right: -284px;
+}
+
+.ArticleHolder {
+    max-width: 90%;
+    text-align: left;
+    direction: ltr;
+    font-family: Arial;
+    font-size: 13px;
+    /*line-height: 20px;*/
+    overflow: hidden;
+    float: left;
+}
+
+.sharebymailclass {
+    background: url('../images/Mission_Images/ShareViaMMailLink.png') no-repeat;
+    width: 145px;
+    height: 25px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 20px;
+    text-indent: 10px;
+}
+
+.sharebyfacebookclass {
+    background: url('../images/Mission_Images/ShareViaFacebookLink.png') no-repeat;
+    width: 145px;
+    height: 20px;
+    background-size: 100% 50%;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    line-height: 22px;
+    text-align: center;
+    /* padding-left: 15px; */
+    margin-top: 20px;
+}
+
+.missionline {
+    float: left;
+    width: 132px;
+    height: 18px;
+    border-bottom: solid 1px white;
+    display: none;
+}
+
+.missionorclass {
+    float: left;
+    margin: 20px 11px;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.missionlogoclass {
+    width: 331px;
+    height: 76px;
+}
+
+.missionbuttonholderclass {
+    width: 100%;
+    float: left;
+    /*position: absolute;*/
+    bottom: 10px;
+}
+
+.readfullclass:after {
+    content: " >";
+}
+
+.missionlineholder {
+    width: 40px;
+    float: left;
+}
+
+.expiredtopline {
+    color: white;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+}
+
+.expiredbottomline {
+    color: white;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.missionbottomclass {
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: none;
+}
+
+.missionbottomclass2 {
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: none;
+}
+
+.missionthumbsubclass {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+}
+
+.BadgeEarnedHolder {
+    display: none;
+    width: 327px;
+    height: 237px;
+    text-align: center;
+    float: left;
+}
+
+.ShareHolder {
+clear: both;
+width: 86px;
+display: table;
+margin: auto;
+margin-top: 0px;
+height: 26px;
+background: url('../images/Mission_Images/Share.png');
+}
+
+.NewBadgeClass img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: table;
+}
+
+.ThanksHolder {
+    display: none;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 175px;
+    float: left;
+}
+
+/*#endregion */
+
+/*#region Register */
+
+.validationHolderClass {
+    line-height: 8px;
+    font-size: 12px;
+    color: white;
+    min-height: 10px;
+}
+
+.LandingImgContentHolder {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url('../images/RegisterImages/GirlWithFlag.png') no-repeat right;
+}
+
+.joinuspageholder {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+}
+
+/*.LandingImgContentHolder .LandingImg {
+    height: 100%;
+    position: fixed;
+    left: 50%;
+}*/
+
+.joinustextholder {
+    font-family: Arial;
+    text-align: left;
+    color: black;
+    line-height: 20px;
+    direction: ltr;
+    float: left;
+    width: 340px;
+}
+
+.FormHolder {
+    width: 415px;
+    height: 440px;
+    background: url('../images/HomeImages/loginformbg.png') no-repeat;
+    background-size: 100%;
+    float: left;
+    text-align: left;
+    direction: ltr;
+    padding-left: 15px;
+}
+
+.TbocHeader {
+    float: left;
+    width: 100%;
+    color: #fec879;
+    line-height: 30px;
+    font-size: 20px;
+    direction: ltr;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+.TboxThankYouText {
+    float: left;
+    width: 85%;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    direction: ltr;
+    font-size: 17px;
+    margin-top: 20px;
+    border-top: dotted 2px;
+    border-bottom: dotted 2px;
+}
+
+.TboxThankYouText1 {
+    float: left;
+    width: 85%;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    direction: ltr;
+    font-size: 17px;
+    margin-top: 20px;
+    border-top: dotted 2px;
+    display: none;
+}
+
+.TboxThankYouTextResend {
+    float: left;
+    width: 85%;
+    color: #fff;
+    padding-top: 10px;
+    direction: ltr;
+    font-size: 17px;
+    margin-top: 20px;
+    display: none;
+}
+
+.ResendEmail {
+    float: left;
+    width: 85%;
+    color: #c2dcf4;
+    direction: ltr;
+    font-size: 17px;
+    display: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.BackToLogin {
+    width: 156px;
+    height: 30px;
+    background: #f0ab00;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    font-family: Arial;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 30px;
+}
+
+TboxThankYouTextBold {
+    font-weight: bold;
+}
+
+.TboxTitle {
+    float: left;
+    width: 100%;
+    color: #fff;
+    line-height: 30px;
+    direction: ltr;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.TboxInput {
+}
+
+    .TboxInput .TextBoxHolderClass {
+        background: url('../images/HomeImages/loginmailmobile.png') no-repeat left center;
+        width: 320px;
+        padding-left: 55px;
+        height: 35px;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .TboxInput .TextBoxWatermarkCssClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+        display: block;
+    }
+
+    .TboxInput .MyTextBoxClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+    }
+
+.TboxInputpassword {
+}
+
+    .TboxInputpassword .TextBoxHolderClass {
+        background: url('../images/HomeImages/loginpasswordmobile.png') no-repeat left center;
+        width: 320px;
+        padding-left: 55px;
+        height: 35px;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .TboxInputpassword .TextBoxWatermarkCssClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+    }
+
+    .TboxInputpassword .MyTextBoxClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+    }
+
+.TboxInputname {
+}
+
+    .TboxInputname .TextBoxHolderClass {
+        background: url('../images/HomeImages/loginnamemobile.png') no-repeat left center;
+        width: 320px;
+        padding-left: 55px;
+        height: 35px;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .TboxInputname .TextBoxWatermarkCssClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+    }
+
+    .TboxInputname .MyTextBoxClass {
+        background: url('../images/HomeImages/logintextpixel.png');
+        width: 305px;
+        height: 25px;
+        padding: 5px 10px;
+        height: 25px;
+        border: none;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        position: relative;
+        z-index: 8;
+    }
+
+.joinusvalsummery {
+    width: 200px;
+    font-size: 13px;
+    float: right;
+    color: white;
+    margin-right: 10px;
+}
+
+    .joinusvalsummery li {
+        color: white;
+    }
+
+
+/*#endregion */
+
+/*#region Thanks */
+
+.thanksWelcomeclass {
+    margin-top: 30px;
+    background: white url('../images/thanks/thumbsup.png') no-repeat 15px center;
+    width: 730px;
+    height: 42px;
+    border-radius: 15px;
+    float: left;
+    font-family: Arial;
+    font-size: 45px;
+    color: #117bc0;
+    font-weight: bold;
+    padding: 24px 75px;
+    text-align: left;
+    position: relative;
+    z-index: -2;
+}
+
+.thanksbtnLoginClass {
+    margin-top: 30PX;
+    width: 390px;
+    height: 20px;
+    background: #f0ab00 url('../images/thanks/mailicon.png') no-repeat 10px center;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    font-family: Arial;
+    line-height: 17px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btnthanksFacebookClass {
+    background: url('../images/thanks/thanksfacebook.png') no-repeat;
+    margin-top: 10PX;
+    width: 390px;
+    height: 21px;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 17px;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.thanksorline {
+    width: 185px;
+    height: 20px;
+    border-bottom: solid 1px white;
+    float: left;
+}
+
+.thanksorclass {
+    font-size: 18px;
+    margin: 10px;
+    float: left;
+    color: white;
+}
+
+/*#endregion */
+
+/*#region Badges */
+
+.ControlpanelDivBadges {
+    max-width: 100%;
+    /*border: 1px solid black;*/
+    border-top: none;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 10px;
+    /*background-color: #D0E5F0;*/
+    background: url('../images/HomeImages/HeaderBackground.png');
+    background-size: 100% 100%;
+    padding: 30px 15px 35px 15px;
+}
+
+.bagespageheader {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+}
+
+.badgesheaderclass {
+    background: url('../images/badges/badgeheader.png') no-repeat left center;
+    width: 178px;
+    height: 37px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: Tahoma,Arial;
+    color: white;
+    padding: 20px 60px 20px 10px;
+    margin: 10px;
+    float: left;
+}
+
+.badgepagelistitemclass {
+    float: left;
+    margin: 25px;
+    font-size: 9px;
+    width: 170px;
+}
+
+.badgespageimageclass {
+    width: 100%;
+    height: 220px;
+    /*overflow:hidden;*/
+}
+
+.tdbadgespageimageclass {
+    width: 100%;
+    height: 220px;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.badgenameclass {
+    font-size: 16px;
+    font-family: Tahoma,Arial;
+    text-align: center;
+    color: #000019;
+}
+
+.badgedateclass {
+    font-size: 16px;
+    font-family: Tahoma,Arial;
+    text-align: center;
+    color: #808085;
+    font-size: 14px;
+}
+
+/*#endregion */
+
+/*#region Instructions */
+
+.pagecontentclass {
+    float: left;
+    width: 440px;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    font-family: Tahoma,Arial;
+}
+
+/*#endregion */
+
+/*#region PopUps */
+
+.popupholderclass {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /*opacity:0.4;*/
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popupholderinnerclass {
+    width: 900px;
+    margin: auto;
+    margin-top: 125px;
+}
+
+.mailpopupholderclass {
+    float: left;
+    width: 100%;
+    background-color: #007ac5;
+    border-radius: 15px;
+    height: 460px;
+    position: relative;
+    display: none;
+}
+
+.popupmailtopclass {
+    background: url('../images/HomeImages/popuphand.png') no-repeat top center;
+    width: 880px;
+    margin: 5px 20px 0px 45px;
+    float: left;
+    padding-top: 150px;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    text-align: center;
+}
+
+    .popupmailtopclass div {
+        display: inline-block;
+    }
+
+.popupmailsubclass {
+    width: 880px;
+    float: left;
+    font-size: 30px;
+    font-family: Tahoma,Arial;
+    text-align: center;
+    color: white;
+    margin: 10px 20px 0px 45px;
+}
+
+.popupmailbottomholder {
+    background-color: #faa81a;
+    border-radius: 0px 0px 15px 15px;
+    float: left;
+    width: 100%;
+    position: absolute;
+    height: 160px;
+    bottom: 0px;
+    font-family: Tahoma,Arial;
+}
+
+.popupmailontextboxclass {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    margin-top: 10px;
+}
+
+.popupmailemailholderclass {
+    width: 380px;
+    background-color: #b2b2b2;
+    height: 48px;
+    border-radius: 8px;
+    float: left;
+    margin-top: 10px;
+}
+
+.popupmailemailtextclass {
+    background-color: #939598;
+    color: white;
+    font-size: 23px;
+    padding: 10px;
+    float: left;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.SendByMailTextBoxclass {
+    float: left;
+    margin: 5px;
+    height: 30px;
+    width: 268px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 23px;
+}
+
+.popupmailmailiconclass {
+    background: url('../images/HomeImages/popupmail.png') no-repeat top center;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.SignByMailLinkButtonClass {
+    height: 30px;
+    float: left;
+    width: 110px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 5px;
+    color: #faa81a;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0px;
+    font-size: 28px;
+    font-family: Tahoma,Arial;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+
+/* ################ ##################*/
+.facepopupholderclass {
+    float: left;
+    width: 100%;
+    background-color: #faa719;
+    border-radius: 15px;
+    height: 460px;
+    position: relative;
+    display: none;
+}
+
+.popupfacebottomholder {
+    background-color: #007bc6;
+    border-radius: 0px 0px 15px 15px;
+    float: left;
+    width: 100%;
+    position: absolute;
+    height: 115px;
+    bottom: 0px;
+    font-family: Tahoma,Arial;
+}
+
+.popupfaceficonclass {
+    background: url('../images/HomeImages/popupface.png') no-repeat top center;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.SignByFaceLinkButtonClass {
+    height: 30px;
+    float: left;
+    width: 115px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 5px;
+    color: #007bc6;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0px;
+    font-size: 28px;
+    font-family: Tahoma,Arial;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+/*#endregion */
+
+
+
+
+/* ################################################################### @@@@@@ ##################################################################################*/
+/* ################################################################### mobile ##################################################################################*/
+
+@media only screen and (max-width:640px) {
+
+    /*#region Login MOBILE */
+
+    .logincontentholder2 {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .InnerHolder {
+        width: 90%;
+        margin: auto;
+        height: 100%;
+    }
+
+    .LoginFormDiv {
+        width: 94%;
+        height: 50%;
+        margin: auto;
+        margin-top: 30px;
+        background: url('../images/HomeImages/loginformbgmobile.png') no-repeat;
+        background-size: 100% 100%;
+        padding-bottom: 20px;
+    }
+
+    .LoginHeaderDiv {
+        width: 90%;
+        color: #177ac0;
+        margin-top: 20px;
+    }
+
+    .logintexttitleclass {
+        display: none;
+    }
+
+    .loginuserclass {
+        background: url('../images/HomeImages/loginmailmobile.png') no-repeat left center;
+        width: 95%;
+        padding-left: 15%;
+        height: 40%;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        background-size: auto 100%;
+    }
+
+    .loginuserclass2 {
+        background: url('../images/HomeImages/loginpasswordmobile.png') no-repeat left center;
+        width: 95%;
+        padding-left: 15%;
+        height: 40%;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        background-size: auto 100%;
+    }
+
+    .FormItemFieldholder {
+        width: 80%;
+    }
+
+    .FormItemField {
+        /*height: 38px;*/
+        width: 105%;
+        margin-left: -6px;
+        margin-top: -1px;
+    }
+
+    .btnLoginClass {
+        width: 65%;
+        height: 33%;
+        font-size: 110%;
+        line-height: 180%;
+        background: #f8951d;
+        position: relative;
+        z-index: 5;
+    }
+
+    .btnLoginFacebookClass {
+        background: url('../images/HomeImages/loginfacebookbtnmobile.png') no-repeat;
+        width: 65%;
+        background-size: 100% 100%;
+        height: 33%;
+        font-size: 110%;
+        line-height: 180%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .ForgotBtnClass {
+        float: left;
+        margin-left: 30px;
+    }
+
+    .GirlWIthFlagclass {
+        width: 184.8px;
+        height: 311.2px;
+        /* background-size: 100% 100%; */
+        margin-right: -55px;
+    }
+
+    .GirlDivclass {
+        display: none;
+    }
+
+    .LogoImageclass {
+        width: 80%;
+        height: 80%;
+        margin-top: 12px;
+        background: url('../images/HomeImages/logo.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .logintextcontentclass {
+        font-size: 80%;
+        line-height: 150%;
+        color: #177ac0;
+    }
+
+    .FieldsDiv {
+        width: 85%;
+        height: 33%;
+        padding: 15px 0px 0px 0px;
+        margin: auto;
+    }
+
+    .loginInnerHolder {
+        position: relative;
+        height: 95px;
+    }
+
+    .Requiredfieldclass {
+        font-size: 75%;
+    }
+
+    .ForgotBtnClass {
+        font-size: 75%;
+    }
+
+    .logincentertext {
+        height: 25px;
+    }
+
+    .lblLoginStatusClass {
+        font-size: 75%;
+    }
+
+    /*#endregion */
+
+    /*#region JoinUs MOBILE */
+    .loginstatusclass {
+        /* display: none; */
+        position: absolute;
+        left: -62px;
+        bottom: 133px;
+        color: rgb(241, 140, 140);
+    }
+
+    .loginstatusclassMobile {
+        display: block;
+    }
+
+    .joinussectionholder {
+        width: 90%;
+        float: left;
+    }
+
+    .TopLogo {
+        width: 90%;
+    }
+
+    .joinustextholder {
+        width: 100%;
+    }
+
+    .joinuspageholder {
+        width: 100%;
+        z-index: auto;
+    }
+
+    .LandingImgContentHolder {
+        background: url('../images/HomeImages/GirlWIthFlag.png') no-repeat left bottom;
+        background-size: 150%;
+        width: 180px;
+        height: 473px;
+        position: absolute;
+        top: 154px;
+        left: 180px;
+    }
+
+    .joinusholder {
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        position: inherit;
+    }
+
+    .FormHolder {
+        width: 100%;
+        background-size: cover;
+        position: relative;
+    }
+
+    .joinusbtnholder {
+        float: left;
+        position: relative;
+        z-index: 7;
+        width: 100%;
+    }
+
+    .TboxInputname {
+        float: left;
+    }
+
+        .TboxInputname .TextBoxHolderClass {
+            width: 70%;
+        }
+
+        .TboxInputname .TextBoxWatermarkCssClass {
+            width: 100%;
+        }
+
+        .TboxInputname .MyTextBoxClass {
+            width: 100%;
+        }
+
+    .TboxInput {
+        float: left;
+    }
+
+        .TboxInput .TextBoxHolderClass {
+            width: 70%;
+        }
+
+        .TboxInput .TextBoxWatermarkCssClass {
+            width: 100%;
+        }
+
+        .TboxInput .MyTextBoxClass {
+            width: 100%;
+        }
+
+    .TboxInputpassword {
+        float: left;
+    }
+
+        .TboxInputpassword .TextBoxHolderClass {
+            width: 70%;
+        }
+
+        .TboxInputpassword .MyTextBoxClass {
+            width: 100%;
+        }
+
+        .TboxInputpassword .TextBoxWatermarkCssClass {
+            width: 100%;
+        }
+
+    .formplaceholderclass {
+        float: left;
+        width: 100%;
+    }
+
+    /*#endregion */
+
+    /*#region Default */
+
+    .ControlpanelDiv {
+        max-width: 100%;
+        min-height: 260px;
+        height: auto;
+        background-size: 100% 100%;
+        float: left;
+        padding: 5px 5px 35px 5px;
+    }
+
+    .tempatureHolderClass {
+        width: 30%;
+        margin-right: 5px;
+        border-left: none;
+    }
+
+    .marginCPele {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .topgraysection {
+        padding-bottom: 27px;
+    }
+
+    .ImgDiv {
+        width: 45%;
+        height: 110px;
+        float: none;
+    }
+
+        .ImgDiv img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+    .MissionsAppendclass {
+        max-width: 100%;
+        background-size: 100%;
+        width: 78%;
+        padding: 23px 30px 14px 14px;
+        font-size: 22px;
+    }
+
+    .missionaccomplished {
+        background-size: 100%;
+        width: 80%;
+        padding: 23px 30px 20px 14px;
+        font-size: 23px;
+        text-align: left;
+        margin: auto;
+        float: none;
+        overflow: hidden;
+    }
+
+    .GoForItAgainButton {
+        margin-top: 5px;
+        float: left;
+    }
+
+    .topgraysectionauto {
+        width: 100%;
+    }
+
+    .topgraysectionfloat {
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .logoimgholderclass img {
+        width: 90%;
+    }
+
+    .rightlogoclass {
+        margin-right: 10px;
+    }
+
+        .rightlogoclass img {
+            width: 50%;
+        }
+
+    .defaultcenterclass {
+        width: 90%;
+    }
+
+    .defaultcenterclass2 {
+        width: 100%;
+    }
+
+    .missiontitleclass {
+        float: right;
+        width: 50%;
+    }
+
+    .WaitingMissionContent {
+        height: 250px;
+    }
+
+    .missioncontentclass {
+        width: 95%;
+        margin: 0px 0px 0px 10px;
+    }
+
+    .tdbadgeimageclassimg {
+        width: 90%;
+    }
+
+    .goforitclass {
+        width: 35%;
+        text-align: center;
+        height: 22px;
+        background-color: #009ee0;
+        line-height: 19px;
+        padding: 10px 25px 10px 22px;
+        margin: auto;
+        margin-top: 95px;
+        display: table;
+        float: none;
+    }
+
+    .badgespageimageclass {
+        height: initial;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .goforitclass span {
+        font-size: 21px;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .SpanBreak {
+        display: none;
+    }
+
+    .missiondateholder {
+        padding: 0px 5%;
+        margin-top: 0px;
+        position: absolute;
+        top: 215px;
+        width: 195%;
+        left: -145px;
+    }
+
+    .missiondateclass {
+        font-size: 12px;
+    }
+
+    .missiondateclass2 {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .datemissionholderclass {
+        border: none;
+        width: 90%;
+        float: none;
+        margin: auto;
+    }
+
+    .defmissionimageholder2 {
+        width: 24%;
+        height: 100px;
+    }
+
+    .blueclass {
+        left: 33px;
+        top: 48px;
+        height: 150px;
+    }
+
+    .grayclass {
+        top: 37px;
+        left: 33px;
+    }
+
+    .MissionDetails {
+        width: 40%;
+        position: relative;
+    }
+
+    .missiontitleclassa {
+        width: 38%;
+        height: 107px;
+        overflow: visible;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .missionShortDesc {
+        /*display: none;*/
+        width: 98%;
+        margin: auto;
+        display: table;
+        float: none;
+        height: initial;
+    }
+
+    .Boy_Imageclass {
+        margin-right: -90%;
+    }
+
+    .defmissionimageholder2 img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .MissionDoneholderclass {
+        width: 100%;
+        height: 250px;
+    }
+
+    .MissionDoneclass {
+        float: left;
+        margin-left: 0px;
+        margin-right: 5px;
+    }
+
+    .accomplishdateclass {
+        width: 95%;
+        float: left;
+        margin: auto;
+        margin-left: 5px;
+        font-size: 16px;
+    }
+
+    .defmissionimageholder {
+        width: 40%;
+    }
+
+        .defmissionimageholder img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .MiddleContent {
+        float: right;
+        width: 48%;
+        position: relative;
+    }
+
+    .marginCPele {
+        width: 100%;
+    }
+
+    .badgeareaclass {
+        max-width: 67%;
+        margin: auto;
+        height: 285px;
+        overflow: hidden;
+        width: initial;
+    }
+
+    .badgelistheader {
+        font-size: 20px;
+        float: none;
+        text-align: center;
+    }
+
+    .badgelistitemclass {
+        margin: 0px;
+        /*float: none;*/
+        width: 59px;
+        display: inline-block;
+    }
+
+    .tempatureClass {
+        background-size: contain;
+    }
+
+    .badgeseeall {
+        display: none;
+    }
+
+    .badgeseeall2 {
+        display: block;
+        margin-top: -115px;
+    }
+
+    .badgepagelistitemclass {
+        margin: auto;
+        width: 150px;
+        float: none;
+        display: inline-block;
+    }
+
+    .orangestrapholder {
+        width: 100%;
+    }
+
+    .SharesStats {
+        display: inline-block;
+        margin-left: 7px;
+        margin-top: 5px;
+        float: none;
+        width: 47%;
+    }
+
+    .orangestraptext {
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    .orangestrapclose {
+        margin-right: 3px;
+    }
+
+    /*#endregion */
+
+    /*#region Mission */
+
+    .missionholderouter {
+        width: 90%;
+    }
+
+    .missionholderinner {
+        width: 100%;
+    }
+
+    .RightHolder, .RightHolder2 {
+        display: none;
+        max-width: 39%;
+    }
+
+    .LeftHolder {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ContainerDiv {
+        width: 100%;
+    }
+
+    .missionlogoclass {
+        width: 90%;
+        height: auto;
+    }
+
+    .ArticleHolder {
+        margin-top: 10px;
+        overflow: visible;
+    }
+
+    .missionbuttonholderclass {
+        position: relative;
+        bottom: auto;
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    .sharebymailclass {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .sharebyfacebookclass {
+        width: 86%;
+        text-align: center;
+        font-size: 17px;
+        padding-right: 2%;
+        padding-left: 12%;
+        overflow: hidden;
+        margin-top: 5px;
+    }
+
+    .readFullHolder {
+        /*background: url('../images/Mission_Images/sharebutton.png') no-repeat;
+        background-size: 100% 100%;
+        width: 159px;
+        width: 90%;
+        color: white;
+        height: 33px;
+        font-size: 29px;
+        display: block;
+        padding: 20px 0px;
+        padding-right: 10%;
+        margin-top: -5px;
+        margin-bottom: 20px;
+        background-size: 100% 100%;*/
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    .readfullclass:after {
+        content: '';
+    }
+
+    .missionlineholder {
+        width: 100%;
+        float: left;
+    }
+
+    .missionline {
+        width: 42%;
+    }
+
+    .missionorclass {
+        width: 10%;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    .BackToLogin {
+        width: 125px;
+        margin-top: 5px;
+    }
+
+    .TbocHeader {
+        margin-top: 10px;
+    }
+
+    .TboxThankYouText {
+        margin-top: 10px;
+    }
+
+    .TboxThankYouTextResend {
+        margin-top: 0px;
+    }
+
+    .TboxThankYouText1 {
+        margin-top: 10px;
+    }
+
+    .expiredtopline {
+        text-align: center;
+    }
+
+    .expiredbottomline {
+        text-align: center;
+    }
+
+    .missionbottomclass {
+        display: block;
+    }
+
+    .expiredtopline {
+        font-size: 22px;
+    }
+
+    .missionthumbsubclass {
+        width: 33%;
+        height: auto;
+    }
+
+    .ThanksHolder {
+        margin-top: 3px;
+    }
+
+    /*#endregion */
+
+    /*#region PopUps MOBILE */
+
+    .popupholderclass {
+    }
+
+    .popupholderinnerclass {
+        width: 90%;
+    }
+
+    .mailpopupholderclass {
+        float: left;
+        width: 100%;
+        background-color: #007ac5;
+        border-radius: 15px;
+        height: 500px;
+        position: relative;
+    }
+
+    .popupmailtopclass {
+        background: url('../images/HomeImages/popuphand.png') no-repeat left center;
+        width: 55%;
+        margin: 0px;
+        float: left;
+        padding-top: 20px;
+        padding-left: 30%;
+        margin-left: 5%;
+        margin-top: 15px;
+    }
+
+    .popupmailsubclass {
+        width: 80%;
+        float: left;
+        font-size: 30px;
+        font-family: Tahoma,Arial;
+        text-align: center;
+        color: white;
+        margin: 10px 10%;
+    }
+
+    .popupmailbottomholder {
+        background-color: #faa81a;
+        border-radius: 0px 0px 15px 15px;
+        float: left;
+        width: 100%;
+        position: absolute;
+        height: 160px;
+        bottom: 0px;
+        font-family: Tahoma,Arial;
+    }
+
+    .popupmailontextboxclass {
+    }
+
+    .popupmailemailholderclass {
+    }
+
+    .popupmailemailtextclass {
+    }
+
+    .SendByMailTextBoxclass {
+    }
+
+    .popupmailmailiconclass {
+    }
+
+    .SignByMailLinkButtonClass {
+    }
+
+    /*#endregion */
+}
+
+/* joinus start */
+.joinustopclass {
+background:url('../images/joinus/joinustopbg.jpg') no-repeat top;
+background-size:100% 100%;
+width:100%;
+height:626px;
+
+}
+.joinustopcontent {
+    width:905px;
+    height:626px;
+    margin:auto;
+}
+.joinusheader {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+    height: 135px;
+    overflow:hidden;
+}
+.joinuslogo {
+    float:left;
+    margin:29px;
+
+}
+.joinustoptitle {
+    float:right;
+    margin:20px;
+    font-size:43px;
+    width:405px;
+    color:#4195cd;
+    font-family: latolight;
+    text-align:left;
+    direction:ltr;
+
+
+}
+.joinustoptitlemoble {
+display:none;
+}
+.joinustextclass {
+    float:left;
+     text-align:left;
+    direction:ltr;
+    width:485px;
+    height:initial;
+    color:#4195cd;
+    margin:25px 30px; 
+    font-family:lato;
+}
+.joinussliderholder {
+    width:545px;
+    float:left;
+    height:255px;
+     display:block;
+    /*background:url('../images/joinus/fade.png') ;*/
+  
+    /*border-radius:20px;*/
+
+}
+.CyclerIMGHolder {
+width:100%;
+height:255px;
+overflow:hidden;
+background-size:100% 100%;
+float:left;
+}
+.CycleIndex {
+
+    
+}
+.CycleRightSide {
+background:url('../images/joinus/joinusright.png') no-repeat top right ;
+width:30px;
+height:255px;
+cursor:pointer;
+float:left;
+}
+.CycleLeftSide {
+background:url('../images/joinus/joinusleft.png') no-repeat top left ;
+width:30px;
+height:255px;
+cursor:pointer;
+float:left;
+}
+.joinusslidertext {
+background:url('../images/joinus/fadeblak.png');
+width:465px;
+height:20px;
+color:white;
+padding:10px;
+margin-top:215px;
+font-family:Arial;
+}
+.joinussliderimageholder {
+    width:485px;float:left;
+}
+.joinusbullet {
+    width:100%;
+    
+    float:left;
+     width:545px;
+     text-align:center;
+     padding-top:20px;
+
+}
+.joinusbullet a {
+background-color:white;
+width:12px;
+height:12px;
+display:inline-block;
+margin:10px;
+font-size:0;
+border-radius:12px;
+
+}
+    .joinusbullet a.activeSlide {
+    background-color:#117bc0;
+    } 
+
+    /* from in joinus*/
+.JoinFormHolder {
+
+
+    width: 265px;
+    height: 405px;
+    background: url('../images/joinus/joinusformbg.png') no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    text-align: left;
+    direction: ltr;
+    padding-left: 15px;
+    margin-top:25px;
+}
+.joinusTboxTitle {
+    width:250px;   
+    color:#117bc0;
+    font-size:20px;
+    font-family:lato;
+    padding:15px 0px;
+}
+.joinusTboxInputname {
+
+}
+
+    .joinusTboxInputname .TextBoxHolderClass {
+        
+       
+    }
+
+    .joinusTboxInputname .TextBoxWatermarkCssClass {
+        background-color:white;
+        width: 230px;
+        height: 25px;
+        padding: 5px 10px;      
+        border: none;
+        color: #c4c5c8;
+        font-family: Arial;
+        font-size: 17px;
+    }
+
+    .joinusTboxInputname .MyTextBoxClass {
+         background-color:white;
+        width: 230px;
+        height: 25px;
+        padding: 5px 10px;      
+        border: none;
+        color: #a1868d;
+        font-family: Arial;
+        font-size: 17px;
+    }
+    .joinusRequieredFileds {
+         color: #fff;
+    font-family: arial;
+    font-size: 13px;
+    margin: 15px 0px;
+    float: left;
+
+}
+.joinusbtnholder {
+
+}
+.joinusbtnLoginClass {
+        width: 244px;
+    height: 34px;
+    padding:5px 0px;
+    background: #faa61a;
+    border:solid 3px #f8941d;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    font-family: latoblack;
+    line-height: 30px;
+    font-weight: bold;
+    
+    cursor: pointer;
+}
+.joinusloginorline {
+      width: 107px;
+    height: 20px;
+    border-bottom: solid 1px white;
+    float: left;
+}
+.Requiredfieldclass {
+    font-family: Arial;
+    font-size: 16px;
+    color: white;
+    float: left;
+   
+}
+
+.fbLogin {
+
+}
+.joinusbtnLoginFacebookClass {
+      background: url('../images/joinus/joinusfacebtn.png') no-repeat;
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+     background-size: 100% 100%;
+}
+.joinusvalsummerynew {
+     width: 200px;
+    font-size: 13px;
+    float: left;
+    color: white;
+  margin-top:30px;
+  margin-left:-40px;
+
+}
+ .joinusvalsummerynew li {
+        color: white;
+    }
+.loginstatusclass {
+
+}
+
+
+.joinuscenterclass {
+width:100%;
+height:350px;
+border-top:solid 5px white;
+background-color:#117bc0;
+
+}
+.joinusbottomclass {
+width:100%;
+height:350px;
+border-top:solid 5px white;
+background-color:#fba81a;
+
+}
+.joinuscentercontent {
+    width:905px;
+    height:355px;
+    margin:auto;
+}
+.joinuscenterheader {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+   text-align:center;
+   font-family:lato;
+   font-size:30px;
+   color:#117bc0;
+   padding:3px 0px;
+}
+.joinusscenterimage {
+width:300px;
+height:115px;
+float:left;
+margin-top:30px;
+padding-top:155px;
+}
+.joinussignin {
+background:url('../images/joinus/joinussignin.png') no-repeat top center;
+
+}
+.joinusrecive {
+background:url('../images/joinus/joinusface.png') no-repeat top center;
+
+}
+.joinusshare {
+background:url('../images/joinus/joinusvoice.png') no-repeat top center;
+
+}
+.joinuscentertext1 {
+    color:white;
+    font-size:20px;
+    font-family:latobold;
+    width:100%;
+    text-align:center;
+}
+.joinusfootertext {
+width:100%;
+text-align:center;
+font-family:lato;
+font-size:30px;
+color:#117bc0;
+padding:20px 0px;
+}
+.joinusprivecy {
+font-size:19px;
+color:white;
+clear:both;
+float:right;
+font-family:Arial;
+}
+.joinusorclass {
+   width: 100%; 
+   height: 40px;
+}
+.joinRequiredfieldclass {
+   font-family: Arial;
+    font-size: 16px;
+    color: white;
+    float: left;
+   margin: 10px
+}
+.joinusgif {
+width:90%;
+
+}
+.joinusgif img {
+    width:98%;
+}
+.joinuslogoimage {
+
+}
+/* joinus end */
+@media only screen and (max-width:640px) {
+    .joinustopclass {
+        height:1110px;
+        height:auto;
+        float:left;
+        padding-bottom:15px;
+    }
+
+    .joinuscenterclass {
+height:auto;
+        float:left;
+        padding-bottom:15px;
+
+}
+
+    .joinusbottomclass {
+height:auto;
+        float:left;
+        padding-bottom:15px;
+
+}
+    .joinussliderholder {
+    display:none;
+    }
+    .joinustopcontent {
+    width:90%;
+    height:626px;
+    margin:0px 5%;
+}
+    .joinusheader {
+    height:85px;
+    height:auto;
+    
+    }
+    .joinuslogo {
+    width:100%;
+    text-align:center;
+    margin:5px;
+    }
+    .joinustoptitle {
+  
+   display:none;
+    }
+    .joinustoptitlemoble {
+      width:85%;
+    float:none;
+    margin:20px 0px;
+    display:block;
+    }
+    .joinustextclass {
+    float:none;
+    }
+    .joinustextclass {
+     margin:20px 0px;
+       width:85%;
+    }
+    .JoinFormHolder {
+    width:100%;
+    height:655px;
+    padding:0px;
+    float:none;
+    
+    }
+    .joinusTboxTitle {
+    font-size:37px;
+    width:90%;
+    margin:auto;
+    padding-bottom:5px;
+    }
+
+    .joinusTboxInputname .TextBoxWatermarkCssClass {
+        background-color:white;
+        width: 80%;
+        margin:10px 5%;
+        height: 50px;
+        padding: 5px 5%;    
+        font-size: 32px;
+    }
+
+    .joinusTboxInputname .MyTextBoxClass {
+         background-color:white;
+        width: 80%;
+        margin:10px 5%;
+        height: 50px;
+        padding: 5px 5%;    
+        font-size: 32px;
+    }
+    .joinusRequieredFileds {
+        font-size:30px;
+        width:90%;
+        margin:auto;
+        float:none;
+
+    
+    }
+    .joinusbtnLoginClass {
+        width:90%;
+        height:84px;
+        margin:auto;
+        font-size:75px;
+        line-height: 84px;
+        margin-top:10px;
+    }
+    .joinusorclass {
+    width:90%;
+    margin:0px 5%;
+    height:45px;
+    }
+    .joinusloginorline {
+      width: 42%;
+    height: 23px;
+    border-bottom: solid 1px white;
+   
+    display:inline-block;
+}
+    .joinRequiredfieldclass {
+        width:16%;
+     display:inline-block;
+     margin:0px;
+    
+     text-align:center;
+     font-size:37px;
+    }
+    .joinusbtnLoginFacebookClass {
+        width:90%;
+        margin:10px 5%;
+        height:65px;
+        text-align:center;
+        font-size:38px;
+        line-height:65px;
+    }
+    .joinuscentercontent {
+    width:100%;
+    height:345px;
+    height:auto;
+
+    }
+      .joinuscenterheader {
+        width:90%;
+        margin:auto;
+    }
+    .joinusscenterimage {
+    width:30%;
+    background-size:50% ;
+    padding-top:20%;
+    height:155px;
+    height:auto;
+    }
+    .joinusfootertext {
+    width:66%;
+    margin:auto;
+    }
+    .joinuslogoimage {
+     max-width:90%;
+       
+}
+}
+
+@media only screen and (max-width:400px) {
+    .joinusbtnLoginClass {
+    font-size:55px;
+    }
+    .joinusTboxTitle {
+          font-size:30px;
+    }
+
+    .joinuscentertext1 {
+      font-size:16px;
+    
+    }
+}

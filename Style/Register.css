@@ -1,0 +1,180 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url('../RegisterImages/backgroundImg.jpg') top left no-repeat;
+    background-size: auto;
+    direction: ltr;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/*#region Page 3 */
+
+/* Page 3 Start */
+
+.LandingPageHolder {
+    float: none;
+    direction: ltr;
+    width: 80%;
+    margin: auto;
+}
+
+.LandingContentHolder {
+    float: left;
+    width: 50%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+    .LandingContentHolder .LandingImg {
+        max-width: 100%;
+        /*max-height: 100%;*/
+    }
+
+.TopLogo {
+    float: left;
+    max-width: 100%;
+}
+
+.TopTextHolder {
+    float: left;
+    font-size: 14px;
+    line-height: 25px;
+    color: #231f20;
+    font-weight: bold;
+}
+
+.BoxHolderBG {
+    float: left;
+    margin-top: 32px;
+    width: 425px;
+    height: 265px;
+    background: url('../RegisterImages/RegisterBalloonBg.png') top left no-repeat;
+    padding: 25px 0px 18px 17px;
+}
+
+.TboxHolder {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    width: 205px;
+    padding-left: 50px;
+    padding-right: 4px;
+    height: 42px;
+    margin-bottom: 14px;
+}
+
+    .TboxHolder.Name {
+        background-image: url('../RegisterImages/TBoxName.png');
+    }
+
+    .TboxHolder.Email {
+        background-image: url('../RegisterImages/TboxEmail.png');
+    }
+
+    .TboxHolder.Password {
+        background-image: url('../RegisterImages/TBoxPassword.png');
+    }
+
+.TboxInput {
+    float: left;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.TboxTitle {
+    float: left;
+    width: 100%;
+    color: #fff;
+    line-height: 30px;
+}
+
+.TboxValidator {
+    float: left;
+    width: 100%;
+    color: white;
+    font-size: 10px;
+    margin-left: 50px;
+}
+
+.TboxComment {
+    float: left;
+    width: 100%;
+    line-height: 15px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.TboxBtn {
+    float: left;
+    display: block;
+    margin-left: -17px;
+    width: 250px;
+    height: 22px;
+    padding-right: 41px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    text-align: right;
+    color: #fff;
+    font-weight: bold;
+    background: url('../RegisterImages/RegisterBalloonBtn.png') center left no-repeat;
+}
+
+/* Page 3 End */
+.validationHolderClass {
+    line-height: 8px;
+    font-size: 12px;
+    color: white;
+}
+
+input[type=text] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 200px;
+    padding-left: 4px;
+}
+
+    input[type=text]:disabled {
+        color: gray;
+    }
+
+input[type=password] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 200px;
+    padding-left: 4px;
+}
+
+.ValidetorClass {
+    color: white;
+}
+
+.TextBoxWatermarkCssClass {
+    color: white;
+    font-size: 15px;
+}
+/*#endregion */

@@ -1,0 +1,45 @@
+/*
+Default style definitions for:
+
+Uploadify v1.6.2
+Copyright (C) 2009 by Ronnie Garcia
+Co-developed by Travis Nickels
+
+.fileUploadQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	background-color: #F5F5F5;
+	border: 3px solid #E5E5E5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 300px;
+}
+.fileUploadQueueItem .cancel {
+	float: left;
+}
+.fileUploadProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%;
+}
+.fileUploadProgressBar {
+	background-color: #0099FF;
+}
+    */
+
+/*.fileUploadQueueItem {
+position:relative;
+z-index:300;
+background:#eef3fb url( "../images/SiteImages/spindate-loader.gif") no-repeat center center;
+width:86px;
+height:40px;
+top:-40px;
+left:0px;
+text-align:center;
+}
+.cancel,.percentage,.fileUploadProgress,.fileName {
+display:none;
+}*/

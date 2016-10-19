@@ -1,0 +1,818 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  EnableViewState="false" CodeFile="Copy of MasterPage.master.cs"
+    Inherits="MasterPage" %>
+<%@ Register TagPrefix="cmstr" Src="~/Controls/CMSTRMenuControll.ascx" TagName="MenuControl" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta name="description"  id="description" runat="server" content="" />
+    <meta runat="server" name="keywords" id="keywords" content="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="googlebot" content="noindex,nofollow" />
+
+    <link href="Style/StyleSheet.css" runat="server" id="mystyle" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />   
+   <!--[if !IE]><!-->
+        <%--	<link rel="stylesheet" type="text/css" href="Style/StyleSheet2.css" />--%>
+  <!--<![endif]-->
+   <%-- <script src="Script/Jquerymin.js" type="text/javascript"></script>
+    <script src="Script/jquery-ui.min.js" type="text/javascript"></script>--%>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="Tiny/jquery.easing.1.3.js" type="text/javascript"></script>  
+    <script src="Script/jquery.mousewheel.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <script type="text/javascript" src="Tiny/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="Script/cmsScript.js"></script>
+    <script type="text/javascript" src="Script/master.js"></script>
+    <script type="text/javascript" >
+        var isinbox = 0;
+        var sound = '0';
+       
+    </script>
+    <asp:Literal runat="server" ID="HeadContentSystem" ></asp:Literal>
+    <asp:Literal runat="server" ID="HeadContentSite" ></asp:Literal>
+</head>
+<body >
+    <form id="form1" runat="server">
+    <asp:ScriptManager ScriptMode="Release" ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+        <div runat="server" id="testdiv" visible="false" style="position:fixed;top:20px;left:20px;" ></div>
+        <div runat="server" id="MyToopLine" class="tooplineclass">
+            <div class="topelineholder">
+                <div runat="server" id="TopeLineData"  class="topelinecontent"></div>
+
+            </div>
+            <asp:Literal runat="server" ID="MyCodeLiteral" ></asp:Literal>
+            <div onclick="closetopline()" class="closetoplineclass"></div>
+
+        </div>
+    <div class="SiteTopCover">
+        <div class="SitePlaceHolderClass">
+            <div runat="server" id="homemiddletop" visible="false" class="homemiddletopclass">
+            </div>
+            <div runat="server" id="spindatelogoholder" class="SitePlaceHolderClass2">
+                <div class="SitePlaceHolderClass3">
+                    <a runat="server" id="sitelogo" class="sitelogoclass" href="./">
+                        <img alt="" runat="server" id="LogoImage"  src="images/siteImages/logo.png" /></a>
+                    <div runat="server" id="MasterRightSide" class="rightsideclass">
+                        <div class="pageheaderclass">
+                            <asp:Panel runat="server"  ID="headerholder">                                  
+                                <h1 runat="server" class="MasterPageHeaderClass" id="PageTitle"></h1>
+                            </asp:Panel>
+                        </div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+                        </asp:ContentPlaceHolder>
+                      <%--  TOP MENU--%>
+                        <div runat="server" id="topmenu"  class="topmenuclass">
+                        <asp:Panel runat="server" ID="topmenuPanel" >
+                            <a runat="server" id="homebutton"   class="topdefaultbuttonclass homebuttonclass"></a>
+                            <a runat="server" id="profilebutton" class="topdefaultbuttonclass profilebuttonclass"></a> 
+                            <a runat="server" id="favoritebutton" class="topdefaultbuttonclass favoritebuttonclass"></a>
+                        </asp:Panel>
+                        </div>                    
+                    </div>
+                    <%--     חלק שמאלי--%>
+                    <asp:Panel runat="server" ID="LeftSideMaster">
+                        <div class="masterLeftClass">
+                            <div class="topmenuHolder">
+                                <asp:UpdatePanel runat="server" ID="SubMenuUpdatePanel" >
+                                    <ContentTemplate>
+                                        <div title='<%= Languages.MyText("My alerts_master") %>' onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("alerts.aspx")+"\", \"560\", \"650\")"  %>'   class="alerticonholder">
+                                            <asp:Label runat="server" ID="AlertbLabel" CssClass="alertbubleclass"></asp:Label>
+                                            <div runat="server" id="leftmenubellclassid" class="leftmenubellclass">
+                                            </div>
+                                        </div>
+                                        <div title='<%= Languages.MyText("My inbox_master") %>' class="inboxiconholder">
+                                            <asp:Label runat="server" ID="InboxbLabel" CssClass="inboxbubleclass"></asp:Label>
+                                            <a runat="server" id="inboxbutton"  class="leftmenuletterclass">
+                                            </a>
+                                        </div>
+                                        <asp:HiddenField runat="server" ID="InboxSenderHiddenField" />
+                                    </ContentTemplate>                                  
+                                </asp:UpdatePanel>
+                              
+                                <div class="leftmenusep">
+                                </div>
+                                <a title='<%= Languages.MyText("help center_master") %>' href='<%= siteDefaults.GetLink( "helpcenter.aspx") %>' class="leftmenuqmarkclass">
+                                </a>
+                                <div title='<%= Languages.MyText("My setting_master") %>' onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("setting.aspx")+"\", \"560\", \"650\")"  %>'   class="leftmenuwheelclass">
+                                </div>
+                                <div title='<%= Languages.MyText("Logout_master") %>' onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("registermsg.aspx?status=7")+"\", \"560\", \"650\")"  %>'  class="leftmenueclass">
+                                </div>
+                            </div>
+                            <asp:Panel runat="server" ID="LeftSideNoMenuPanel">
+                                <div  class="lightblueholder masterlightblueholder">
+                                    <div class="lefttoplightblue">
+                                    </div>
+                                    <div  class="toplightblue w94class">
+                                    </div>
+                                    <div class="righttoplightblue">
+                                    </div>
+                                    <div class="leftlightblue">
+                                        <div class="rightlightblue">
+                                            <div  class="centerlightblue masterimgclass">
+                                                <div class="homeimageholder" ><img src="images/SiteImages/blank.gif" runat="server" id="Myprofimg" alt="Alternate Text" /></div>
+                                                <a title='<%=   Languages.MyText("Go to my profile_master") %>' href='<%=   siteDefaults.GetLink("profile.aspx") %>'  class="myimgframlbclass3">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="leftbottomlightblue">
+                                    </div>
+                                    <div  class="bottomlightblue w94class">
+                                    </div>
+                                    <div class="rightbottomlightblue">
+                                    </div>
+                                </div>
+                                <div class="membermenuclass3">
+                                    <div class="membermenunameclass">
+                                        <%= Languages.MyText("Welcome, [[name]]_master").ToString().Replace("[[name]]", "<span style=\"color:#4175AF\">" + methods.MemberList[memberid].FirstName + "<span>")%></div>
+                                    <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("setting.aspx")+"\", \"560\", \"650\")"  %>'   class="membermenueditclass">
+                                        <%= Languages.MyText("Edit My Profile_master")%></div>
+                                    <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("images.aspx")+"\", \"560\", \"650\")"  %>'  class="membermenuchangeclass">
+                                        <%= Languages.MyText("Change My Picture_master")%></div>
+                                    <div class="membermenuchangeclass" id="myclocktime" ></div>
+                                </div>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolderleft" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <asp:Panel runat="server" ID="LeftBubblesPanel">
+                                    <div runat="server" id="buble1Topdiv" class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center">                                                
+                                                <div class="upgrageaccountclass">
+                                                    <%= Languages.MyText("regular user_master_3")%>
+                                                </div>
+                                                <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=1")+"\", \"560\", \"650\")"  %>'  class="buble1gotoclass">
+                                                  <%= Languages.MyText("More Information_master")%>   </div>
+                                                <div  class="yellowbtnleft masteryellowbtnleft">
+                                                    <div class="yellowbtnright">
+                                                        <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=1")+"\", \"560\", \"650\")"  %>'  class="yellowbtncenter upgradebtnclass">
+                                                            <span>
+                                                                <img alt="star" src="images/SiteImages/staricon.png" /> <%= Languages.MyText("Upgrade_master")%></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div runat="server" id="buble2Topdiv" class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center">
+                                                <%--<div class="xclass">
+                                                </div>--%>
+                                                <div runat="server" id="freeacountdate" class="upgrageaccountclass">
+                                                   
+                                                </div>
+                                                <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>'  class="buble1gotoclass">
+                                                <%= Languages.MyText(" More Information_master")%></div>
+                                                <div class="whitebtnleft floatRight marginright10" >
+                                                    <div class="whitebtnright">
+                                                        <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>'  class="whitebtncenter">
+                                                            <%= Languages.MyText("Extend Now_master")%> <span></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div runat="server" id="buble3Topdiv" class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center">                                               
+                                                <div class="upgrageaccountclass">
+                                                 <%= Languages.MyText("Guest spinner_master_3")%>
+                                                </div>
+                                                <div class="massubtop">  <div class="massubbottom">  <div runat="server" id="coupondaydiv"    class="massubcenter">
+                                                
+                                                </div></div></div>
+                                                <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>'  class="buble1gotoclass">
+                                                <%= Languages.MyText(" More Information_master")%></div>
+                                                <div class="whitebtnleft floatRight marginright10" >
+                                                    <div class="whitebtnright">
+                                                        <div  onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>'  class="whitebtncenter">
+                                                            <%= Languages.MyText("Extend Now_master")%> <span></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div runat="server" id="buble4Topdiv" class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center">                                               
+                                                <div runat="server" id="GuestSpinner2" class="upgrageaccountclass">
+                                                 
+                                                </div>
+                                                <div runat="server" id="DateCountStatus" class="massubtop">  <div class="massubbottom">  <div class="massubcenter">
+                                                 <%= Languages.MyText("Make sure you join us! _master_3")%>
+                                                </div></div></div>
+                                                <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>' class="buble1gotoclass">
+                                                <%= Languages.MyText(" More Information_master")%></div>
+                                                <div class="whitebtnleft floatRight marginright10" >
+                                                    <div class="whitebtnright">
+                                                        <div onclick='<%= "openMyprofile(\""+  siteDefaults.GetLink("subscribe.aspx?status=2")+"\", \"560\", \"650\")"  %>'  class="whitebtncenter">
+                                                            <%= Languages.MyText("Extend Now_master")%> <span></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div  class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center bublefollow" >                                               
+                                               <div class="followusclass"><%= Languages.MyText("Follow us_Master") %></div>
+                                                <a title='<%=  Languages.MyText("Youtube _master") %>' href='<%=  Languages.MyText("http://www.youtube.com/ _master") %>' target="_blank"  class="mylinkclass youtubelinkclass" ></a>
+                                                <a title='<%=  Languages.MyText("Twitter _master") %>' href='<%=  Languages.MyText("https://twitter.com/ _master") %>' target="_blank"  class="mylinkclass twitterlinkclass" ></a>
+                                                <a title='<%=  Languages.MyText("Facebook _master") %>' href='<%=  Languages.MyText("https://www.facebook.com/ _master") %>' target="_blank"  class="mylinkclass facebooklinkclass" ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div  class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center bublefollow" >                                               
+                                                <div class="invitefreindclass"><%= Languages.MyText("Invite your friends to Spindate_Master").Replace("Spindate","<span style=\"font-family:roboto;\">Spindate</span>") %></div>
+                                                <div class="shareareaholder">
+                                                    <div onclick="sharethis(1,this)" class="shareclass sharefaceclass"></div>
+                                                     <div onclick="sharethis(2,this)" class="shareclass sharetwitlass"></div>
+                                                     <div onclick="sharethis(3,this)" class="shareclass sharegoogleclass"></div>
+                                                     <div onclick="sharethis(4,this)" class="shareclass shareyahooclass"></div>
+
+                                                     <div class="whitebtnleft sharebuttonclass"  >
+                                                    <div class="whitebtnright">
+                                                        <div onclick="doshare()"   class="whitebtncenter w40class">
+                                                            <%= Languages.MyText("Invite_master")%> <span></span></div>
+                                                    </div>
+                                                </div>
+                                                    
+                                                </div>
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div  class="buble1Top">
+                                        <div class="buble1Bottom">
+                                            <div class="buble1Center paddingtop5"   >                                               
+                                               <div class="Needhelpclass"><%= Languages.MyText("Need help?_Master") %></div>
+                                                
+                                                <div class="whitebtnleft floatRight marginright10" >
+                                                    <div class="whitebtnright">
+                                                        <div onclick='<%=  "openMyprofile(\""+siteDefaults.GetLink("Guide.aspx") +"\", \"640\", \"570\");"  %>'   class="whitebtncenter">
+                                                            <%= Languages.MyText("Take the SpinTour_master")%> <span></span></div>
+                                                    </div>
+                                                </div>
+                                              
+                                                         </div>
+                                        </div>
+                                    </div>
+
+                                </asp:Panel>
+                            </asp:Panel>
+                        </div>
+                    </asp:Panel>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderright" runat="server">
+                    </asp:ContentPlaceHolder>                
+                    <asp:Label runat="server" ID="check"></asp:Label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="fotterholderclass">
+        <div class="SitePlaceHolderClass">
+            <div class="SitePlaceHolderClass3">
+                <div class="footerclass">
+                    <a  title='<%= Languages.MyText("Go to About Us_Master")  %>' href='<%= "javascript:openMyprofile(\""+ siteDefaults.GetLink("about.aspx")+"\", \"560\", \"620\");" %>'  "javascript:openMyprofile('about.aspx', '560', '620');" class="footermenuclass"><%= Languages.MyText("About Us_Master")%> </a> 
+                    <a title='<%= Languages.MyText("Go to Terms of Service_Master")  %>' href='<%= siteDefaults.GetLink("termsofservice.aspx") %>'  class="footermenuclass"><%= Languages.MyText("Terms of Service_Master")%></a>
+                    <a title='<%= Languages.MyText("Go to Privacy Policy_Master")  %>' href='<%= siteDefaults.GetLink("policy.aspx") %>'  class="footermenuclass"><%= Languages.MyText("Privacy Policy_Master")%></a> 
+                    <a title='<%= Languages.MyText("Go to Blog_Master")  %>' href='<%= siteDefaults.GetLink("blog.aspx") %>'  class="footermenuclass"><%= Languages.MyText("Blog_Master")%></a> 
+                    <a title='<%= Languages.MyText("Go to Help & FAQ_Master")  %>'  href='<%= siteDefaults.GetLink("helpcenter.aspx") %>' class="footermenuclass"><%= Languages.MyText("Help & FAQ_Master")%></a>
+
+                    <div title='<%= Languages.MyText("Send us message_Master")  %>' onclick='<%= "javascript:openMyprofile(\""+ siteDefaults.GetLink("contact.aspx")+"\", \"640\", \"570\");" %>'   class="footermenuclass">
+                        <%= Languages.MyText("Contact Us_Master")%></div>
+                    <div class="footerwrights">
+                        <%= Languages.MyText("All rights reserved © 2012 Spindate.com_Master")%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:Panel CssClass="OnlineChatPAnelClass" runat="server" Visible="false" ID="OnlineChatPAnel">
+        <%--  online freinds--%>        
+        <div runat="server" id="mychatonlineholderid" class="mychatonlineholder">
+            <div class="mychatonlineholder2">               
+            <div class="mcs_containerChatOnline" id="mcs_containerchatonline">
+                <div class="customScrollBox">
+                    <div  class="container padding0">
+                        <div class="content">
+                             <div onclick="closeonlinemenu()" class="closemenutop"  ></div>
+                            <div class="chatonlineheaderholder fontbold">
+                                <div class="chatonlineheader">
+                                    <%= Languages.MyText("Online_master")%></div>
+                            </div>
+                            <div id="MyOnlineLiteral"></div>
+                           
+                            <div class="chatonlineheaderholder">
+                                <div class="chatonlineheader">
+                                    <%= Languages.MyText("offline_master")%></div>
+                            </div>
+                        <div id="MyOffLineLiteral"></div>
+                        
+                        </div>
+                    </div>
+                    <div class="dragger_container_holder">
+                        <div class="dragger_container_up">
+                        </div>
+                        <div class="dragger_container displayblock" >
+                            <div class="dragger">
+                            </div>
+                        </div>
+                        <div class="dragger_container_down">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <%-- ONLINE FREIND DETAILS--%>
+        <div class="mychatdetailsclass">
+            <div class="myimgframlbclass backgrounblack">
+                <img alt="chair" id="chatimage" src="images/SiteImages/blank.gif" /></div>
+            <div class="myimgframgrayclass myimgframgrayclass2">
+            </div>
+            <div class="mychatdetailsholder">
+                <div class="settingtitle">
+                    <img alt="" width="15" id="chatGenimg" src="images/SiteImages/blank.gif" />
+                    <span id="chatName" class="blueclass fontbold"></span>
+                </div>
+                <div class="mychatdetailonline">
+                    <img alt="online" id="myonline" src="images/SiteImages/onlineball.png" />&nbsp;
+                    <span class="homeonlinetext"><%= Languages.MyText("online_master") %></span>
+                    <span class="homeofflinetext"><%= Languages.MyText("offline_master") %></span>
+                     </div>
+                <div class="settingtitle">
+                   <%= Languages.MyText("Age: _master") %>&nbsp;<span id="chatAge" class="fontbold">23</span>
+                </div>
+                <div class="settingtitle">
+                    <%= Languages.MyText("From: _master") %><span class="fontbold">&nbsp;<img id="chatflage" alt="" src="images/SiteImages/blank.gif" />&nbsp;<span id="chatcountry"></span></span>
+                </div>
+            </div>
+        </div>
+        <%-- SEARCH TAMPLATE--%>
+        <div class="mychatsearchholder">
+            <cmsr:MyTextBox runat="server" OnKeyUp="searchfavourites(this);" CssClass="mychatsearchtextbox" HasWatermark="true"
+                WatermarkText="Search" ID="MyChatSearchBox" />
+            <div runat="server" id="onlineoffline" class="onlineofflineholder">
+                <div class="onoffbuttonHolder">
+                    <div onclick="setchaton(this);" class="mychatoffbtn mychatoffbtngreen">
+                    </div>
+                </div>
+                <div onclick="closeonlinemenu()" class="moffontext" ><%= Languages.MyText("online_master")%></div>
+                <div onclick="soundoffon(this)" class="soundbuttonclass"></div>
+            </div>
+        </div>
+        <div class="MyChatHolder3">
+        <div  id="chatsPlaceHolder">
+        </div>
+            <div onclick="showsideextra()" class="chatonlineextra">
+            <div class="chatonlineextracount">1</div>
+            <asp:HiddenField runat="server" ID="onlinecountHiddenField" Value="0" />
+        </div>
+        <div class="chatonlinewxtraholder" >
+            <div id="chatextralist" class="chatextralistclass"></div>
+        </div>
+
+        </div>
+
+
+        <%--CHAT TAMPLAT--%>
+        <div id="chattemplate" class="displaynone" >
+            <div id="mychatholdermynumber" class="MyChatHolder">
+                <input type="hidden" id="chayhiddenmynumber" />
+                <div class="MyChatHolder2">
+                    <div  class="MyChatTitleHolder">
+                        <div onclick="hidechatbox(this)" id="mychatname" class="MyChatName">[[name]]</div>
+                        <div onclick="closechat('mynumber',0)" class="closewhiteclass MyChatClose2">
+                        </div>
+                        <%--   action menu--%>
+                        <div class="chatactionclass">
+                            <div onclick="openchatmenu(this)" class="Mychatmenu">
+                                <asp:Literal runat="server" ID="ActionLiteral"></asp:Literal></div>
+                            <div class="chatmenuholder">
+                                <a class="menuinbox menuchat" href='<%= siteDefaults.SiteUrl+"/inbox.aspx?member=mynumber" %>'>
+                                    <%= Languages.MyText("See Full Conversation_master")%></a>
+                                <div class="menuinbox menuinboxblock" onclick='<%= "javascript:openMyprofile(\""+ siteDefaults.GetLink("spindatereport.aspx?status=2&member=mynumber&block=3")+"\", \"640\", \"570\");" %>'  >
+                                    <%= Languages.MyText("Block Member_master")%></div>
+                                <div class="menuinbox menuinboxreport" onclick='<%= "javascript:openMyprofile(\""+ siteDefaults.GetLink("spindatereport.aspx?status=2&member=mynumber&block=4")+"\", \"640\", \"570\");" %>' >
+                                    <%= Languages.MyText("Report Abuse_master")%></div>
+                            </div>
+                        </div>                       
+                            <div onclick="createchat('mynumber','true',4,this)"    class="Mychatcamera" ></div>     
+                            <asp:HiddenField runat="server" ID="MyHidden" Value="mynumber" />                 
+                    </div>
+                    <div class="mcs_containerChat" id="mcs_containerchatmynumber">
+                        <div class="customScrollBox">
+                            <div class="container padding0">
+                                <div class="content">
+                                    <span id="convholdermynumber"></span>
+                                </div>
+                            </div>
+                            <div class="dragger_container_holder">
+                                <div class="dragger_container displayblock" >
+                                    <div class="dragger">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <cmsr:MyTextBox onkeypress="return runScript(event,mynumber)" onfocus="setinboxread(mynumber)"   onkeyup="keyupdirection(this);" CssClass="mychatTextBox"
+                        runat="server" ID="Mychattextboxmynumber" />
+                    <div class="opensmillyholder" >
+                        <div onclick="openchatsmilly(this,mynumber);" class="mychatmillyclass">
+                        </div>
+                        <div class="mychatsmillyholder">                          
+                            <asp:Literal runat="server" ID="SmillyLiteral"></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onclick="showchatbox(this)" class="closechatwinclass">
+                   <div id="myachatnamehid" class="MyChatName chagewidth">[[name]]</div>
+                    <div onclick="closechat('mynumber',0)" class="closewhiteclass MyChatClose2"></div>
+            </div>
+        </div>
+        <div id="favouritetemplate" class="displaynone"  >
+        <div id="chatonlinefreindholdermyid" onclick="setchatif('myid','myname');" onmouseover="showfavouritedata(this,'myid');"  onmouseout="hidefavouritedata(this);" class="chatonlinefreindholder">
+        <div class="mychatimageholder"><img  onload="setimgposnew(this,imagex,imagey);" alt="" src="blank.gif" /> </div>
+        <div class="mychatimagefram mychatimageframblue"></div>
+        <div class="chatonlinename">myname</div>
+        <div class="chatonlinestatus"></div>
+        </div>
+        </div>
+        
+    </asp:Panel>
+        <asp:Panel runat="server" CssClass="ChatAlertPanelclass" ID="ChatAlertPanel" >
+            <div id="myinvitation"></div>
+
+    <div style="display:none;">
+        <div id="myonlineinv2" class="displaynone">
+            <div id="sidechatfram" class="sidechatfram">
+                  <div onclick="doclick" class="closeclass" ></div>
+                <div class="chatalertimgholder">
+                    <img   id="segoimag" alt=""  src="images/SiteImages/femaleimg1.png" />
+                    </div>
+                <div class="chatalertimgfram">
+                </div>
+                <div onclick="doacceptclick" class="doacceptvideoclass"><%= Languages.MyText("Accept_master") %> </div>
+                <div class="whitebtnleft donotnow"   >
+                    <div class="whitebtnright"><div onclick="doclick"  class="whitebtncenter w50class"   ><%= Languages.MyText("Not Now_master") %>  </div></div>
+                    <div  class="buttonloader"><img src="images/SiteImages/spindate-loader.gif" /></div>
+                </div>  
+                <div onclick="doclick;clickreport" class="doreportclass"><%= Languages.MyText("Report_master") %></div>
+                <div class="doinvitemsgclass">mytext</div>
+                <div class="doinvitecommentclass">commenttext</div>
+
+            </div>
+        </div>
+
+         
+<div id="myonlineinv" class="displaynone">            
+    <div id="sesidechatfram" class="sidechatfram2">
+                  <div onclick="doclick" class="closeclass" ></div>
+                <div class="chatalertimgholder">
+                    <img  id="goimag" alt=""  src="images/SiteImages/femaleimg1.png" />
+                    </div>
+                <div class="chatalertimgfram">
+                </div>               
+               <div class="goCancelvideoclass">  <div class="whitebtnleft"   >
+                   <div class="whitebtnright"><div onclick="doclick"  class="whitebtncenter w50class"   ><%= Languages.MyText("Cancel_master") %> </div></div>
+                   <div  class="buttonloader"><img src="images/SiteImages/spindate-loader.gif" /></div>
+
+                                                 </div>  </div>
+               
+                <div class="doinvitemsgclass2">mytext</div>
+            </div>
+    </div>
+            </div>
+        </asp:Panel>
+        <asp:Literal runat="server" ID="soundstate" ></asp:Literal>
+        <asp:Literal runat="server" ID="PageCodeLiteral" ></asp:Literal>
+        <input id="pagecodehidden" type="hidden" value="0" />
+    <%--jump pages ifram--%>
+    <div runat="server" id="mainIframHolder" class="RemoveBlockAlert">
+        <div id="aaaa" class="iframholder11" >
+            <div id="bbb" class="iframholder22" ></div>
+          <iframe frameborder="0" allowtransparency="true"  runat="server" class="mainiframeclass"
+            id="mainiframe"></iframe>
+            </div>
+   
+        <div  class="RemoveBlockAlert2"></div>
+        <div id="ajaxid" class="ajaxidclass" >           
+            <img alt="load" width="16" src="images/SiteImages/spindate-loader.gif" />
+        </div>     
+    </div>
+        <asp:Panel runat="server" ID="donothing" >
+            <script type="text/javascript">
+                function dobuildconv() {
+                }
+            </script>
+        </asp:Panel>
+         <asp:Panel runat="server" Visible="false" ID="ChatScriptPanel" >
+            
+    <script  type="text/javascript">
+        var imagex = 0;
+        var imagey = 0;
+        var checkalertlink1 = '<%= siteDefaults.GetLink("windows.aspx?status=3&member=")%>';
+        var checkalertlink3 = '<%= siteDefaults.GetLink("windows.aspx?status=7&member=")%>';
+        var checkalertlink4 = '<%= siteDefaults.GetLink("createroom.aspx?status=17")%>';
+        var checkalertlink5 = '<%= siteDefaults.GetLink("gift.aspx?status=2")%>';
+        var checkalertlink11 = '<%=  siteDefaults.GetLink("online.aspx") %>';
+        var checkalertlink12 = '<%= siteDefaults.GetLink("windows.aspx?status=9&member=") %>';
+        var checkalertlink20 = '<%= siteDefaults.GetLink("waitingwin.aspx?status=2&room=") %>';
+        var checkalertlink35 = '<%= siteDefaults.GetLink("lobby.aspx") %>';
+        var checkalertlink41 = '<%= siteDefaults.GetLink("chat.aspx?status=1&room=") %>';
+        var checkalertlink43 = '<%= siteDefaults.GetLink("chat.aspx?status=3&room=") %>';
+        var checkalertlink44 = '<%= siteDefaults.GetLink("chat.aspx?status=4&room=") %>';
+        var checkalertlink45 = '<%= siteDefaults.GetLink("chat.aspx?status=2&room=") %>';
+        var checkalertlink36 = '<%= siteDefaults.GetLink("createroom.aspx?status=24")%>';
+
+        var offline = '<%= Languages.MyText("offline_master")  %>';
+        var online = '<%= Languages.MyText("online_master")  %>'
+        var chatcount = '<%= onlinecountHiddenField.ClientID  %>';
+        var invitetext = '<%= Languages.MyText("Inviting [[name]] to a video chat..._master") %>';
+        var invitetext2 = '<%= Languages.MyText("Inviting [[name]] to a chat..._master") %>';
+        var invitetext4 = '<%= Languages.MyText("[[name]] invites you to a chat..._master") %>';     
+        var invitetext3 = '<%= Languages.MyText("[[name]] invites you to a video chat..._master") %>';
+        var invitetext5 = '<%= Languages.MyText("By clicking 'Not now' the caller see you're unavailable._master").Replace("'","\\'") %>';
+        var windowpath1 = '<%= siteDefaults.GetLink("windows.aspx?status=8") %>';
+        var windowpath2 = '<%= siteDefaults.GetLink("windows.aspx?status=12") %>';
+        var windowpath3 = '<%= siteDefaults.GetLink("spindatereport.aspx?status=2")%>';
+        var windowpath4 = '<%= siteDefaults.GetLink("blindroom.aspx")%>';
+        var windowpath5 = '<%= siteDefaults.GetLink("registermsg.aspx?status=13")%>';
+
+        var mypressdate = '0';
+        var timevalue = '<%= siteDefaults.GetParam("idletime")%>';
+        $(window).load(function () {
+            callconversation();
+            checkOnline(1);
+            setpagecode();
+        });
+        window.setInterval(function () {
+            checkifupade2();
+        }, 1000);
+        window.setInterval(function () {
+            checkisfavochange();
+           
+        }, 4000);
+        $('input').keyup(function () {         
+            $this = $(this);
+            if ($this.val().length > 1) {
+                var x = new RegExp("[\x00-\x80]+"); // is ascii
+                var isAscii = x.test($this.val()[0] + $this.val()[1]);
+
+                if (isAscii) {
+                    $this.css("direction", "ltr");
+                }
+                else {
+                    $this.css("direction", "rtl");
+                }
+            }
+        });     
+            window.setInterval(function () {
+                UpdateUSer();
+            }, 1000);
+
+            window.setInterval(function () {
+                checkAlerts();
+                console.log('aaaa' + $(".mainiframeclass").attr('src')); 
+            }, 1000);
+            window.setInterval(function () {
+                checkOnline(0);
+            }, 1000);
+
+            setsoundoffo();      
+            callFavourite('');
+            var mytime = '';
+            $('body').mousemove(function () { setidletime(); })
+            
+            window.setInterval(function () {
+                checktime(timevalue);
+            }, 60000);
+            window.setInterval(function () {
+                checkpagecode();
+            }, 5000);
+            var pathout = '<%= siteDefaults.GetLink("OutFromDate.aspx") %>';
+          
+        var currentVal = 0;
+        function sharethis(num, sender)
+        {
+            switch (num)
+            {
+                case 1:
+                    if ($(sender).attr('class').indexOf('sharefaceclasssel') > 0) {
+                        $(sender).removeClass('sharefaceclasssel');
+                        $(sender).addClass('sharefaceclass');
+                        currentVal = 0;
+                    } else {
+                        clearsharebtn();
+                        $(sender).removeClass('sharefaceclass');
+                        $(sender).addClass('sharefaceclasssel');
+                        currentVal = 1;
+                    }
+                    break;
+                case 2:
+                    if ($(sender).attr('class').indexOf('sharetwitlasssel') > 0) {
+                        $(sender).removeClass('sharetwitlasssel');
+                        $(sender).addClass('sharetwitlass');
+                        currentVal = 0;
+                    } else {
+                        clearsharebtn();
+                        $(sender).removeClass('sharetwitlass');
+                        $(sender).addClass('sharetwitlasssel');
+                        currentVal = 2;
+                    }
+                    break;
+                case 3:
+                    if ($(sender).attr('class').indexOf('sharegoogleclasssel') > 0) {
+                        $(sender).removeClass('sharegoogleclasssel');
+                        $(sender).addClass('sharegoogleclass');
+                        currentVal = 0;
+                    } else {
+                        clearsharebtn();
+                        $(sender).removeClass('sharegoogleclass');
+                        $(sender).addClass('sharegoogleclasssel');
+                        currentVal = 3;
+                    }
+
+                    break;
+                case 4:
+                    if ($(sender).attr('class').indexOf('shareyahooclasssel') > 0) {
+                        $(sender).removeClass('shareyahooclasssel');
+                        $(sender).addClass('shareyahooclass');
+                        currentVal = 0;
+                    } else {                      
+                        clearsharebtn();
+                        $(sender).removeClass('shareyahooclass');
+                        $(sender).addClass('shareyahooclasssel');
+                        currentVal = 4;
+                    }
+                    break;
+            }
+
+        }
+        function clearsharebtn()
+        {
+            $('.sharegoogleclasssel').addClass('sharegoogleclass');
+            $('.sharegoogleclasssel').removeClass('sharegoogleclasssel');
+            $('.sharetwitlasssel').addClass('sharetwitlass');
+            $('.sharetwitlasssel').removeClass('sharetwitlasssel');
+            $('.sharefaceclasssel').addClass('sharefaceclass');
+            $('.sharefaceclasssel').removeClass('sharefaceclasssel');
+            $('.shareyahooclasssel').addClass('shareyahooclass');
+            $('.shareyahooclasssel').removeClass('shareyahooclasssel');
+
+        }
+        function doshare()
+        {
+            switch (currentVal)
+            {
+
+                case 1:                  
+
+                    window.open(
+                      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+                      'facebook-share-dialog', 
+                      'width=626,height=436'); 
+                    return false;
+                    break;
+                case 2:
+                 window.open(
+                      'https://twitter.com/share?url=' + encodeURIComponent(location.href)); 
+                    return false;
+                    break;
+                case 3:
+                    window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href), '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;
+                    break;
+                case 4:
+                    openMyprofile(windowpath5, '450', '570');
+                    break;
+
+            }
+        }
+        
+    </script>
+    </asp:Panel>
+        <asp:Panel runat="server" ID="OnlineJSLTRPanel" >
+             <script type="text/javascript">                
+                 var directionrtl = 2;
+            </script>
+        </asp:Panel>
+        <asp:Panel runat="server" Visible="false" ID="OnlineJSRTLPanel" >
+             <script type="text/javascript">
+                  directionrtl = 1;
+                 
+            </script>
+        </asp:Panel>
+    <script type="text/javascript">
+        var myconvhtml = '<div class="Myfreindholderclass"><div class="mychatimageholder"><img onload="loadimg" src="blank.gif"></div><a  href="<%= siteDefaults.GetLink("profile.aspx?profile=numberid") %>" class="mychatimagefram"></a><div class="mychatnsgholder"><div class="mychattime">mytime</div><div class="mychatmsg">mycontent</div></div></div>';        
+        $(window).load(function () {          
+            mCustomScrollbarschat();
+            mCustomScrollbars();
+        });
+      //  openMyprofile('createroom.aspx?status=24', '480', '470');
+        // openMyprofile('spindatereport.aspx?status=2&member=33', '450', '570');
+      //openMyprofile('createroom.aspx?status=17&room=141', '480', '470');
+       // openMyprofile('Onlineshow.aspx?user=11', '640', '570');
+        // openMyprofile('registermsg.aspx?status=12', '480', '470');
+        // openMyprofile('editimage.aspx?image=41', '760', '650');
+        // openMyprofile('images.aspx', '760', '650');
+      //  openMyprofile('Guide.aspx', '640', '570');
+        // openMyprofile('Onlineshow.aspx?user=64', '640', '570');
+        // openMyprofile('contact.aspx?lang=3', '640', '570');
+        //   openMyprofile('registermsg.aspx?status=10', '480', '470');
+        // openMyprofile('about.aspx', '560', '620');
+        // openMyprofile('setting.aspx?lang=3', '750', '760');
+        // openMyprofile('images.aspx', '760', '650');
+        // openMyprofile('spindatereport.aspx?status=1&online=231', '450', '570');
+        //  openMyprofile('Sendmsg.aspx?sendto=60', '540', '470');
+        //  openMyprofile('windows.aspx?status=9&member=61', '640', '470');
+       //  openMyprofile('waitingwin.aspx?status=1&room=131&lang=3', '930', '570');
+        //   openMyprofile('subscribe.aspx?status=1', '690', '750');
+        //  openMyprofile('gift.aspx?status=1&sendto=61', '640', '670');
+        //openMyprofile('alerts.aspx?lang=3', '560', '650');
+       // openMyprofile('createroom.aspx?status=19&room=93', '460', '670');
+        var basemyimage = '<%= MemberImage %>';
+        var baseimagex = '<%= imagex %>';
+        var baseimagey = '<%= imagey %>';       
+        var boxmynumber = '<%= Mychattextboxmynumber.ClientID %>';
+        var dotogleChat = 'true';
+        var dotogle3 = 'true';
+      
+
+        $('html').click(function () {
+            var istogle = true;
+            $('.mychatsmillyholder').each(function () {
+                if (dotogleChat == "true" && $(this).css('height') == '105px') {
+                    $('.mychatsmillyholder').css('height', '0px');
+                    istogle = false;
+                }
+            });
+            if (istogle) {
+                dotogleChat = "true";
+            }
+        });      
+        $('html').click(function () {
+            var istogle = true;
+            $('.chatmenuholder').each(function () {
+
+                if (dotogle3 == "true" && $(this).css('height') == '155px') {
+                    $('.chatmenuholder').css('height', '0px');
+                    $('.chatmenuholder').css('padding', '0px');
+                    istogle = false;
+                }
+            });
+            if (istogle) {
+                dotogle3 = "true";
+            }
+        });   
+        $.fn.insertAtCaret = function (text) {
+            this.focus();
+            return this.each(function () {
+
+                if (document.selection && this.tagName == 'TEXTAREA') {
+                    //IE textarea support
+                    this.focus();
+                    sel = document.selection.createRange();
+                    sel.text = text;
+                    this.focus();
+                } else if ($.browser.msie) {
+                    // IE input[type=text] and other browsers
+                    this.value += text;
+                    this.focus();
+                    this.value = this.value;    // forces cursor to end
+
+                } else if (this.selectionStart || this.selectionStart == '0') {
+                    //MOZILLA/NETSCAPE support
+                    startPos = this.selectionStart;
+                    endPos = this.selectionEnd;
+                    scrollTop = this.scrollTop;
+                    this.value = this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length);
+                    this.focus();
+                    this.selectionStart = startPos + text.length;
+                    this.selectionEnd = startPos + text.length;
+                    this.scrollTop = scrollTop;
+                } else {
+                    // IE input[type=text] and other browsers
+                    this.value += text;
+                    this.focus();
+                    this.value = this.value;    // forces cursor to end
+                }
+            });
+        };
+        function inserttoline(sender)
+        {
+        }
+
+    </script>
+    <asp:Literal runat="server" ID="SiteBottomLiteral" ></asp:Literal>
+    <asp:Literal runat="server" ID="SystemBottomLiteral" ></asp:Literal>
+    </form>
+</body>
+</html>

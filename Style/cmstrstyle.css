@@ -1,0 +1,426 @@
+﻿body {
+}
+
+/* Start mainmenu control */
+      .menuholderClass   
+{
+width:700px; 
+margin:auto;
+margin-top:40px;
+}
+.menuholderClass  .topLinkholderclass  
+{
+   
+    position:relative;
+    float:right;    
+}
+.menuholderClass  .topLinkholderclass   .MainMenuRightClass
+{
+  float:right;
+  #float:none;
+  margin:4px;    
+  height:40px;
+  background-color:Red;
+  padding-right:6px;
+}
+.menuholderClass  .topLinkholderclass  .MainMenuLeftClass
+{    
+  height:40px;
+  background-color:yellow;
+  padding-left:6px;
+}
+.menuholderClass  .topLinkholderclass  .MainMenuCenterClass
+{
+    height:32px;
+    background-color:green;
+    padding:4px;
+}    
+
+.menuholderClass  .topLinkholderclass  .MainMenuCenter2Class
+{
+     height:32px;
+    background-color:white; 
+    line-height:32px;
+    font-weight:bold;
+    padding:0px 3px;
+    font-size:16px;
+}
+.menuholderClass  .topLinkholderclass  .subcatholderclass
+{
+    overflow:hidden;
+    position:absolute;   
+    margin-top:50px;
+     # margin-top:0px;
+    
+    
+}
+.menuholderClass  .topLinkholderclass  .subcatholderinside1class
+{
+  
+    
+    
+}
+.menuholderClass  .topLinkholderclass  .subcatholderinside2class
+{
+   
+    
+    
+}
+
+.menuholderClass  .topLinkholderclass  .SubMenuRightClass
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .SubMenuLeftClass
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .SubMenuCenterClass
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .SubMenuCenter2Class
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .MainSepclass
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .subsepclass
+{
+    
+}
+.menuholderClass  .topLinkholderclass  .mainmenulinkclass
+{
+    color:Black;
+}
+
+
+.menuholderClass  .topselLinkholderclass  
+{
+    
+    position:relative;
+    float:right;
+    
+}
+.menuholderClass  .topselLinkholderclass  .MainMenuRightClass
+{
+  float:right;
+  #float:none;
+  margin:4px;    
+  height:40px;
+  background-color:Red;
+  padding-right:6px;
+}
+.menuholderClass  .topselLinkholderclass  .MainMenuLeftClass
+{
+   height:40px;
+  background-color:yellow;
+  padding-left:6px;  
+}
+.menuholderClass  .topselLinkholderclass  .MainMenuCenterClass
+{
+     height:32px;
+    background-color:green;
+    padding:4px;
+}    
+
+.menuholderClass  .topselLinkholderclass  .MainMenuCenter2Class
+{
+    height:32px;
+    background-color:orange; 
+    line-height:32px;
+    font-weight:bold;
+    padding:0px 3px;  
+    font-size:16px;
+}
+.menuholderClass  .topselLinkholderclass  .subcatholderclass
+{
+    overflow:hidden;
+    overflow:hidden;
+    position:absolute;   
+    margin-top:40px;
+    # margin-top:0px;
+}
+.menuholderClass  .topselLinkholderclass  .subcatholderinside1class
+{
+   
+}
+.menuholderClass  .topselLinkholderclass  .subcatholderinside2class
+{
+    
+}
+
+.menuholderClass  .topselLinkholderclass  .SubMenuRightClass
+{    
+}
+.menuholderClass  .topselLinkholderclass  .SubMenuLeftClass
+{    
+}
+.menuholderClass  .topselLinkholderclass  .SubMenuCenterClass
+{    
+}
+.menuholderClass  .topselLinkholderclass  .SubMenuCenter2Class
+{    
+}
+.menuholderClass  .topselLinkholderclass  .MainSepclass
+{    
+}
+.menuholderClass  .topselLinkholderclass  .subsepclass
+{    
+}
+.menuholderClass  .topselLinkholderclass  .mainmenulinkclass
+{      color:Black;
+}  
+   
+ /* end mainmenu control */
+
+ /* control Articles */
+.ArticleHolderClass
+{    
+   float:right;
+    width:730px;
+    overflow:hidden;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.ArticleHolderClass .ArticlePlaceHolderClass
+{
+width:800px;
+height:200px;
+float:right;
+overflow:hidden;
+       
+}
+.ArticleHolderClass  .ContentHolderClass
+{
+    width:590px;
+    float:right;
+    overflow:hidden;
+    }
+.ArticleHolderClass .ArticleImageHolderClass
+{
+   float:right;
+    width:166px;
+    height:103px;
+    background:url('images/ArticlesImages/ArticleListPicFrame.png') center center no-repeat;
+    margin-left:7px;
+    overflow:hidden;    
+    }    
+.ArticleHolderClass .GoToArticleViv
+{
+    float:right;   
+    width:680px;
+   
+    
+    }
+    
+.ArticleHolderClass .GoToArticleClass
+{
+    float:left;
+    display:block;
+    font-size:14px;
+    width:78px;
+    text-decoration:underline;
+    color:#ae0101;
+    padding-left:20px;
+    background:url('images/ArticlesImages/FullArticleLinkIcon.png') left center no-repeat;
+    
+    }
+
+.ArticleHolderClass .ArticleNameClass
+{
+    float:right;
+    display:block;
+    width:440px;
+    font-size:18px;
+    color:#1c4c61;
+    
+    }
+ 
+    
+.ArticleHolderClass .ArticleSubtitleClass
+{
+    
+    }
+.ArticleHolderClass .ArticleShortContentClass
+{
+     float:right;
+    font-size:14px;
+    color:#6e7389;
+    line-height:18px;
+    height:55px;
+    overflow:hidden;
+    margin:10px 0px;
+    width:460px;
+    text-align:justify;
+    }
+
+
+.ArticleHolderClass .ArticleSeperator
+{
+      float:right;
+    display:block;
+    width:680px;
+    border:none;
+    border-top:1px solid #c6c6c5;
+        
+}
+    
+.ArticleHolderClass .NumberMenuClass
+{
+   clear:right;
+    float:left;
+    width:300px;
+    height:28px;
+    padding-top:10px;
+    margin-bottom:20px;  
+    margin-left:220px;
+}
+.ArticleHolderClass .numTableclass
+{
+    width:500px;
+    text-align:center;        
+}
+.ArticleHolderClass .numberTDclass
+{
+    
+        
+}
+.ArticleHolderClass .navigateprevclass
+{
+   display:none;	
+        
+}
+.ArticleHolderClass .navigatenextclass
+{
+     
+  display:none;	
+}
+.ArticleHolderClass .navigate-number
+{
+   float:left;
+    display:block;
+    margin-left:1px;  
+    font-size:19px;
+    width:26px;
+    height:25px;
+    text-decoration:none;
+    color:#919190;
+    font-weight:bold;
+    padding-top:3px;
+    padding-right:2px;
+    text-align:center;    
+}
+.ArticleHolderClass .navigate-number:hover
+{
+    background:url('images/ArticlesImages/ArticlePagesNumBG.png') center center no-repeat;
+    color:#fbfbfb;
+}
+.ArticleHolderClass .navigate-current
+{
+   float:left;
+    display:block;
+    margin-left:1px;  
+    font-size:19px;
+    width:26px;
+    height:25px;
+    text-decoration:none;
+    color:#919190;
+    font-weight:bold;
+    padding-top:3px;
+    padding-right:2px;
+    text-align:center;    
+}
+
+.ArticleHolderClass .ArticleTdClass
+{
+       width:166px;
+    height:100px;
+    vertical-align:middle;
+    text-align:center;
+    
+}
+
+.ArticleHolderClass .ArtilceGoBack1Class
+{
+    float:left;
+    display:block;
+    font-size:14px;
+    text-decoration:underline;
+    color:#ae0101;
+    padding-left:20px;
+    background:url('images/ArticlesImages/FullArticleLinkIcon.png') left center no-repeat;     
+    width:80px;
+    height:16px;
+    
+}
+.ArticleHolderClass .ArtilceGoBack2Class
+{
+    float:left;
+    display:block;
+    font-size:14px;
+    text-decoration:underline;
+    color:#ae0101;
+    padding-left:20px;
+    background:url('images/ArticlesImages/FullArticleLinkIcon.png') left center no-repeat;    
+    width:80px;
+    height:16px;
+    
+}
+.ArticleHolderClass .SelectedArticleHolderClass
+{
+   float:right;
+    width:720px;   
+    
+}
+.ArticleHolderClass .SelectedArticleImageHolderClass
+{
+   float:right;
+    width:216px;
+    height:134px;
+    background:url('images/ArticlesImages/ArticleListPicFrame_LRG.png') center center no-repeat;
+    padding-right:10px;
+    padding-top:2px;   
+    
+}
+.ArticleHolderClass .SelectedArticleTdClass
+{
+     width:208px;
+    height:125px;
+    vertical-align:middle;
+    text-align:center; 
+    
+}
+.ArticleHolderClass .SelectedArticleNameClass
+{
+    
+     float:right;
+    display:block;
+    width:440px;
+    font-size:18px;
+    color:#1c4c61;
+}
+.ArticleHolderClass .SelectedArticleSubTitleClass
+{
+    
+    
+}
+.ArticleHolderClass .SelectedArticleDateClass
+{
+    
+    
+}
+.ArticleHolderClass .SelectedArticleContentClass
+{
+  float:right;
+    font-size:14px;
+    color:#6e7389;
+    line-height:18px;
+    margin:10px 0px;
+    width:460px;   
+    
+}
+
+/* end control Articles */

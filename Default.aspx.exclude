@@ -1,0 +1,255 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Homepage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Style/styleSheet.css" rel="stylesheet" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js" type="text/javascript" charset="utf-8"></script>
+    <title>ISRAELikers</title>
+    <link rel="icon" type="image/png" href="images/smile.png">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46208718-1', 'israelikers.org');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+<body runat="server" id="PageBody">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" EnablePartialRendering="true" />
+        <asp:Panel runat="server" ID="Panel_WebSiteView" Visible="false">
+            <asp:UpdatePanel runat="server" ChildrenAsTriggers="true">
+                <ContentTemplate>
+                    <asp:Panel runat="server" ID="Panel_LoggedUser" Visible="false">
+                        <%--MainPanel--%>
+                        <div class="OuterHolder" style="height: 115px; background-color: #EBEBEB; border-bottom: 2px solid white;">
+
+                            <div class="InnerHolder" style="position: relative; height: 100%;">
+                                <img src="images/HomeImages/LoginLogo.png" style="width: 331px; height: 76px; position: absolute; left: 10px; top: 10px;" />
+                                <div style="position: absolute; right: 10px; top: 10px;">
+                                    <div class="rightlogoclass">
+                                        <img src="images/HomeImages/rightlogo.png" /></div>
+
+
+                                    [<asp:LinkButton ID="Button1" CssClass="LogOutBtn" Text="Log Out" OnClick="Unnamed_Click" runat="server" />]
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="OuterHolder" style="min-height: 500px; background: url('images/HomeImages/background.png'); background-size: 100% 100%;">
+                            <div style="width:900px;margin:auto;">
+                            <div  class="InnerHolder" style="float:left;width:900px;">
+                                <div class="ControlpanelDiv">
+
+
+                                    <div class="CPele marginCPele">
+                                        <%--picture div--%>
+                                        <div style="margin-bottom: 5px;">
+                                            <asp:Label CssClass="lbl_User_Nameclass"
+                                                ID="lbl_User_Name" Text="" runat="server" /><br />
+                                            <span class="personalzoneclass">Welcome to your personal zone</span>
+                                        </div>
+                                        <div class="ImgDiv">
+                                            <img runat="server" id="UserIMG" /></div>
+                                        <div style="display: inline-block; margin-left: 7px;">
+                                            <img src="images/HomeImages/LoginFaceBook_icon.png" style="width: 20px; height: 20px; margin-right: 5px; vertical-align: text-bottom;" /><span style="color: #446FB6; font-size: 12.6px; font-family: Arial;">Facebook Shares</span><br />
+                                            <div class="statsBackDiv" style="margin-bottom: 3px; margin-top: 3px;">
+                                                <asp:Label ID="lbl_User_FBShares" Text="" runat="server" />
+                                            </div>
+                                            <img src="images/Mission_Images/Share_mail_Button.png" style="width: 20px; height: 20px; margin-right: 5px; vertical-align: text-bottom;" /><span style="color: #446FB6; font-size: 12.6px; font-family: Arial;">Mail Shares</span><br />
+                                            <div class="statsBackDiv" style="margin-bottom: 3px; margin-top: 3px;">
+                                                <asp:Label ID="lbl_User_MailShares" Text="" runat="server" />
+                                            </div>
+                                            <span style="color: #446FB6; font-size: 12.6px; font-family: Arial;">Points you have collected</span><br />
+                                            <div class="statsBackDiv" style="margin-top: 1px;">
+                                                <asp:Label ID="lbl_User_TotalPoints" Text="" runat="server" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="CPele tempatureHolderClass">
+                                        <%--thermometer div--%>
+
+                                        <div class="blueclass"></div>
+                                        <div runat="server" id="mygrayclass" class="grayclass"></div>
+                                        <div class="tempatureClass"></div>
+                                        <%--   <img src="HomeImages/tempature.png" style="width: 113px; height: 100%; margin-right: 10px; margin-left: 10px;" />--%>
+                                    </div>
+                                    <div class="CPele" style="margin-right: 15px; height: 216px;">
+                                        <asp:Label ID="lbl_User_Mail" Text="" runat="server" Visible="false" />
+                                    </div>
+                                    <div style="float: none; clear: both;"></div>
+                                </div>
+                                <img src="images/HomeImages/shadow.png" style="margin: auto; height: 50px; width: 100%; font-size: 0; margin-bottom: -5px;" />
+                                <div style="float:left;" class="MissionWaitingHolder">
+                                    <div class="MissionsAppendclass">Missions still standing</div>
+                                    
+                                    <asp:Repeater  runat="server" ID="RepaterMissionsToDo">
+                                        <ItemTemplate>
+                                            <div style="float: left">
+                                                <div style="width: 195px; height: 150px; overflow: hidden; float: left;">
+                                                    <img src='<%# Eval("JoinIMG")  != ""? Eval("JoinIMG"):"images/HomeImages/LoginLogo.png"%>' style="max-height: 150px; max-width: 195px;" /></div>
+                                                <div style="margin-bottom: 5px; float: left; width: 530px;"><a class="missiontitleclass" target="_blank" href='<%# "Mission.aspx?name="+Eval("PageGuid")+"&mail="+_usermail %>'><%# Eval("missionheader").ToString()==""? "Share this"+ Eval("MissionType") +"  Now":Eval("missionheader").ToString()   %> </a></div>
+
+
+                                                <a class="goforitclass" style="float: left;" target="_blank" href='<%# "Mission.aspx?name="+Eval("PageGuid")+"&mail="+_usermail %>'>
+                                                    <span style="font-size: 45px;">GO</span>
+                                                    <span>For it</span>
+                                                </a>
+                                                <div style="float:left;width:530px;margin-top:-40px;">
+                                                    <div class="missioncontentclass"><%#Eval("PostText") %></div>
+                                                    <div class="datemissionholderclass">
+                                                        <div class="missiondateclass">
+                                                            Exp Date: <%# ((DateTime)Eval("EndingDate")).ToShortDateString() %>
+                                                        </div>
+
+                                                        <div class="missiondateclass2">
+                                                            <%#    (((DateTime)Eval("EndingDate")) - DateTime.Now).Days + " Days left"  %>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       
+
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                
+                                </div>
+                                <div style="float:left;"     class="MissionDoneHolder">
+                                    <div class="missionaccomplished">Missions- already accomplished </div>
+                                    <%-- <img src="images/HomeImages/MissionsExcecutedLogo.png" style="width: 424px; height: 72px; margin-left: 15px; margin-top: 25px; margin-bottom: 25px;" />--%>
+                                    <table style="margin-left: 15px;">
+
+                                        <asp:Repeater ID="missionsDoneRepeater" runat="server">
+                                            <ItemTemplate>
+
+                                                <tr>
+                                                    <td style="width: 200px; padding-right: 15px; font-size: 0px;">
+                                                        <img src='<%# Eval("JoinIMG")  != ""? Eval("JoinIMG"):"images/HomeImages/LoginLogo.png"%>' style="max-height: 150px; max-width: 200px;" />
+                                                    </td>
+                                                    <td valign="top" style="width: 450px; padding-right: 20px;">
+                                                        <div class="missiontitleclassa"><a class="missiontitleclass" target="_blank" href='<%# "Mission.aspx?name="+Eval("PageGuid")+"&mail="+_usermail %>'><%# Eval("missionheader").ToString()==""? "Share this"+ Eval("MissionType") +"  Now":Eval("missionheader").ToString()   %></a></div>
+                                                        <div style="float: left; margin-left: 30px;">
+                                                            <img src="images/HomeImages/MissionDoneIcon.png" style="width: 79px; height: 84px;" /></div>
+                                                        <%-- <div class="missioncontentclass" ><%#Eval("PostText") %></div>--%>
+                                                        <div class="accomplishdateclass">
+                                                            Acomplished on: <%# ((DateTime)Eval("DatePosted")).ToShortDateString() %>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="middle" style="text-align: center;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <div style="height: 25px;"></div>
+                                                    </td>
+                                                </tr>
+
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </table>
+                                </div>
+
+                            </div>
+                                </div>
+                        </div>
+
+
+
+                    </asp:Panel>
+                    <%--Login Panel--%>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+
+
+        </asp:Panel>
+        <asp:Panel runat="server" ID="Panel_FacebookView" Visible="false">
+            <div class="HeaderDiv">
+                <img src="images/RegisterImages/IsraelLikersLogo.png" style="width: 331px; height: 76px;" />
+            </div>
+            <div class="BodyDiv">
+                <script>
+                    window.fbAsyncInit = function () {
+                        FB.init({
+                            appId: '<%=siteDefaults.FbClientId.ToString()%>',
+                            status: true, // check login status
+                            cookie: true, // enable cookies to allow the server to access the session
+                            xfbml: true  // parse XFBML
+                        });
+                        FB.Event.subscribe('auth.authResponseChange', function (response) {
+
+                            if (response.status === 'connected') {
+                                GetUserDeatilsFacebook();
+                            }
+                        });
+                    };
+                    // Load the SDK asynchronously
+                    (function (d) {
+                        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                        if (d.getElementById(id)) { return; }
+                        js = d.createElement('script'); js.id = id; js.async = true;
+                        js.src = "//connect.facebook.net/en_US/all.js";
+                        ref.parentNode.insertBefore(js, ref);
+                    }(document));
+
+
+                    function GetUserDeatilsFacebook() {
+                        FB.api('/me', function (response) {
+
+                            AjaxLoginUserFromFacebook(response.id);
+                        });
+                    }
+                    function AjaxLoginUserFromFacebook(ID) {
+                        //alert("hello " + ID);
+                        $.ajax({
+                            type: "POST",
+                            url: "Default.aspx/LogUserWithFB",
+                            data: "{'ID':'" + ID + "'}",
+                            dataType: "json",
+                            contentType: "application/json; charset=utf-8",
+                            success: function (msg) {
+                                alert(msg.d);
+                                if (msg.d == "JustLogged") {
+
+                                    window.location = window.location;
+                                }
+                                else if (msg.d == "AlreadyLogged") {
+
+                                }
+                                else {
+                                    alert("An Error Occured");
+                                }
+
+                            },
+                            error: function (msg) {
+                                //alert(msg.status + " " + msg.text);
+                            }
+                        });
+                    }
+                </script>
+
+                <div>
+
+                    <asp:Label ID="lblName" Text="" runat="server" />
+                    <asp:Label ID="lblMail" Text="" runat="server" />
+                    <img runat="server" id="MinPictureImg" />
+                </div>
+            </div>
+        </asp:Panel>
+
+    </form>
+</body>
+</html>

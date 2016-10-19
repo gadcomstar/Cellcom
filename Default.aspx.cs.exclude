@@ -1,0 +1,325 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Homepage : System.Web.UI.Page
+{
+
+    protected bool FB_Mode = false;
+    public  string _usermail = "";
+    protected string User_Fullname = "";
+    protected int User_TotalFbShares = 0;
+    protected int User_TotalFbUniqeShares = 0;
+    protected int User_TotalMailShares = 0;
+    protected int User_TotalMailUniqeShares = 0;
+    protected int User_ID = 0;
+    protected int User_Points = 0;
+    int place = 0;
+    int totalcount = 0;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(Request.QueryString["fb_source"]))
+        {
+            FB_Mode = true;
+        }
+        if (!string.IsNullOrEmpty(Request.QueryString["mail"]))
+        {
+            _usermail = Request.QueryString["mail"].ToString();
+        }
+        if (FB_Mode)
+        {
+            Panel_FacebookView.Visible = true;
+            if (Session["Logged"] != null && Session["Logged"] == "true")
+            {
+                if (Session["LoggedUserMail"] != null)
+                {
+                    lblName.Text = Session["LoggedUserMail"].ToString();
+
+                }
+            }
+        }
+        else
+        {
+            Panel_WebSiteView.Visible = true;
+            if (Session["Logged"] == null)
+            {
+                Response.Redirect("login.aspx");
+                //if (!string.IsNullOrEmpty(Request.QueryString["mail"]))
+                //{
+                //    txtUsername.Text = Request.QueryString["mail"].ToString();
+                //}
+                //Panel_login.Visible = true;
+               
+                //PageBody.Attributes["class"] = "LoginBodyClass";
+
+            }
+            else
+            {
+                Panel_LoggedUser.Visible = true;
+                UserIMG.Src = Session["LoggedUserPicture"] != null ? Session["LoggedUserPicture"].ToString().Replace("square", "large") : "";
+                if (Session["LoggedUserMail"] != null)
+                {
+                    _usermail = Session["LoggedUserMail"].ToString();
+                }
+                if (_usermail != "")
+                {
+                    lbl_User_Mail.Text = _usermail;
+                    bool UsersExists = false;
+                    using (MySqlConnection con = new MySqlConnection(siteDefaults.ConnStr))
+                    {
+                        con.Open();
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = con;
+                        cmd.CommandText = "SELECT * from tblUsers where EmailAddress='" + _usermail + "' limit 1";
+                        MySqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            int.TryParse(dr["UserID"].ToString(), out User_ID);
+                            User_Points = dr.GetInt32("UserPoints");
+                            User_Fullname = dr["FullName"].ToString();
+                            UsersExists = true;
+                        }
+                        dr.Close();
+                        if (UsersExists)
+                        {
+                            lbl_User_Name.Text = User_Fullname;
+
+                            cmd.CommandText = string.Format("select MissionName,(select count(*) from tblposts2missions as tbl1 left join tblpages as tbl2 on tbl2.PageGuid = tbl1.MissionName where UserMail='{0}' AND Platform='FB' and givenpts != 0 AND tbl2.pageguid is not null ) as 'CountFBShares',(select count(*) from tblposts2missions as tbl1 left join tblpages as tbl2 on tbl2.PageGuid = tbl1.MissionName where UserMail='{0}' AND Platform='Mail' and givenpts != 0 AND tbl2.pageguid is not null ) as 'CountMailShares',(select sum(GivenPts)  from tblposts2missions where GivenPts !=0 AND UserMail='{0}') as 'MyTotalPoints'  from tblposts2missions  left join tblpages on PageGuid = MissionName where  UserMail='{0}' limit 1", _usermail);
+                            dr = cmd.ExecuteReader();
+                            if (dr.Read())
+                            {
+
+                                User_TotalFbShares = dr.GetInt32("CountFBShares") != null ? dr.GetInt32("CountFBShares") : 0;
+                                User_TotalMailShares = dr.GetInt32("CountMailShares") != null ? dr.GetInt32("CountMailShares") : 0;
+
+                                int.TryParse(dr["MyTotalPoints"].ToString(), out User_Points);
+                                lbl_User_MailShares.Text = User_TotalMailShares.ToString();
+                                lbl_User_FBShares.Text = User_TotalFbShares.ToString();
+                                lbl_User_TotalPoints.Text = User_Points.ToString();
+
+
+                            }
+                            dr.Close();
+                            cmd.CommandText = "select tbl1.*, tbl2.* from tblposts2missions as tbl1 left join tblpages as tbl2 on tbl1.MissionName = tbl2.PageGuid where tbl1.UserMail='" + _usermail + "' AND idtblpages is not null group by tbl1.MissionName order by DatePosted Desc ";
+                            dr = cmd.ExecuteReader();
+
+                            missionsDoneRepeater.DataSource = dr;
+                            missionsDoneRepeater.DataBind();
+
+                            dr.Close();
+                            cmd.CommandText = String.Format("Select (Select place From (  Select EmailAddress,@row := @row + 1 as place From( SELECT EmailAddress,Sum(GivenPts) as mySum FROM (tblusers Left join tblposts2missions On tblusers.EmailAddress=tblposts2missions.UserMail) Group by EmailAddress Order by mySum desc) as table1 ,(SELECT @row := 0) r ) as table3 where EmailAddress='{0}' ) as myPlace , (Select count(*) From( SELECT EmailAddress,Sum(GivenPts) as mySum FROM (tblusers Left join tblposts2missions On tblusers.EmailAddress=tblposts2missions.UserMail) Group by EmailAddress Order by mySum) as table2 ) as mycount;  ", _usermail);
+
+                            dr = cmd.ExecuteReader();
+                            if (dr.Read())
+                            {
+                                int.TryParse(dr["myPlace"].ToString(), out place);
+                                int.TryParse(dr["mycount"].ToString(), out totalcount);
+                                //int place = 0;
+                                //int totalcount = 0;
+                                //string a = dr["myPlace"].ToString();
+                                //string b = dr["mycount"].ToString();
+                            }
+                            dr.Close();
+                            if (!IsPostBack)
+                            {
+                                List<string> _lst = siteDefaults.GetUserMissions(_usermail);
+                                List<string> _lst2 = new List<string>();
+
+                                foreach (string item in _lst)
+                                {
+                                    _lst2.Add("'" + item.ToString() + "'");
+
+                                }
+                                if (_lst.Count > 0)
+                                {
+                                    cmd.CommandText = string.Format("SELECT *,(select count(*) from tblposts2missions where MissionName = tblpages.pageguid AND usermail='{1}') as MyCount from tblpages where pageguid in({0})  AND (select count(*) from tblposts2missions where MissionName = tblpages.pageguid AND usermail='{1}') = 0 AND date(endingdate) >= date(now())  group by pageguid", string.Join(",", _lst2.ToArray()), _usermail);
+                                    dr = cmd.ExecuteReader();
+                                    if (dr.HasRows)
+                                    {
+                                        RepaterMissionsToDo.DataSource = dr;
+                                        RepaterMissionsToDo.DataBind();
+                                    }
+                                }
+                            }
+                        }
+
+                        con.Close();
+                    }
+                    int myheight =  170*(place * 10000 / totalcount)/10000 +4;
+                    mygrayclass.Style["height"] = myheight+"px";
+                }
+            }
+
+        }
+
+    }
+    protected void Unnamed_Click(object sender, EventArgs e)
+    {
+        if (Session["Logged"] != null)
+        {
+
+        }
+        if (Session["LoggedMail"] != null)
+        {
+            Session["LoggedMail"] = null;
+        }
+        if (Session["justRegistered"] != null)
+        {
+            Session["justRegistered"] = null;
+
+        }
+        Session["Logged"] = null;
+        Session["LoggedFB"] = null;
+        Session["LoggedUser"] = null;
+        Session["LoggedUserMail"] = null;
+        Session["LoggedUserPicture"] = null;
+        Response.Redirect("./");
+    }
+    //[System.Web.Services.WebMethod]//facebookLogin inside Website
+    //public static string LogUserWithWebsite(string ID)
+    //{
+    //    string _res = "";
+    //    if (HttpContext.Current.Session["Logged"] == null || HttpContext.Current.Session["Logged"].ToString() != "true")
+    //    {
+    //        using (MySqlConnection con = new MySqlConnection(siteDefaults.ConnStr))
+    //        {
+    //            con.Open();
+    //            MySqlCommand cmd = new MySqlCommand();
+    //            cmd.Connection = con;
+    //            cmd.CommandText = " SELECT * from tblUsers where LoginTypeID='" + ID + "' Limit 1";
+    //            MySqlDataReader dr = cmd.ExecuteReader();
+    //            if (dr.Read())
+    //            {
+    //                HttpContext.Current.Session["Logged"] = "true";
+    //                HttpContext.Current.Session["LoggedUserMail"] = dr["EmailAddress"].ToString();
+    //                HttpContext.Current.Session["LoggedUserPicture"] = dr["LoginProfilePic"].ToString();
+    //                HttpContext.Current.Session["LoggedUserID"] = ID;
+    //                _res = "JustLogged";
+    //            }
+    //            dr.Close();
+    //        }
+    //    }
+    //    else
+    //    {
+    //        _res = "AlreadyLogged";
+    //    }
+    //    return _res;
+    //}
+    [System.Web.Services.WebMethod] //facebookLogin inside Facebook
+    public static string LogUserWithFB(string ID)
+    {
+        string _res = "";
+        if (HttpContext.Current.Session["LoggedFB"] == null || HttpContext.Current.Session["LoggedFB"].ToString() != "true")
+        {
+
+            using (MySqlConnection con = new MySqlConnection(siteDefaults.ConnStr))
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = " SELECT * from tblUsers where LoginTypeID='" + ID + "' Limit 1";
+                MySqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    HttpContext.Current.Session["LoggedFB"] = "true";
+                    HttpContext.Current.Session["LoggedUserMail"] = dr["EmailAddress"].ToString();
+                    HttpContext.Current.Session["LoggedUserPicture"] = dr["LoginProfilePic"].ToString();
+                    HttpContext.Current.Session["LoggedUserID"] = ID;
+                    _res = "JustLogged";
+                }
+                dr.Close();
+                con.Close();
+            }
+
+        }
+        else
+        {
+            _res = "AlreadyLogged";
+        }
+        return _res;
+    }
+    //protected void btn_Login_Click(object sender, EventArgs e)
+    //{
+    //    bool UserExists = false;
+    //    using (MySqlConnection con = new MySqlConnection(siteDefaults.ConnStr))
+    //    {
+    //        con.Open();
+    //        MySqlCommand cmd = new MySqlCommand();
+    //        cmd.Connection = con;
+    //        cmd.CommandText = " SELECT * from tblUsers where EmailAddress='" + txtUsername.Text.Replace("'", "''") + "' AND  Password='" + txtPassword.Text.Replace("'", "''") + "' Limit 1";
+    //        MySqlDataReader dr = cmd.ExecuteReader();
+    //        if (dr.Read())
+    //        {
+    //            Session["Logged"] = "true";
+    //            Session["LoggedUserMail"] = dr["EmailAddress"].ToString();
+    //            Session["LoggedUserPicture"] = dr["LoginProfilePic"].ToString();
+    //            Session["LoggedUserID"] = ID;
+    //            UserExists = true;
+    //        }
+    //        con.Close();
+    //    }
+    //    if (UserExists)
+    //    {
+    //        Response.Redirect("./");
+    //    }
+    //    else
+    //    {
+    //        lblLoginStatus.Text = "Incorrect User\\Password";
+    //    }
+    //}
+    //protected void btn_ForgotPassword_Click(object sender, EventArgs e)
+    //{
+    //    bool UserExists = false;
+    //    bool mailSent = false;
+    //    string userPass = "";
+    //    using (MySqlConnection con = new MySqlConnection(siteDefaults.ConnStr))
+    //    {
+
+    //        con.Open();
+    //        MySqlCommand _cmd = new MySqlCommand();
+    //        _cmd.Connection = con;
+    //        _cmd.CommandText = "SELECT * from tblUsers where EmailAddress='" + txtUsername.Text + "' limit 1";
+    //        MySqlDataReader _dr = _cmd.ExecuteReader();
+    //        if (_dr.Read())
+    //        {
+    //            UserExists = true;
+    //            userPass = _dr["Password"].ToString();
+    //        }
+    //        else
+    //        {
+    //            lblLoginStatus.Text = "User not Exists";
+
+    //        }
+    //        _dr.Close();
+    //        con.Close();
+    //    }
+    //    if (UserExists)
+    //    {
+    //        string _body = "";
+
+    //        _body += "<div><span>Username: </span><span style=\"font-weight:bold;\">" + txtUsername.Text + "</span></div>";
+    //        _body += "<div><span>Password: </span><span style=\"font-weight:bold;\">" + userPass + "</span></div>";
+    //        _body += "<div><a href='" + Request.Url.ToString() + "?mail=" + txtUsername.Text + "'>click here to login</a></div>";
+    //        mailSent = cmstrDefualts.SendMail(_body, "Password Recovery from Israelikers.org", txtUsername.Text);
+    //    }
+    //    if (mailSent)
+    //    {
+    //        lblLoginStatus.Text = "Mail has been sent to your inbox";
+    //    }
+    //}
+}
+public class LoggedUser
+{
+    public string FacebookID { get; set; }
+    public string SystemMail { get; set; }
+    public string UserPicture { get; set; }
+    public string GetMail()
+    {
+        return SystemMail == null ? "" : SystemMail;
+
+    }
+}

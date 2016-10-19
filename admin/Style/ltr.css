@@ -1,0 +1,2452 @@
+﻿body
+{
+	font-family:Tahoma;
+}
+*:focus
+{
+outline:none;
+}
+
+@font-face {
+    font-family: 'mediumroborto';
+    src: url('../../images/fontroboto/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../images/fontroboto/Roboto-MediumItalic-webfont.woff') format('woff'), url('../../images/fontroboto/Roboto-MediumItalic.ttf') format('truetype'), url('../../images/fontroboto/Roboto-MediumItalic-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'lightroborto';
+    src: url('../../images/fontroboto/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../images/fontroboto/Roboto-LightItalic-webfont.woff') format('woff'), url('../../images/fontroboto/Roboto-LightItalic.ttf') format('truetype'), url('../../images/fontroboto/Roboto-LightItalic-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../../images/fontroboto/Roboto-BlackItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../images/fontroboto/Roboto-BlackItalic-webfont.woff') format('woff'), url('../../images/fontroboto/Roboto-BlackItalic.ttf') format('truetype'), url('../../images/fontroboto/Roboto-BlackItalic-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../../images/fontroboto/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../../images/fontroboto/Roboto-Italic-webfont.woff') format('woff'), url('../../images/fontroboto/Roboto-Italic.ttf') format('truetype'), url('../../images/fontroboto/Roboto-Italic-webfont.svg#svgFontName') format('svg');
+}
+div.pageDiv
+{
+	width:1018px;
+	margin:auto auto auto auto;
+	height:100%; 
+	background:#ffffff; 
+	direction:ltr;
+	text-align:center;
+	vertical-align:top;
+}
+
+.ltrLeft
+{
+    direction:ltr;
+    text-align:left;
+}
+
+.rtlRight
+{
+    direction:rtl;
+    text-align:right;
+}
+
+table.devider
+{
+	width:100%;
+	height:700px;
+}
+
+td.banner
+{
+	vertical-align:bottom;
+	background-color:#4b99cf;
+	background-position:center top;
+	background-image:url('../images/HeaderBack.gif');
+	background-repeat:no-repeat;
+	height: 110px;
+	width: 100%;
+	text-align:left;
+}
+
+td.right
+{
+	background-image:url("../images/RightBorder.gif");
+	background-repeat:repeat-y;
+	background-position:right;
+
+	vertical-align:top;
+	text-align:left;
+	background-color:#f2f2f2;
+	width:130px;
+}
+
+td.left
+{
+	background-color:#ffffff;
+	width:0;
+}
+
+td.main
+{
+	vertical-align:top;
+	direction:ltr;
+	background-color:#ffffff;
+	width:90%;
+	height:600px;
+}
+
+td.Defaultmain
+{
+	vertical-align:top;
+	direction:ltr;
+	background-color:#ffffff;
+	width:100%;
+	height:554px;
+}
+
+div.main
+{
+	table-layout:fixed;
+	width:100%; 
+	direction:ltr;
+	vertical-align:top;
+}
+
+td.footer
+{
+	background-color:#ffffff;
+	height:20px
+}
+
+td.rightCell
+{
+width:120px;
+color:#595959;
+vertical-align:middle;
+border-bottom:solid 2px #d0d0d0;
+text-align:left;
+}
+
+td.rightCellSelected
+{
+	width:120px;
+	color:#ffffff;
+	vertical-align:middle;
+	background-color:#0269b1;
+	background-image:url("../images/RightBorder.gif");
+	background-repeat:repeat-y;
+	background-position:-2px;
+	border-bottom:solid 2px #d0d0d0;
+	text-align:left;
+}
+
+
+
+td.rightCellHeader
+{
+color:#1071b5;
+font-weight:bold;
+font-family:Arial;
+font-size:16px;
+width:120px;
+text-align:center;
+}
+
+a.right
+{
+color:#595959;
+font-family:Arial;
+font-size:14px;
+text-decoration:none;
+}
+
+a.rightSelected
+{
+color:#ffffff;
+font-family:Arial;
+font-size:14px;
+text-decoration:none;
+text-align:left;
+}
+
+td.bannerCell
+{
+width:131px;
+height:44px;
+text-align:center;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+height:44px;
+}
+
+
+td.bannerCellSelected
+{
+width:131px;
+height:44px;
+text-align:center;
+color:blue;
+background-image:url('../images/topMenuSelect.gif');
+background-position:center top;
+background-repeat:no-repeat;
+font-family:Arial;
+font-size:15px;
+}
+
+.LinkButton
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+a.banner
+{
+color:#ffffff;
+text-decoration:none;
+border:none;
+}
+
+a.bannerSelected
+{
+display:block;
+color:#1071b5;
+text-decoration:none;
+border:none;
+}
+
+
+.titleSpan
+{
+	color:#0269b1;
+	font-size:22px;
+	font-weight:bold;
+	direction:ltr;
+    display:block;
+
+	
+}
+
+
+tr.resTH
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('../images/tableTopback.gif');
+	height:41px;
+}
+
+tr.resTF
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('../images/tableButtomBack.gif');
+	height:32px;
+}
+
+a.resTH
+{
+color:#ffffff;
+font-family:Arial;
+font-size:16px;
+text-decoration:none;
+text-align:left;
+}
+
+td.ThRight
+{
+	text-align:left;
+}
+
+td.ThLeft
+{
+	text-align:right;
+}
+
+td.tableRight
+{
+    background-image:url('../images/tableRight.gif');
+	
+	background-position:right;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+
+td.tableLeft
+{
+	background-image:url('../images/tableLeft.gif');
+	background-position:left;
+	background-repeat:repeat-y;
+	text-align:center;
+	font-size:1px;
+}
+
+tr.resTDeven
+{
+background:#f2f2f2;
+color:#5c5c5c;
+font-size:14px;
+text-align:left;
+}
+
+tr.resTDeven span a
+{
+	/*display:none;*/
+	color:#0269b1;
+	font-weight:bold;
+}
+
+tr.resTDuneven
+{
+background:#ffffff;
+color:#5c5c5c;
+font-size:14px;
+text-align:left;
+}
+
+tr.resTDuneven span a
+{
+	/*display:none;*/
+	color:#0269b1;
+	font-weight:bold;
+}
+
+tr.resSelect
+{
+	background:#bbdef7;
+	color:#5c5c5c;
+	font-size:14px;
+	text-align:left;
+}
+
+tr.resSelect span
+{
+	background:#bbdef7;
+	color:#000000;
+}
+
+tr.resSelect span a
+{
+	display:inherit;
+	color:#0269b1;
+}
+
+tr.resSelect span span
+{
+	font-weight:bold;
+	display:inherit;
+	color:#cc0000;
+}
+
+.bannerRow
+{
+background-image:url('../images/SearchHeaderBack.jpg');
+height:44px;
+}
+
+td.bannerRowRight
+{
+    background-image:url('../images/SearchHeaderLeft.jpg');
+
+	width:15px;
+}
+
+td.bannerRowLeft
+{
+		background-image:url('../images/SearchHeaderRight.jpg');
+	width:15px;
+}
+
+.buttomRow
+{
+	background-image:url('../images/tableButtomBack.gif');
+	background-repeat:repeat-x;
+	height:29px;
+}
+
+.FwdBwd
+{
+	width:500px;
+	height:39px;
+	background-image:url("../images/foundBack.gif");
+	background-repeat:repeat-x;
+	margin: auto auto auto auto;
+}
+
+.displayCalBox
+{
+position:absolute;
+height:400px; 
+overflow:scroll; 
+border:solid 1px #000000;
+text-align:right;
+left:100px;
+top:200px; 
+width:300px;
+display:none; 
+background:#6a95f2;
+margin:auto auto auto auto;
+}
+
+.tblUserCats
+{
+margin:auto auto auto auto;
+}
+
+td.textbox
+{	
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:350px;
+}
+td.textboxHome
+{
+	background-image:url("../images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:left;
+	text-align:left;
+	padding-left:5px;
+	height:25px;
+	width:137px;
+}
+input.textboxHome
+{
+	background-color:Transparent;
+	border:none;
+	width:125px;
+	font-size:13px;
+}
+
+div.textbox
+{
+	background-image:url("../images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:right;
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:137px;
+}
+
+
+input.textbox
+{	
+	width:350px;
+	font-size:13px;
+}
+
+select.textbox
+{
+	background-color:Transparent;
+	border:none 0px transparent;
+	width:125px;
+	font-size:12px;
+}
+
+
+td.selectBox
+{
+	background-image:url("../images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:left top;
+	text-align:left;
+	padding-left:5px;
+	height:25px;
+	width:137px;
+}
+
+input.selectBox
+{
+	background-color:Transparent;
+	border:none;
+	width:105px;
+	font-size:12px;
+	cursor:default;
+}
+
+div.selectOver
+{
+	background:#555555;
+}
+
+.tblUserCats
+{
+margin:auto auto auto auto;
+}
+
+.LoginInfo
+{
+	height:71px;
+	width:265px;
+	background-image:url("../images/TopLoginInfo.png");
+	background-repeat:no-repeat;
+	text-align:center;
+}
+
+
+td.LogOut
+{
+	height:71px;
+	width:64px;
+	background-image:url("../images/LogOut-EN.png");
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+td.Help
+{
+	height:71px;
+	width:51px;
+	background-image:url("../images/TopHelpOver.png");
+	background-repeat:no-repeat;
+	cursor:pointer;	
+}
+
+td.OnThisPage
+{
+	height:71px;
+	width:51px;
+	background-image:url("../images/TopOnThisPageOver.png");
+	background-repeat:no-repeat;
+	cursor:pointer;	
+}
+
+
+td.percentBar
+{
+	height:21px;
+	background-image:url("../images/sendBarBack.gif");
+	background-repeat:repeat-x;
+	color:#ffffff;
+}
+
+td.faderRight
+{
+	background-image:url('../images/PageRight.gif');
+	background-repeat:repeat-y;
+	width:5px;
+	background-position:right;
+}
+
+td.faderLeft
+{
+	background-image:url('../images/PageLeft.gif');
+	background-repeat:repeat-y;
+	width:5px;
+}
+
+td.LoginInfoCell
+{
+	color:#adadad;
+	text-align:left;
+	direction:ltr;
+	padding:10px 15px;
+	font-family:Arial;
+	font-size:14px;
+}
+
+td.numTotal
+{
+	color:#ffffff;
+	text-align:right;
+	vertical-align:middle;
+	padding-bottom:4px;
+}
+
+span.info
+{
+	text-decoration:underline;
+	color:#1071b5;
+	cursor:pointer;
+}
+
+tr.EnterTH
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('../images/EntertableTopback.gif');
+	height:40px;
+}
+
+td.EnterTableRight
+{
+	background-image:url('../images/EnterTableRight.gif');
+	background-position:left;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+td.EnterTableTopSelected
+{
+	width:103px;
+	height:40px;
+	background-image:url('../images/EnterTableTopSelected.gif');
+	background-position:left top;
+	background-repeat:no-repeat;
+	text-align:center;
+	vertical-align:middle;
+	color:#1071b5;
+	font-size:18px;
+	cursor:default;
+}
+
+td.EnterTableTop
+{
+	width:103px;
+	text-align:center;
+	color:#ffffff;
+	text-align:center;
+	vertical-align:middle;
+	font-size:18px;
+	cursor:pointer;
+}
+
+td.EnterTableLeft
+{
+	background-image:url('../images/EnterTableLeft.gif');
+	background-position:right;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+.EnterTableBottomRow
+{
+	background-image:url('../images/EnterTableBottom.gif');
+	background-repeat:repeat-x;
+	height:6px;
+    direction:rtl;
+}
+
+.PageBottomRow
+{
+	background-image:url('../images/PageBottom.gif');
+	background-repeat:repeat-x;
+	height:5px;
+}
+
+
+td.ManCatsBannerCell
+{
+height:60px;
+text-align:center;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+background-image:url('../images/SearchHeaderBack.jpg');
+background-repeat:repeat-x;
+background-position:bottom;
+}
+
+tr.THRow
+{
+	background-image:url('../images/tableTopback.gif');
+	height:41px;
+}
+
+.Product2CatGrid
+{
+	direction:ltr;
+	margin:auto auto auto auto;
+}
+
+td.ManageProductAddCell
+{
+	vertical-align:middle;
+	text-align:center;
+	padding-bottom:20px;
+	padding-right:5px;
+	padding-left: 5px;
+}
+
+.ManageProductCell
+{
+	color:#595959;
+	font-family:Arial;
+	font-size:14px;
+	padding-right:5px;
+	padding-left: 5px;
+}
+
+
+.FwdBwd
+{
+	width:500px;
+	height:39px;
+	background-image:url("../images/foundBack.gif");
+	background-repeat:repeat-x;
+	margin: auto;
+}
+
+a.FwdBwdLink
+{
+	color:#0269b1;
+	text-decoration:none;
+}
+
+.tableCell
+{
+	padding:5px;
+}
+
+a.SelectedLink
+{
+	color:Red;
+}
+
+.DataList2PlaceHolderClass
+{
+
+width:200px;
+float:left;
+height:200px;
+
+}
+
+.LoadImagesClass
+{
+clear:both;
+display:block;
+background-image:url('../images/buttonBack.gif');
+background-repeat:no-repeat;
+height:16px;
+width:68px;
+float:left;
+color:White;
+font-size:12px;
+text-decoration:none;
+padding:2px 0px;
+font-weight:bold;
+}
+.ImageNameLabelClass
+{
+display:block;
+width:80%;
+font-size:15px;
+height:20px;
+direction:ltr;
+text-align:left;
+float:right;
+padding-left:10px;
+}
+.GalleryImagePalceHolderClass
+{
+width:95%;
+float:left;
+margin:20px;
+
+}
+.DeleteImage
+{
+background-image:url('../images/DelOn.gif');
+background-repeat:no-repeat;
+width:20px;
+display:block;
+height:20px;
+float:left;
+
+}
+
+.backLinkClass
+{
+
+
+display:block;
+background-image:url('../images/buttonBack.gif');
+height:20px;
+width:68px;
+float:right;
+color:White;
+font-size:13px;
+text-decoration:none;
+font-weight:bold;
+margin-right:20px;
+margin-top:10px;
+}
+.EditPageTitleClass
+{
+float:left;
+width:500px;
+margin-top:20px;
+margin-left:100px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.ltrLeft
+{
+	direction:ltr;
+	text-align:left;
+}
+
+.ltrRight
+{
+	direction:ltr;
+	text-align:right;
+}
+
+.ltrCenter 
+{
+	direction:rtl;
+	text-align:center;
+}
+
+
+
+
+.rtlLeft
+{
+	direction:rtl;
+	text-align:left;
+}
+
+.rtlRight
+{
+	direction:ltr;
+	text-align:right;
+}
+
+.rtlCenter
+{
+	direction:rtl;
+	text-align:center;
+}
+
+
+.floatLeft
+{
+	float:left;
+}
+
+.clearLeft
+{
+	clear:left;
+}
+
+.floatRight
+{
+	float:right;
+}
+
+.clearRight
+{
+	clear:right;
+}
+
+
+td.right
+{
+	background-position:right;
+}
+
+td.main
+{
+	direction:ltr;
+}
+
+td.Defaultmain
+{
+	direction:ltr;
+}
+
+.titleSpan
+{
+	direction:ltr;
+}
+
+tr.resTH
+{
+	direction:ltr;
+}
+
+tr.resTDeven
+{
+text-align:left;
+}
+
+tr.resTDuneven
+{
+text-align:left;
+}
+
+
+tr.resSelect
+{
+	text-align:left;
+}
+
+.displayCalBox
+{
+	text-align:left;
+}
+
+td.textbox
+{
+	background-position:left;
+	text-align:left;
+}
+
+td.selectBox
+{
+	background-position:left top;
+	text-align:left;
+}
+
+
+.PageClass
+{
+	text-align:left;
+}
+
+td.banner
+{
+	text-align:left;
+}
+
+td.bannerHome
+{
+	text-align:left;
+}
+
+td.right
+{
+	text-align:left;
+}
+
+a.rightSelected
+{
+	text-align:left;
+}
+
+a.resTH
+{
+	text-align:left;
+}
+
+td.ThRight
+{
+	text-align:left;
+}
+
+td.ThLeft
+{
+	text-align:right;
+}
+
+
+
+
+
+td.EnterTableRight
+{
+	background-image:url('../images/EnterTableRight.gif');
+	background-position:left;
+}
+
+td.EnterTableLeft
+{
+	background-image:url('../images/EnterTableLeft.gif');
+		background-position:right;
+}
+
+
+.EnterTableTopRight
+{
+	background-color:#ffffff;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopRight div
+{
+	background-image:url('../images/EnterTableTopLeft.gif');
+	background-repeat:no-repeat;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopLeft
+{
+	background-color:#ffffff;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopLeft div
+{
+    background-image:url('../images/EnterTableTopRight.gif');
+	
+	background-repeat:no-repeat;
+	width:11px; 
+	height:40px;
+}
+
+
+.EnterTableBL
+{
+	text-align:left; 
+	font-size:1px;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBL div
+{
+	background-image:url('../images/EnterTableBR.gif');
+	background-repeat:no-repeat;
+	background-position:left;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBR
+{
+	text-align:right; 
+	font-size:1px;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBR div
+{
+	background-image:url('../images/EnterTableBL.gif');
+	background-repeat:no-repeat;
+	background-position:right;
+	width:11px; 
+	height:6px;
+}
+
+
+
+
+.longLTCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longLTCell div
+{
+	background-image:url('../images/longRTCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longRTCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longRTCell div
+{
+	background-image:url('../images/longLTCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longLBCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longLBCell div
+{
+	background-image:url('../images/longRBCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longRBCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longRBCell div
+{
+	background-image:url('../images/longLBCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longLeft
+{
+	width:7px;
+	font-size:1px; 
+	background-image:url('../images/longRightCell.gif'); 
+	background-repeat:repeat-y;
+}
+
+.longRight
+{
+	width:7px;
+	font-size:1px; 
+	background-image:url('../images/longLeftCell.gif'); 
+	background-repeat:repeat-y;
+}
+
+.margin_Left_30
+{
+	margin-left:30px;
+	vertical-align:middle;
+}
+
+div.tableTopLeft
+{
+	width:10px; 
+	height:41px;
+	background-color:#ffffff;
+	
+	background-image:url(../images/tableTopRight.gif);
+	background-position:right;
+}
+div.tableBottomLeft
+{
+	width:11px; 
+	height:32px;
+	background-color:#ffffff;
+	background-image:url(../images/tableButtomRight.gif);
+	
+}
+
+div.tableTopRight
+{
+	width:11px; 
+	height:41px;
+	background-color:#ffffff;
+	background-image:url(../images/tableTopLeft.gif);
+}
+
+
+div.tableBottomRight
+{
+	width:10px; 
+	height:32px;
+	background-color:#ffffff;
+	background-image:url(../images/tableButtomLeft.gif);
+}
+
+.Header
+{
+    font-size:22px;
+    width:100%;
+    color:#065b9b;
+    margin:5px 0px;
+    font-weight:bold;
+}
+.FromViowHolder
+{
+width:780px;
+margin-top:40px;    
+float:left;
+padding-left:20px;
+  text-align:left;
+  direction:ltr;  
+}
+.FromViowHolder .Header
+{
+    font-size:22px;
+    width:100%;
+    color:#065b9b;
+}
+.FromViowHolder .BackURLClass
+{
+   background:url('../images/buttonBack.gif') no-repeat top left;
+   width:68px;
+   height:16px;
+   font-size:12px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:right;
+  padding:2px 0px;
+  text-align:center;
+}
+.FromViowHolder .savebuttonclass
+{
+    background:url('../images/buttonBack.gif') no-repeat top left;
+   width:68px;
+   height:16px;
+   font-size:13px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:left;
+  padding:2px 0px; 
+  margin-left:200px;
+  margin-top:10px;
+  text-align:center;
+}
+.FromViowHolder .saveandbackbuttonclass
+{
+    background:url('../images/buttonBack.gif') no-repeat top left;
+   width:68px;
+   height:16px;
+   font-size:13px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:left;
+  padding:2px 0px; 
+  margin-left:5px;
+  margin-top:10px;  
+  text-align:center;  
+}
+.FromViowHolder .MymsgLabelClass
+{
+    float:left;
+    width:100%;
+    color:Red;
+}
+
+.minititleclass
+{
+float:left;
+width:100%;
+text-decoration:underline;
+text-align:left;
+margin:10px 0px;    
+color:#065b9b;
+font-weight:bold;
+}
+
+.ManageTextBoxHolderDivClassLeft
+{  
+    width:100%;
+  float:left;
+  font-size:17px;
+  text-align:left;
+  direction:ltr;
+  margin:3px;
+}
+.ManageTextBoxHolderDivClassLeft .TextLabelClass
+{  
+    padding-top:14px;
+    width:200px;
+    float:left;
+}   
+.ManageTextBoxHolderDivClassLeft .TextBoxHolderClass
+{   
+  width:400px;
+    float:left;
+}
+.ManageTextBoxHolderDivClassLeft .validationHolderClass
+{  
+  width:400px;
+    float:left;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+.ManageTextBoxHolderDivClassLeft .ValidetorClass
+{  
+}
+ .ManageTextBoxHolderDivClassLeft .TextBoxWatermarkCssClass
+{   
+}   
+ .ManageTextBoxHolderDivClassLeft .MyTextBoxClass
+{   
+  text-align:left;
+     width:400px;    
+} 
+
+ .ShortTextBox
+{  
+   max-width:260px;
+  float:left;
+  font-size:17px;
+  text-align:left;
+  direction:ltr;
+  margin:3px;
+}
+.ShortTextBox .TextLabelClass
+{  
+    padding-top:14px;   
+    float:left;
+    width:200px;
+}   
+.ShortTextBox .TextBoxHolderClass
+{   
+  width:60px;
+    float:left;
+}
+.ShortTextBox .validationHolderClass
+{  
+  width:60px;
+    float:left;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+
+.ShortTextBox .ValidetorClass
+{  
+}
+ .ShortTextBox .TextBoxWatermarkCssClass
+{   
+}   
+ .ShortTextBox .MyTextBoxClass
+{   
+  text-align:left;
+     width:60px;    
+} 
+
+  .ShortTextBox2
+{  
+   max-width:80px;
+  float:left;
+  font-size:17px;
+  text-align:left;
+  direction:ltr;
+  margin:3px;
+ 
+}
+.ShortTextBox2 .TextLabelClass
+{  
+    padding-top:14px;   
+    float:left;
+    max-width:20px;
+}   
+.ShortTextBox2 .TextBoxHolderClass
+{   
+  width:60px;
+    float:left;
+}
+.ShortTextBox2 .validationHolderClass
+{  
+  width:60px;
+    float:left;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+
+.ShortTextBox2 .ValidetorClass
+{  
+}
+ .ShortTextBox2 .TextBoxWatermarkCssClass
+{   
+}   
+ .ShortTextBox2 .MyTextBoxClass
+{   
+  text-align:left;
+     width:60px;    
+      text-align:left;
+} 
+
+
+.ManageTextBoxHolderDivClass
+{  
+    width:100%;
+  float:left;
+  font-size:17px;
+  text-align:left;
+  direction:ltr;
+  margin:3px;
+}
+.ManageTextBoxHolderDivClass .TextLabelClass
+{  
+    padding-top:14px;
+    width:200px;
+    float:left;
+}   
+.ManageTextBoxHolderDivClass .TextBoxHolderClass
+{   
+  width:400px;
+    float:left;
+}
+.ManageTextBoxHolderDivClass .validationHolderClass
+{  
+  width:400px;
+    float:left;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+.ManageTextBoxHolderDivClass .ValidetorClass
+{  
+}
+ .ManageTextBoxHolderDivClass .TextBoxWatermarkCssClass
+{   
+}   
+ .ManageTextBoxHolderDivClass .MyTextBoxClass
+{   
+  text-align:left;
+     width:400px;    
+} 
+
+
+.DropDownHolderDivClass
+{
+    width:100%;   
+   float:left; 
+   margin-top:10px;
+   text-align:left;
+}
+.DropDownHolderDivClass   .MyDropDownClass
+{
+    width:200px;
+    float:inherit;
+}
+.DropDownHolderDivClass   .LabelTextClass
+{
+     width:200px;          
+     float:left;
+     display:block;
+    
+     font-size:16px;
+}
+.DropDownHolderDivClass .DropDownClass
+{
+}
+.DropDownHolderDivClass .UperBlockText
+{
+display:none;
+}
+.DropDownHolderDivClass .DropDownCoverClass
+{
+}
+.CheckBoxHolder2Class
+{
+float:left;
+width:100%;
+height:40px;  
+text-align:left;  
+margin:5px 0px;
+}  
+
+
+.RadioButtonHolderObjClass
+{
+float:left;
+width:400px;
+}
+.RadioButtonHolderObjClass .oneRadioHolderClass
+{
+float:left;
+width:160px;
+}
+.RadioButtonHolderObjClass .Radioclass
+{
+   float:left;
+   width:40px; 
+}
+.RadioButtonHolderObjClass .RadioFieldNameHolder
+{
+    float:left;
+    width:80px;  
+}
+.linedivclass
+{
+float:left;
+width:100%;    
+padding:4px 0px;    
+}
+
+.searchtableclass
+{
+   position:absolute;
+   top:30px;
+   right:20%;  
+    
+}
+ .AddButtonRightclass
+{       
+    height:27px;
+    background:url('../images/rightbutton2.png') no-repeat left top; 
+    padding-left:24px;      
+    float:left;
+}
+    .AddButtonLeftclass
+    {
+       
+        height:27px;
+         background:url('../images/leftbutton2.png') no-repeat right top; 
+        padding-right:12px;
+        float:left;
+        #float:none;
+        
+    }
+    .AddButtonClass
+    {
+       
+        height:24px;
+        background:url('../images/middlebutton2.png') repeat-x top;
+        display:block;
+        color:White;
+        text-decoration:none;       
+        font-weight:bold;
+        padding-top:3px;
+        min-width:30px;
+        max-width:400px;
+    }
+
+.Lang
+{
+    vertical-align:top;
+    
+    }
+.LangDropDownClass
+{
+    
+    width:140px;   
+   float:left; 
+   
+   margin-left:20px;
+    }
+.LangDropDownClass   .MyDropDownClass
+    {
+    width:140px;
+    height:30px;
+         font-size:18px;
+    line-height:25px;
+}
+.LangDropDownClass   .LabelTextClass
+{
+    
+}
+.LangDropDownClass .DropDownClass
+{
+ 
+}
+.LangDropDownClass .UperBlockText
+{
+display:none;
+}
+.LangDropDownClass .DropDownCoverClass
+{
+}
+.tableTopLeft
+{
+width:11px;    
+}
+.TopleftTable
+{
+background:url('../images/tableTopLeft.gif') no-repeat right top;
+height:41px;
+padding-right:11px;    
+float:left;
+
+}
+.TopRightTable
+{
+background:url('../images/tableTopRight.gif') no-repeat left top;
+height:41px;
+padding-left:10px;    
+    
+}
+.TopCenterTable
+{
+background:url('../images/TableTopBack.gif') repeat-x left top;
+height:41px;
+ width:820px;
+    
+}
+.CenterleftTable
+{
+background:url('../images/tableLeft.gif') repeat-y right top;
+height:41px;
+padding-right:11px;    
+float:left;
+
+}
+.CenterRightTable
+{
+background:url('../images/tableRight.gif') repeat-y left top;
+height:41px;
+padding-left:10px;    
+    
+}
+.CenterCenterTable
+{
+height:41px;
+width:820px;    
+}
+.BottomleftTable
+{
+background:url('../images/tableButtomLeft.gif') no-repeat right top;
+height:41px;
+padding-right:11px;    
+float:left;
+
+}
+.BottomRightTable
+{
+background:url('../images/tableButtomRight.gif') no-repeat left top;
+height:41px;
+padding-left:10px;    
+    
+}
+.BottomCenterTable
+{
+background:url('../images/tableButtomBack.gif') repeat-x left top;
+height:41px;
+ width:820px;
+    
+}
+
+.tableTabDiv
+{
+   margin-left:1px;
+    width:134px;
+    height:34px;
+    font-size:14px;
+    padding-top:10px;
+    float:left;   
+    cursor:pointer;
+    line-height:34px;
+    background:url('../images/Generaltab.png') no-repeat left top;
+      color:#0269b1;
+    font-weight:bold;
+}
+.tableTabDivSel
+{ 
+      background:url('../images/Generaltab.png') no-repeat left bottom;
+    color:White;
+}
+.tableTabDivHolder
+{
+    margin-left:40px;
+    padding:0px 5px;  
+    float:left;   
+}
+.RemarkHolder
+{
+width:100%;
+height:30px;
+direction:ltr;
+color:White;
+font-weight:bold;    
+}
+.Searchtextbox
+{
+   direction:ltr;   
+}
+
+.langnameclass
+{
+   float:left;
+   width:200px;
+   text-align:left;
+   font-size:14px; 
+    
+}
+
+.MultTextbox
+{  
+    width:100%;
+  float:left;
+  font-size:14px;
+  text-align:left;
+  direction:ltr;
+  margin-top:10px;
+ 
+}
+.MultTextbox .TextLabelClass
+{  
+     width:200px;
+  float:left;
+}   
+.MultTextbox .TextBoxHolderClass
+{   
+  width:400px;
+  float:left;
+}
+.MultTextbox .validationHolderClass
+{  
+  
+}
+.MultTextbox .ValidetorClass
+{  
+}
+ .MultTextbox .TextBoxWatermarkCssClass
+{   
+    width:400px;
+  
+  height:80px;  
+}   
+ .MultTextbox .MyTextBoxClass
+{   
+   width:400px;
+ 
+  height:80px;    
+} 
+.CkeHoldrclass
+{
+width:100%;
+height:100%;
+position:fixed;
+top:0px;
+right:0px;
+left:0px;
+bottom:0px;
+display:none;    
+background:url(../images/fancy_title_over.png);
+border:solid 2px #c6c6c6;
+padding:40px;
+}
+.closeckeditor
+{
+  background:url(../images/Erase.png) no-repeat center center;
+  width:24px;
+  height:24px;  
+float:left;
+margin:15px;
+border:outset 4px #d2d2d2;
+padding:4px;
+cursor:pointer;
+}
+.cketextboxclass
+{
+
+float:right; 
+width:620px;   
+}
+.setnone
+{
+display:none;    
+}
+.SaveLAngbtnclass
+{
+width:68px;
+height:20px;
+top:10px;
+right:30px;
+position:absolute; 
+color:#ffffff;
+text-decoration:none;
+font-weight:bold;
+background:white url(../images/buttonBack.gif) no-repeat center center;
+}
+.editgentextholderclas
+{
+float:left;
+width:832px;
+padding:20px;
+margin-right:-20px;  
+margin-bottom:60px;
+/*border:outset 2px #c7c7c7;*/
+border-right:none;
+}
+.editgentextholderclas2
+{
+float:left;
+width:805px;
+padding:20px;
+height:650px;
+overflow-y:auto;  
+
+}
+
+
+.AdminMyForm
+{
+width:870px;
+padding:20px;  
+float:left;
+border-bottom:4px  dashed #4074ae;
+margin-bottom:10px;
+}
+.AdminMyForm .Header
+{  
+    font-size:18px;
+    font-weight:bold;
+    color:#0269b8;  
+}
+.AdminMyForm .BackURLClass
+{
+    float:right;
+ width:68px;
+height:20px;
+color:#ffffff;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+background:white url(../images/buttonBack.gif) no-repeat center center;
+}
+.AdminMyForm .savebuttonclasstop
+{   
+     background:white url(../images/buttonLeft.gif) no-repeat left top;
+     padding-left:7px;
+     height:27px;
+     float:left;
+     margin-left:20px;
+     margin-top:25px;
+}
+
+
+.AdminMyForm .savebuttonclassbotton
+{
+   background:white url(../images/buttonRight.gif) no-repeat right top;
+     padding-right:7px;
+     height:27px;
+     float:left;
+}
+.AdminMyForm .savebuttonclass
+{
+float:left;
+ height:27px;
+color:#ffffff;
+    text-decoration:none;
+font-weight:bold;
+background:white url(../images/buttonBackLine.gif) repeat-x top;
+display:block;
+padding:0px 4px;
+ font-size:14px;
+    
+}
+.AdminMyForm .MymsgLabelClass
+{
+    float:left;
+   color:#0000ff;
+   font-size:12PX;
+}
+.AdminMyForm .saveandbackbuttonclass
+{
+float:left;
+ height:27px;
+color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+font-weight:bold;
+background:white url(../images/buttonBackLine.gif) repeat-x top;
+display:block;
+padding:0px 4px;
+    
+}
+
+
+.DatePeakerHolderDiv
+{
+    width:100%;
+    float:left;  
+    text-align:left;
+    margin:10px 0px;
+}
+.DatePeakerHolderDiv .DateTextBoxClass
+{
+width:200px;
+font-size:14px;
+text-align:left;
+}
+.DatePeakerHolderDiv .DateLabelClass
+{
+width:200px;
+font-size:16px;
+float:left;
+}
+.DatePeakerHolderDiv .ValidetorClass
+{
+width:150px;
+font-size:11px;
+}
+.datepick {
+	background-color: #e0f4d7;
+	color: #000;
+	border: 1px solid #f90;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+	font-family: Arial,Helvetica,Sans-serif;
+	font-size: 90%;
+}
+.datepick-rtl {
+	direction: rtl;
+}
+.datepick-popup {
+	z-index: 1000;
+}
+.datepick-disable {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.datepick a {
+	color: #000;
+	text-decoration: none;
+}
+.datepick a.datepick-disabled {
+	color: #888;
+	cursor: auto;
+}
+.datepick button {
+    margin: 0.25em;
+    padding: 0.125em 0em;
+    background-color: #fc8;
+    border: none;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    font-weight: bold;
+}
+.datepick-nav, .datepick-ctrl {
+	float: left;
+	width: 100%;
+	background-color: #83beff;
+	color: #fff;
+	font-size: 90%;
+	font-weight: bold;
+}
+.datepick-ctrl {
+	background-color: #f90;
+}
+.datepick-cmd {
+	width: 30%;
+}
+.datepick-cmd:hover {
+	background-color: #b1db87;
+}
+.datepick-ctrl .datepick-cmd:hover {
+	background-color: #fa4;
+}
+.datepick-cmd-prevJump, .datepick-cmd-nextJump {
+	width: 8%;
+}
+a.datepick-cmd {
+	height: 1.5em;
+}
+button.datepick-cmd {
+	text-align: center;
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {
+	float: left;
+	padding-left: 2%;
+}
+.datepick-cmd-current, .datepick-cmd-today {
+	float: left;
+	width: 35%;
+	text-align: center;
+}
+.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {
+	float: right;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,
+.datepick-rtl .datepick-cmd-clear {
+	float: right;
+	padding-left: 0%;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
+	float: right;
+}
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,
+.datepick-rtl .datepick-cmd-close {
+	float: left;
+	padding-left: 2%;
+	padding-right: 0%;
+	text-align: left;
+}
+.datepick-month-nav {
+	float: left;
+	background-color: #b1db87;
+	text-align: center;
+}
+.datepick-month-nav div {
+	float: left;
+	width: 12.5%;
+	margin: 1%;
+	padding: 1%;
+}
+.datepick-month-nav span {
+	color: #888;
+}
+.datepick-month-row {
+	clear: left;
+}
+.datepick-month {
+	float: left;
+	width: 15em;
+	border: 1px solid #83c948;
+	text-align: center;
+}
+.datepick-month-header, .datepick-month-header select, .datepick-month-header input {
+	height: 1.5em;
+	background-color: #83c948;
+	color: #fff;
+	font-weight: bold;
+}
+.datepick-month-header select, .datepick-month-header input {
+	height: 1.4em;
+	border: none;
+}
+.datepick-month-header input {
+	position: absolute;
+	display: none;
+}
+.datepick-month table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.datepick-month thead {
+	border-bottom: 1px solid #aaa;
+}
+.datepick-month th, .datepick-month td {
+	margin: 0em;
+	padding: 0em;
+	font-weight: normal;
+	text-align: center;
+}
+.datepick-month th {
+	border: 1px solid #b1db87;
+}
+.datepick-month th, .datepick-month th a {
+	background-color: #b1db87;
+	color: #000;
+	border: 1px solid #b1db87;
+}
+.datepick-month td {
+	background-color: #fff;
+	color: #666;
+	border: 1px solid #b1db87;
+}
+.datepick-month td.datepick-week * {
+	background-color: #b1db87;
+	color: #666;
+	border: none;
+}
+.datepick-month a {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+	text-decoration: none;
+}
+.datepick-month span {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+}
+.datepick-month td span {
+	color: #888;
+}
+.datepick-month td .datepick-other-month {
+	background-color: #e0f4d7;
+}
+.datepick-month td .datepick-weekend {
+	background-color: #e0f4d7;
+}
+.datepick-month td .datepick-today {
+	background-color: #b1db87;
+}
+.datepick-month td .datepick-highlight {
+	background-color: #fc8;
+}
+.datepick-month td .datepick-selected {
+	background-color: #f90;
+	color: #fff;
+}
+.datepick-status {
+	clear: both;
+	background-color: #b1db87;
+	text-align: center;
+}
+.datepick-clear-fix {
+	clear: both;
+}
+.datepick-cover {
+    display: none;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    filter: mask();
+    top: -1px;
+    left: -1px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.admincheckbox
+{
+   width:100%;
+   height:20px;
+   float:left;
+   margin-top:10px;
+   margin-bottom:10px;
+  
+}
+.admincheckbox .MyCheckBox
+{
+  width:20px;
+  height:20px;
+  cursor:pointer;
+  float:left;  
+}
+.admincheckbox .checkboxfieldclass
+{
+    float:left;
+    width:400px;
+    font-size:13px;
+    text-align:left;
+    padding-left:10px;
+}
+
+
+
+.adminloadfile
+{   
+width:100%;
+float:left;
+position:relative;
+
+    
+}
+.adminloadfile .Imageholderclass
+{   
+   width:40px;
+   height:40px;
+   float:right;
+  margin-right:400px;
+}
+.adminloadfile .imgtable
+{ 
+     width:40px;
+    height:40px;
+    
+  
+    }
+.adminloadfile .ImageTDclass
+{   
+    width:40px;
+    height:40px;
+     vertical-align:middle;
+    text-align:center;
+    
+}
+.adminstages .ImageClass
+{
+    
+}
+.adminstages .UplouadButtonHolderClass
+{   
+    width:310px;
+    float:left; 
+   
+    
+}
+.adminstages .UploadTextClass
+{   
+ width:200px;
+ float:left;
+ text-align:left;
+}
+.adminstages .FileUploadClass
+{   
+   width:80px;
+   float:left;
+   text-align:left;
+  
+    
+}
+.adminstages .TextHolderBoxClass
+{   
+    width:200px;
+    height:30px;
+    float:left;
+    
+}
+.adminstages .TextBoxClass
+{   
+    display:block;
+    width:200px;
+    height:30px;
+    float:right; 
+}
+
+.adminstages .DeleteImageclass
+{   
+  background:white url(../images/delete.gif) no-repeat;
+  width:17px;
+  height:15px;
+  float:left;
+  cursor:pointer;
+}
+
+
+
+
+.adminstages .Imageholderclass
+{   
+   width:100%;
+   height:300px;
+   float:right;
+ 
+}
+.adminstages .imgtable
+{ 
+    width:300px;
+    height:300px;
+}
+.adminstages .ImageTDclass
+{   
+    width:300px;
+    height:300px;
+     vertical-align:middle;
+    text-align:center;
+    
+}
+.adminstages .ImageClass
+{
+   max-width:300px; 
+    max-height:300px;
+}
+.adminstages .UplouadButtonHolderClass
+{   
+    width:310px;
+    float:left; 
+   
+    
+}
+.adminstages .UploadTextClass
+{   
+ width:200px;
+ float:left;
+ text-align:left;
+}
+.adminstages .FileUploadClass
+{   
+   width:80px;
+   float:left;
+   text-align:left;
+  
+    
+}
+.adminstages .TextHolderBoxClass
+{   
+    width:200px;
+    height:30px;
+    float:left;
+    
+}
+.adminstages .TextBoxClass
+{   
+    display:block;
+    width:200px;
+    height:30px;
+    float:right; 
+}
+
+.adminstages .DeleteImageclass
+{   
+  background:white url(../images/delete.gif) no-repeat;
+  width:17px;
+  height:15px;
+  float:left;
+  cursor:pointer;
+}
+
+.MultRadioButtonHolderClass
+{
+float:left;
+width:500px;
+}
+.MultRadioButtonHolderClass .oneRadioHolderClass
+{
+float:left;
+width:110px;
+}
+.MultRadioButtonHolderClass .Radioclass
+{
+   float:left;
+   width:20px; 
+}
+.MultRadioButtonHolderClass .RadioFieldNameHolder
+{
+    float:left;
+   width:90px;  
+}
+.cofirmimageclass
+{
+width:30px;   
+display:block; 
+}
+.cofirmimageclass:hover
+{
+border:solid 1px #666666;}
+.cofirmimageclass2
+{
+width:200px; 
+position:absolute;
+top:-30px;   
+z-index:30;
+left:300px;
+cursor:pointer;
+}
+.cofirmimageholderclass
+{
+    width: 70px; 
+    position: relative;
+    overflow:hidden;    
+    
+}
+.cofirmimageholderclass:hover
+{
+  overflow:visible;     
+}
+.selectstatus
+{
+float:left;
+margin:10px;    
+clear:none;
+
+}
+
+.DragCatBoxSurround {
+    float:left;
+    width:240px;
+    height:80px;
+    margin:10px;
+    overflow:hidden;
+    border-radius:5px;    
+    border:1px solid #dedede;
+    box-shadow:0px 2px 2px 0px #cbc9ca;
+    background:white;   
+}
+
+
+    .DragCatBoxSurround:hover ,.DragCatBoxSurround.Hover {
+        height:auto;   
+     
+        z-index:10;
+    }
+
+.DragCategoriesBoxHolder {
+    float:right;
+    width:100%;
+    height:80px; 
+    cursor:pointer;
+    text-align:center;
+    line-height:80px;   
+    font-size:14px;
+    display:table-cell;
+    text-decoration:none;
+    color:#505050;  
+     background-image: linear-gradient(bottom, #E9E9E9 20%, #FEFEFE 120%);
+    background-image: -o-linear-gradient(bottom, #E9E9E9 20%, #FEFEFE 120%);
+    background-image: -moz-linear-gradient(bottom, #E9E9E9 20%, #FEFEFE 120%);
+    background-image: -webkit-linear-gradient(bottom, #E9E9E9 20%, #FEFEFE 120%);
+    background-image: -ms-linear-gradient(bottom, #E9E9E9 20%, #FEFEFE 120%);
+    background-image: -webkit-gradient(
+           linear,
+           left bottom,
+           left top,
+           color-stop(0.23, #E9E9E9),
+           color-stop(1, #FEFEFE)
+    );      
+
+   
+    
+}
+
+
+.DragCategoriesBoxHolder:hover,.DragCategoriesBoxHolder.Hover  {
+    color:#4194a2;
+    background-image: linear-gradient(bottom, #cbf2fd 10%, #ffffff 80%);
+    background-image: -o-linear-gradient(bottom, #cbf2fd 10%, #ffffff 80%);
+    background-image: -moz-linear-gradient(bottom, #cbf2fd 10%, #ffffff 80%);
+    background-image: -webkit-linear-gradient(bottom, #cbf2fd 10%, #ffffff 80%);
+    background-image: -ms-linear-gradient(bottom, #cbf2fd 10%, #ffffff 80%);
+
+     background-image: -webkit-gradient(
+           linear,
+           left bottom,
+           left top,
+           color-stop(0.10, #cbf2fd),
+           color-stop(0.8, #ffffff)
+    );    
+}
+
+.DragCategoriesBoxHolder:active,.DragCategoriesBoxHolder.Active {
+    color:#4194a2;
+    background-image: linear-gradient(top, #cbf2fd 23%, #ffffff 43%);
+    background-image: -o-linear-gradient(top, #cbf2fd 23%, #ffffff 43%);
+    background-image: -moz-linear-gradient(top, #cbf2fd 23%, #ffffff 43%);
+    background-image: -webkit-linear-gradient(top, #cbf2fd 23%, #ffffff 43%);
+    background-image: -ms-linear-gradient(top, #cbf2fd 23%, #ffffff 43%);
+
+    background-image: -webkit-gradient(
+           linear,
+           left top,
+           left bottom,
+           color-stop(0.23, #cbf2fd),
+           color-stop(0.43, #ffffff)
+    );    
+}
+
+.titlediv {
+float:left;
+font-size:15px;
+margin:10px;
+color:#1071b5;
+font-weight:bold;
+
+}
+.commentdiv {
+float:left;
+font-size:11px;
+color:gray;
+width:100%;
+text-align:left;
+
+}
+.selectedbutton {
+
+background:0px;
+color:black;
+}
+.selectmenutext {
+text-align:left;
+cursor:pointer;
+width:100%;
+line-height:24px;
+font-size:14px;
+background:url('../images/ArrowRight.gif') no-repeat left center;
+padding-left:23px;
+
+}
+    .selectmenutext:hover {
+    background:url('../images/ArrowRightblue.gif') no-repeat left center;
+    color:#0269b8;
+    
+    }
+.setselected {
+ background:url('../images/ArrowRightblue.gif') no-repeat left center;
+    color:#0269b8;
+}
+/*    default.aspx   */
+
+.mstatuspageclass {
+   text-decoration:none;
+   color:black;
+
+}
+.mstatuspageclass2 {
+    color:#4074ae;
+    font-weight:bold;
+}
+
+    .mstatuspageclass:hover {
+    color:#4074ae;
+    font-weight:bold;
+    }
+

@@ -1,0 +1,35 @@
+﻿body 
+{
+
+font-family:Arial;
+direction:ltr;
+margin:0;
+padding:0;
+text-decoration:none;
+
+}
+a 
+{
+text-decoration:none;
+}
+img 
+{
+border:none;
+margin:0;
+padding:0;
+}
+.ErrorPalceHolderClass
+{
+width:950px;
+margin:auto;
+margin-top:50px;    
+    
+}
+.ErrorPalceHolderClass2
+{
+  width:100%;
+  float:right;  
+  text-align:right;
+  direction:rtl;
+    
+}

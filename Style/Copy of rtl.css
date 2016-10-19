@@ -1,0 +1,151 @@
+﻿body {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background: #c0deff;
+    font-size: 12px;
+    font-family: arial;
+    color: #333333;
+}
+#myfram {
+}
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    font-family: arial;
+    font-size: 12px;
+    color: #333333;
+}
+input {
+     font-family: arial;
+    font-size: 12px;
+    color: #333333;
+}
+*:focus {
+    outline: none;
+}
+img {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.watermark {
+    color: #999;
+    font-family: Arial;
+}
+.fontbold {
+    font-weight: bold;
+}
+
+.menuholderClass {
+    width: 700px;
+    margin: auto;
+    margin-top: 40px;
+}
+    .menuholderClass .topLinkholderclass {
+        position: relative;
+        float: left;
+    }
+        .menuholderClass .topLinkholderclass .MainMenuleftClass {
+            float: left;
+            
+            margin: 4px;
+            height: 40px;
+            background-color: Red;
+            padding-left: 6px;
+        }
+        .menuholderClass .topLinkholderclass .MainMenurightClass {
+            height: 40px;
+            background-color: yellow;
+            padding-right: 6px;
+        }
+        .menuholderClass .topLinkholderclass .MainMenuCenterClass {
+            height: 32px;
+            background-color: green;
+            padding: 4px;
+        }
+        .menuholderClass .topLinkholderclass .MainMenuCenter2Class {
+            height: 32px;
+            background-color: white;
+            line-height: 32px;
+            font-weight: bold;
+            padding: 0px 3px;
+            font-size: 16px;
+        }
+        .menuholderClass .topLinkholderclass .subcatholderclass {
+            overflow: hidden;
+            position: absolute;
+            margin-top: 50px;
+            
+        }
+        .menuholderClass .topLinkholderclass .SubMenuleftClass {
+        }
+        .menuholderClass .topLinkholderclass .SubMenurightClass {
+        }
+        .menuholderClass .topLinkholderclass .SubMenuCenterClass {
+        }
+        .menuholderClass .topLinkholderclass .SubMenuCenter2Class {
+        }
+        .menuholderClass .topLinkholderclass .MainSepclass {
+        }
+        .menuholderClass .topLinkholderclass .subsepclass {
+        }
+        .menuholderClass .topLinkholderclass .mainmenulinkclass {
+            color: Black;
+        }
+    .menuholderClass .topselLinkholderclass {
+        position: relative;
+        float: left;
+    }
+        .menuholderClass .topselLinkholderclass .MainMenuleftClass {
+            float: left;
+            
+            margin: 4px;
+            height: 40px;
+            background-color: Red;
+            padding-left: 6px;
+        }
+        .menuholderClass .topselLinkholderclass .MainMenurightClass {
+            height: 40px;
+            background-color: yellow;
+            padding-right: 6px;
+        }
+        .menuholderClass .topselLinkholderclass .MainMenuCenterClass {
+            height: 32px;
+            background-color: green;
+            padding: 4px;
+        }
+        .menuholderClass .topselLinkholderclass .MainMenuCenter2Class {
+            height: 32px;
+            background-color: orange;
+            line-height: 32px;
+            font-weight: bold;
+            padding: 0px 3px;
+            font-size: 16px;
+        }
+        .menuholderClass .topselLinkholderclass .subcatholderclass {
+            overflow: hidden;
+            overflow: hidden;
+            position: absolute;
+            margin-top: 40px;
+            
+        }
+        .menuholderClass .topselLinkholderclass .SubMenuleftClass {
+        }
+        .menuholderClass .topselLinkholderclass .SubMenurightClass {
+        }
+        .menuholderClass .topselLinkholderclass .SubMenuCenterClass {
+        }
+        .menuholderClass .topselLinkholderclass .SubMenuCenter2Class {
+        }
+        .menuholderClass .topselLinkholderclass .MainSepclass {
+        }
+        .menuholderClass .topselLinkholderclass .subsepclass {
+        }
+        .menuholderClass .topselLinkholderclass .mainmenulinkclass {
+            color: Black;
+        }
+

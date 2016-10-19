@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>מערכת ניהול תוכן</title>  
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="datepik/jquery.datepick.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Style/rtl.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#ffffff;margin:0px auto 0px auto" onload="javascript:document.getElementById('mainTD').style.visibility='visible'">
+<form runat="server" >
+    <div class="pageDiv">
+    <table class="devider" cellspacing="0" cellpadding="0"> <%--devider table--%>
+		<tr>
+			<td colspan="5" class="banner"><%--banner--%>
+			<table cellpadding="0" cellspacing="0" style="width:100%;" >
+				<tr>
+					<td style="vertical-align:top">
+						<table cellpadding="0" cellspacing="0" style="margin:0px auto auto auto;vertical-align:top; width:100%;">
+							<tr>
+								<td style="width:20px;height:102px;">&nbsp</td><%--spacer--%>
+								<td style="width:265px; vertical-align:top"><asp:Table runat="server" ID="LoginInfo" CssClass="LoginInfo" CellPadding="0" CellSpacing="0"><asp:TableRow><asp:TableCell ID="LoginInfoCell" runat="server" VerticalAlign="Top"></asp:TableCell></asp:TableRow></asp:Table> </td>
+								<td style="width:6px">&nbsp</td>
+								<td class="LogOut" onclick="document.location='functions.aspx?act=1'">&nbsp;</td>
+                                <td class="Lang" ><cmsr:MyDropDown CssClass="LangDropDownClass" AutoPostBack="true" OnOnSelectedIndexChanged="SetLang" ID="LangMyDropDown" runat="server" DataTextField="LangName" DataValueField="LangID"  ></cmsr:MyDropDown></td>
+								<td style="height:101px; text-align:center; color:White; font-size:35px;"><asp:Label style="width:400px;display:block" runat="server" ID="TitleLable"></asp:Label></td>
+								<td style="width:150px;height:100%;overflow:hidden;">
+									<a runat="server"  id="hreflogo" href="./"><img  src="../images/siteimages/Logo.png" style="border:none;width:80%;height:100px;overflow:hidden;display:block;" alt="דף הבית"/></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<asp:Table ID="bannerTable" runat="server" Width="100%" CellPadding="0" CellSpacing="0" BorderStyle="None"></asp:Table>
+					</td>
+				</tr>
+                
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="faderRight" rowspan="2">&nbsp</td><%--right fader--%>
+			<td runat="server" id="lefttabletd" class="right" rowspan="2"><%--right colomn--%>
+				<asp:Table ID="rightTable" runat="server" Width="140"></asp:Table>
+			</td>
+			<td class="main" style="-visibility:hidden;" id="mainTD"><%--main colomn--%>
+				<div class="main" dir="rtl" runat="server">
+				<asp:ContentPlaceHolder ID="main" runat="server">
+		        </asp:ContentPlaceHolder>
+		        </div>
+			</td>
+			<td class="left"><%--left colomn--%>
+				&nbsp 
+			</td>
+			<td class="faderLeft" rowspan="2">&nbsp</td><%--left fader--%>
+		</tr>
+		<tr>
+			<td colspan="2" class="footer"><%--footer--%>
+				<div style="width:100%; text-align:center; direction:ltr">
+					&copy Developed by Comstar Web development - All Rights Reserved
+				</div>
+			</td>
+		</tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

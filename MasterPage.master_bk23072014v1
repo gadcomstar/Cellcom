@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="MasterPage.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="cmstr" Src="~/Controls/CMSTRMenuControll.ascx" TagName="MenuControl" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta name="description" id="description" runat="server" content="" />
+    <meta runat="server" name="keywords" id="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <%-- <meta name="robots" content="noindex,nofollow" />--%>
+    <%-- <meta name="googlebot" content="noindex,nofollow" />--%>
+    <link rel="icon" type="image/png" href="images/smile.png" />
+    <link href="Style/StyleSheet.css" runat="server" id="mystyle" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script/jquery.balloon.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js" type="text/javascript" charset="utf-8"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <asp:Literal runat="server" ID="HeadContentSystem"></asp:Literal>
+    <asp:Literal runat="server" ID="HeadContentSite"></asp:Literal>
+    <script type="text/javascript">
+        //$(document).ready(function myfunction() {
+        //    $('.tdbadgeimageclassimg').balloon({
+        //        position: "top",
+        //        classname: "ShareBadge",
+        //        contents: ' ',
+        //        tipSize: 0,
+        //        css: {
+        //            border: "none",
+        //            borderRadius: "0px",
+        //            backgroundColor: "none",
+        //            boxShadow: "none",
+        //            opacity: "1",
+        //        }
+        //    });
+        //});
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-46208718-1', 'israelikers.org');
+        ga('send', 'pageview');
+
+
+       
+    </script>
+</head>
+<body runat="server" id="PageBody">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ScriptMode="Release" ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div runat="server" id="MasterBG" class="masterbgclass"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server"></asp:ContentPlaceHolder>
+        <asp:Literal runat="server" ID="SiteBottomLiteral"></asp:Literal>
+        <asp:Literal runat="server" ID="SystemBottomLiteral"></asp:Literal>
+    </form>
+</body>
+</html>

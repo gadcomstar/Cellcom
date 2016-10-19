@@ -1,0 +1,89 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JoinUs.aspx.cs" Inherits="JoinUs" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <%--  <script>
+         (function (i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date(); a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+         ga('create', 'UA-46208718-1', 'israelikers.org');
+         ga('send', 'pageview');
+
+    </script>--%>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="Server">
+    <asp:Label Text="text" ID="mylog" runat="server" />
+    <div class="joinusholder">
+
+        <div class="joinuspageholder" runat="server" id="joinuspageholder">
+            <div class="ContainerDiv">
+                <asp:Panel runat="server" Visible="false" ID="Panel_Error">
+                    <div>אירעה שגיאה</div>
+                    <div>An Error occured</div>
+                </asp:Panel>
+                <div class="joinussectionholder">
+                    <div style="width: 100%; float: left">
+                        <img src="images/ConnectImages/IsraelLikersLogo.png" alt="Welcome to Israel Likers" class="TopLogo" /></div>
+                    <div class="joinustextholder">
+                        The system was created to allow you to be a   
+                        leading force on the worldwide information front with   
+                        minimal effort on your part.
+                    </div>
+                    <div class="FormHolder">
+                        <div class="TboxTitle">To join now fill in the following information:</div>
+                        <cmsr:MyForm ID="MyFormHeb" runat="server" TableName="tblusers" FormStatus="Insert" OnItemInserted="MyFormHeb_ItemInserted" BackButtonText="" ValidationGroup="AddUserGrp">
+                            <MessageTemplate>
+                                <cmsr:MyTextBox Display="None" ID="txtFullName" DataFieldType="String" CssClass="TboxInputname" ValidationGroup="AddUserGrp" IsRequiredFieldValidator="true" RequiredFielderrorMessage="Please supply full name" runat="server" DataFieldName="FullName" WatermarkText="*Full Name:" HasWatermark="true" />
+                                <cmsr:MyTextBox Display="None" ID="txtMail" DataFieldType="String" CssClass="TboxInput" ValidationGroup="AddUserGrp" runat="server" DataFieldName="EmailAddress" HasWatermark="true" WatermarkText="*Email Address:" IsRequiredFieldValidator="true" RequiredFielderrorMessage="Please enter email address" SelectExpresion="Email" RegularExpressionErrorMessage="mail not valid!" />
+                                <cmsr:MyTextBox Display="None" ID="txtPassword" CssClass="TboxInputpassword" DataFieldType="String" ValidationGroup="AddUserGrp" TextMode="Password" runat="server" IsRequiredFieldValidator="true" RequiredFielderrorMessage="Please select a password" HasWatermark="true" WatermarkText="*Password:" DataFieldName="Password" />
+                                <cmsr:MyHiddenField runat="server" ID="GuidMyHiddenField" DataFieldType="String" DataFieldName="Guid" />
+                                <cmsr:MyHiddenField runat="server" ID="SignByMailMyHiddenField" DataFieldType="Bool" DataFieldName="SignInByMail" />
+                                <div class="RequieredFileds">* Requiered Fileds</div>
+                                <div class="joinusbtnholder">
+                                    <asp:LinkButton CssClass="btnLoginClass" ValidationGroup="AddUserGrp" Style="background-color: #f7921e" ID="btn_Login" Text="Join us!" runat="server" OnClick="Login_Click" />
+                                    <div style="width: 100%; height: 40px;">
+                                        <div class="loginorline"></div>
+                                        <div class="Requiredfieldclass" style="margin: 10px">or</div>
+                                        <div class="loginorline"></div>
+                                    </div>
+                                    <asp:LinkButton runat="server" CssClass="fbLogin btnLoginFacebookClass" ID="RegisterFBLinkButton" OnClick="RegisterFBLinkButton_Click">Connect
+                                    </asp:LinkButton>
+                                </div>
+                                <div>
+                                    <asp:ValidationSummary CssClass="joinusvalsummery" runat="server" ID="MyValidationSummary" ValidationGroup="AddUserGrp" />
+                                </div>
+                                <asp:Panel runat="server" ID="Panel_HebExists" Visible="false">
+                                    <div style="text-align: center;">
+                                        <div>משתמש קיים כבר במערכת להמשך להתחברות בעזרת הפייסבוק לחץ <a id="ProceedLinkHeb" runat="server" href="#">כאן</a></div>
+                                    </div>
+                                </asp:Panel>
+                            </MessageTemplate>
+                        </cmsr:MyForm>
+                        <asp:Label CssClass="loginstatusclass" ID="lblRegisterStatus" runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="LandingImgContentHolder" id="LandingImgContentHolder" runat="server">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function clickSave() {
+            $('.savebuttonclass').attr("href");
+            alert("");
+
+        }
+        $(document).ready(function () {
+            $('.ValidetorClass').css("color", "white");
+        });
+
+        //function socialLogin(facebook, fbImage, fbName) {
+        //    alert('');
+
+        //}
+    </script>
+</asp:Content>
+

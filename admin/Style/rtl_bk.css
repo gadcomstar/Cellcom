@@ -1,0 +1,1653 @@
+﻿body
+{
+	font-family:Arial;
+}
+*:focus
+{
+outline:none;
+}
+div.pageDiv
+{
+	width:1018px;
+	margin:auto auto auto auto;
+	height:100%; 
+	background:#ffffff; 
+	direction:rtl;
+	text-align:center;
+	vertical-align:top;
+}
+
+.ltrLeft
+{
+    direction:rtl;
+    text-align:right;
+}
+
+.rtlRight
+{
+    direction:ltr;
+    text-align:left;
+}
+
+table.devider
+{
+	width:100%;
+	height:700px;
+}
+
+td.banner
+{
+	vertical-align:bottom;
+	background-color:#4b99cf;
+	background-position:center top;
+	background-image:url('images/HeaderBack.gif');
+	background-repeat:no-repeat;
+	height: 110px;
+	width: 100%;
+	text-align:right;
+}
+
+td.right
+{
+	background-image:url("images/RightBorder.gif");
+	background-repeat:repeat-y;
+	background-position:left;
+
+	vertical-align:top;
+	text-align:right;
+	background-color:#f2f2f2;
+	width:130px;
+}
+
+td.left
+{
+	background-color:#ffffff;
+	width:0;
+}
+
+td.main
+{
+	vertical-align:top;
+	direction:rtl;
+	background-color:#ffffff;
+	width:90%;
+	height:600px;
+}
+
+td.Defaultmain
+{
+	vertical-align:top;
+	direction:rtl;
+	background-color:#ffffff;
+	width:100%;
+	height:554px;
+}
+
+div.main
+{
+	table-layout:fixed;
+	width:100%; 
+	direction:ltr;
+	vertical-align:top;
+}
+
+td.footer
+{
+	background-color:#ffffff;
+	height:20px
+}
+
+td.rightCell
+{
+width:120px;
+color:#595959;
+vertical-align:middle;
+border-bottom:solid 2px #d0d0d0;
+text-align:right;
+}
+
+td.rightCellSelected
+{
+	width:120px;
+	color:#ffffff;
+	vertical-align:middle;
+	background-color:#0269b1;
+	background-image:url("images/RightBorder.gif");
+	background-repeat:repeat-y;
+	background-position:-2px;
+	border-bottom:solid 2px #d0d0d0;
+	
+}
+
+
+
+td.rightCellHeader
+{
+color:#1071b5;
+font-weight:bold;
+font-family:Arial;
+font-size:16px;
+width:120px;
+text-align:center;
+}
+
+a.right
+{
+color:#595959;
+font-family:Arial;
+font-size:14px;
+text-decoration:none;
+}
+
+a.rightSelected
+{
+color:#ffffff;
+font-family:Arial;
+font-size:14px;
+text-decoration:none;
+text-align:right;
+}
+
+td.bannerCell
+{
+width:131px;
+height:44px;
+text-align:center;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+height:44px;
+}
+
+
+td.bannerCellSelected
+{
+width:131px;
+height:44px;
+text-align:center;
+color:blue;
+background-image:url('images/topMenuSelect.gif');
+background-position:center top;
+background-repeat:no-repeat;
+font-family:Arial;
+font-size:15px;
+}
+
+.LinkButton
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+a.banner
+{
+color:#ffffff;
+text-decoration:none;
+border:none;
+}
+
+a.bannerSelected
+{
+display:block;
+color:#1071b5;
+text-decoration:none;
+border:none;
+}
+
+
+.titleSpan
+{
+	color:#0269b1;
+	font-size:22px;
+	font-weight:bold;
+	direction:rtl;
+	
+}
+
+
+tr.resTH
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('images/tableTopback.gif');
+	height:41px;
+}
+
+tr.resTF
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('images/tableButtomBack.gif');
+	height:32px;
+}
+
+a.resTH
+{
+color:#ffffff;
+font-family:Arial;
+font-size:16px;
+text-decoration:none;
+text-align:right;
+}
+
+td.ThRight
+{
+	text-align:right;
+}
+
+td.ThLeft
+{
+	text-align:left;
+}
+
+td.tableRight
+{
+	background-image:url('images/tableRight.gif');
+	background-position:right;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+
+td.tableLeft
+{
+	background-image:url('images/tableLeft.gif');
+	background-position:left;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+tr.resTDeven
+{
+background:#f2f2f2;
+color:#5c5c5c;
+font-size:14px;
+text-align:right;
+}
+
+tr.resTDeven span a
+{
+	/*display:none;*/
+	color:#0269b1;
+	font-weight:bold;
+}
+
+tr.resTDuneven
+{
+background:#ffffff;
+color:#5c5c5c;
+font-size:14px;
+text-align:right;
+}
+
+tr.resTDuneven span a
+{
+	/*display:none;*/
+	color:#0269b1;
+	font-weight:bold;
+}
+
+tr.resSelect
+{
+	background:#bbdef7;
+	color:#5c5c5c;
+	font-size:14px;
+	text-align:right;
+}
+
+tr.resSelect span
+{
+	background:#bbdef7;
+	color:#000000;
+}
+
+tr.resSelect span a
+{
+	display:inherit;
+	color:#0269b1;
+}
+
+tr.resSelect span span
+{
+	font-weight:bold;
+	display:inherit;
+	color:#cc0000;
+}
+
+.bannerRow
+{
+background-image:url('images/SearchHeaderBack.jpg');
+height:44px;
+}
+
+td.bannerRowRight
+{
+	background-image:url('images/SearchHeaderRight.jpg');
+	width:15px;
+}
+
+td.bannerRowLeft
+{
+	background-image:url('images/SearchHeaderLeft.jpg');
+	width:15px;
+}
+
+.buttomRow
+{
+	background-image:url('images/tableButtomBack.gif');
+	background-repeat:repeat-x;
+	height:29px;
+}
+
+.FwdBwd
+{
+	width:500px;
+	height:39px;
+	background-image:url("images/foundBack.gif");
+	background-repeat:repeat-x;
+	margin: auto auto auto auto;
+}
+
+.displayCalBox
+{
+position:absolute;
+height:400px; 
+overflow:scroll; 
+border:solid 1px #000000;
+text-align:right;
+left:100px;
+top:200px; 
+width:300px;
+display:none; 
+background:#6a95f2;
+margin:auto auto auto auto;
+}
+
+.tblUserCats
+{
+margin:auto auto auto auto;
+}
+
+td.textbox
+{
+	/*background-image:url("images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:right;*/
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:350px;
+}
+td.textboxHome
+{
+	background-image:url("images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:right;
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:137px;
+}
+input.textboxHome
+{
+	background-color:Transparent;
+	border:none;
+	width:125px;
+	font-size:13px;
+}
+
+div.textbox
+{
+	background-image:url("images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:right;
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:137px;
+}
+
+
+input.textbox
+{
+	/*background-color:Transparent;
+	border:none;*/
+	width:350px;
+	font-size:13px;
+}
+
+select.textbox
+{
+	background-color:Transparent;
+	border:none 0px transparent;
+	width:125px;
+	font-size:12px;
+}
+
+
+td.selectBox
+{
+	background-image:url("images/TextBoxFull.gif");
+	background-repeat:no-repeat;
+	background-position:right top;
+	text-align:right;
+	padding-right:5px;
+	height:25px;
+	width:137px;
+}
+
+input.selectBox
+{
+	background-color:Transparent;
+	border:none;
+	width:105px;
+	font-size:12px;
+	cursor:default;
+}
+
+div.selectOver
+{
+	background:#555555;
+}
+
+.tblUserCats
+{
+margin:auto auto auto auto;
+}
+
+.LoginInfo
+{
+	height:71px;
+	width:265px;
+	background-image:url("images/TopLoginInfo.png");
+	background-repeat:no-repeat;
+	text-align:center;
+}
+
+
+td.LogOut
+{
+	height:71px;
+	width:51px;
+	background-image:url("images/TopLogoutOver.png");
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+td.Help
+{
+	height:71px;
+	width:51px;
+	background-image:url("images/TopHelpOver.png");
+	background-repeat:no-repeat;
+	cursor:pointer;	
+}
+
+td.OnThisPage
+{
+	height:71px;
+	width:51px;
+	background-image:url("images/TopOnThisPageOver.png");
+	background-repeat:no-repeat;
+	cursor:pointer;	
+}
+
+
+td.percentBar
+{
+	height:21px;
+	background-image:url("images/sendBarBack.gif");
+	background-repeat:repeat-x;
+	color:#ffffff;
+}
+
+td.faderRight
+{
+	background-image:url('images/PageRight.gif');
+	background-repeat:repeat-y;
+	width:5px;
+	background-position:left;
+}
+
+td.faderLeft
+{
+	background-image:url('images/PageLeft.gif');
+	background-repeat:repeat-y;
+	width:5px;
+}
+
+td.LoginInfoCell
+{
+	color:#adadad;
+	text-align:right;
+	direction:rtl;
+	padding:10px 15px 10px 15px;
+	font-family:Arial;
+	font-size:14px;
+}
+
+td.numTotal
+{
+	color:#ffffff;
+	text-align:left;
+	vertical-align:middle;
+	padding-bottom:4px;
+}
+
+span.info
+{
+	text-decoration:underline;
+	color:#1071b5;
+	cursor:pointer;
+}
+
+tr.EnterTH
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	background-image:url('images/EntertableTopback.gif');
+	height:40px;
+}
+
+td.EnterTableRight
+{
+	background-image:url('images/EnterTableRight.gif');
+	background-position:right;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+td.EnterTableTopSelected
+{
+	width:103px;
+	height:40px;
+	background-image:url('images/EnterTableTopSelected.gif');
+	background-position:right top;
+	background-repeat:no-repeat;
+	text-align:center;
+	vertical-align:middle;
+	color:#1071b5;
+	font-size:18px;
+	cursor:default;
+}
+
+td.EnterTableTop
+{
+	width:103px;
+	text-align:center;
+	color:#ffffff;
+	text-align:center;
+	vertical-align:middle;
+	font-size:18px;
+	cursor:pointer;
+}
+
+td.EnterTableLeft
+{
+	background-image:url('images/EnterTableLeft.gif');
+	background-position:left;
+	background-repeat:repeat-y;
+	text-align:center;
+}
+
+.EnterTableBottomRow
+{
+	background-image:url('images/EnterTableBottom.gif');
+	background-repeat:repeat-x;
+	height:6px;
+}
+
+.PageBottomRow
+{
+	background-image:url('images/PageBottom.gif');
+	background-repeat:repeat-x;
+	height:5px;
+}
+
+
+td.ManCatsBannerCell
+{
+height:60px;
+text-align:center;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+background-image:url('images/SearchHeaderBack.jpg');
+background-repeat:repeat-x;
+background-position:bottom;
+}
+
+tr.THRow
+{
+	background-image:url('images/tableTopback.gif');
+	height:41px;
+}
+
+.Product2CatGrid
+{
+	direction:rtl;
+	margin:auto auto auto auto;
+}
+
+td.ManageProductAddCell
+{
+	vertical-align:middle;
+	text-align:center;
+	padding-bottom:20px;
+	padding-right:5px;
+	padding-left: 5px;
+}
+
+.ManageProductCell
+{
+	color:#595959;
+	font-family:Arial;
+	font-size:14px;
+	padding-right:5px;
+	padding-left: 5px;
+}
+
+
+.FwdBwd
+{
+	width:500px;
+	height:39px;
+	background-image:url("images/foundBack.gif");
+	background-repeat:repeat-x;
+	margin: auto auto auto auto;
+}
+
+a.FwdBwdLink
+{
+	color:#0269b1;
+	text-decoration:none;
+}
+
+.tableCell
+{
+	padding:5px 5px 5px 5px;
+}
+
+a.SelectedLink
+{
+	color:Red;
+}
+
+.DataList2PlaceHolderClass
+{
+
+width:200px;
+float:right;
+height:200px;
+
+}
+
+.LoadImagesClass
+{
+clear:both;
+display:block;
+background-image:url('images/buttonBack.gif');
+background-repeat:no-repeat;
+height:20px;
+width:68px;
+float:right;
+color:White;
+font-size:14px;
+text-decoration:none;
+font-weight:bold;
+
+
+}
+.ImageNameLabelClass
+{
+display:block;
+width:80%;
+font-size:15px;
+height:20px;
+direction:rtl;
+text-align:right;
+float:right;
+padding-right:10px;
+}
+.GalleryImagePalceHolderClass
+{
+width:95%;
+float:right;
+margin:20px;
+
+}
+.DeleteImage
+{
+background-image:url('images/DelOn.gif');
+background-repeat:no-repeat;
+width:20px;
+display:block;
+height:20px;
+float:right;
+
+}
+
+.backLinkClass
+{
+
+
+display:block;
+background-image:url('images/buttonBack.gif');
+height:20px;
+width:68px;
+float:left;
+color:White;
+font-size:13px;
+text-decoration:none;
+font-weight:bold;
+margin-left:20px;
+margin-top:10px;
+}
+.EditPageTitleClass
+{
+float:right;
+width:500px;
+margin-top:20px;
+margin-right:100px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.ltrLeft
+{
+	direction:rtl;
+	text-align:right;
+}
+
+.ltrRight
+{
+	direction:rtl;
+	text-align:left;
+}
+
+.ltrCenter 
+{
+	direction:rtl;
+	text-align:center;
+}
+
+
+
+
+.rtlLeft
+{
+	direction:ltr;
+	text-align:right;
+}
+
+.rtlRight
+{
+	direction:ltr;
+	text-align:left;
+}
+
+.rtlCenter
+{
+	direction:ltr;
+	text-align:center;
+}
+
+
+.floatLeft
+{
+	float:right;
+}
+
+.clearLeft
+{
+	clear:right;
+}
+
+.floatRight
+{
+	float:left;
+}
+
+.clearRight
+{
+	clear:left;
+}
+
+
+td.right
+{
+	background-position:right;
+}
+
+td.main
+{
+	direction:rtl;
+}
+
+td.Defaultmain
+{
+	direction:rtl;
+}
+
+.titleSpan
+{
+	direction:rtl;
+}
+
+tr.resTH
+{
+	direction:rtl;
+}
+
+tr.resTDeven
+{
+text-align:right;
+}
+
+tr.resTDuneven
+{
+text-align:right;
+}
+
+
+tr.resSelect
+{
+	text-align:right;
+}
+
+.displayCalBox
+{
+	text-align:right;
+}
+
+td.textbox
+{
+	background-position:right;
+	text-align:right;
+}
+
+td.selectBox
+{
+	background-position:right top;
+	text-align:right;
+}
+
+
+.PageClass
+{
+	text-align:right;
+}
+
+td.banner
+{
+	text-align:right;
+}
+
+td.bannerHome
+{
+	text-align:right;
+}
+
+td.right
+{
+	text-align:right;
+}
+
+a.rightSelected
+{
+	text-align:right;
+}
+
+a.resTH
+{
+	text-align:right;
+}
+
+td.ThRight
+{
+	text-align:right;
+}
+
+td.ThLeft
+{
+	text-align:left;
+}
+
+td.tableRight
+{
+	background-position:right;
+}
+
+
+
+td.EnterTableRight
+{
+	background-image:url('images/EnterTableRight.gif');
+	background-position:right;
+}
+
+td.EnterTableLeft
+{
+	background-image:url('images/EnterTableLeft.gif');
+		background-position:left;
+}
+
+
+.EnterTableTopRight
+{
+	background-color:#ffffff;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopRight div
+{
+	background-image:url('images/EnterTableTopLeft.gif');
+	background-repeat:no-repeat;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopLeft
+{
+	background-color:#ffffff;
+	width:11px; 
+	height:40px;
+}
+
+.EnterTableTopLeft div
+{
+	background-image:url('images/EnterTableTopRight.gif');
+	background-repeat:no-repeat;
+	width:11px; 
+	height:40px;
+}
+
+
+.EnterTableBL
+{
+	text-align:right; 
+	font-size:1px;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBL div
+{
+	background-image:url('images/EnterTableBR.gif');
+	background-repeat:no-repeat;
+	background-position:right;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBR
+{
+	text-align:left; 
+	font-size:1px;
+	width:11px; 
+	height:6px;
+}
+
+.EnterTableBR div
+{
+	background-image:url('images/EnterTableBL.gif');
+	background-repeat:no-repeat;
+	background-position:left;
+	width:11px; 
+	height:6px;
+}
+
+
+
+
+.longLTCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longLTCell div
+{
+	background-image:url('images/longRTCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longRTCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longRTCell div
+{
+	background-image:url('images/longLTCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longLBCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longLBCell div
+{
+	background-image:url('images/longRBCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longRBCell
+{
+	background-color:#ffffff;
+	width:7px; 
+	height:7px;
+}
+
+.longRBCell div
+{
+	background-image:url('images/longLBCell.gif');
+	background-repeat:no-repeat;
+	width:7px; 
+	height:7px;
+}
+
+.longLeft
+{
+	width:7px;
+	font-size:1px; 
+	background-image:url('images/longRightCell.gif'); 
+	background-repeat:repeat-y;
+}
+
+.longRight
+{
+	width:7px;
+	font-size:1px; 
+	background-image:url('images/longLeftCell.gif'); 
+	background-repeat:repeat-y;
+}
+
+.margin_Left_30
+{
+	margin-right:30px;
+	vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.tableTopLeft
+{
+	width:11px; 
+	height:41px;
+	background-color:#ffffff;
+	background-image:url(images/tableTopLeft.gif);
+	background-position:left;
+}
+
+
+div.tableBottomLeft
+{
+	width:11px; 
+	height:32px;
+	background-color:#ffffff;
+	background-image:url(images/tableButtomLeft.gif);
+}
+
+div.tableTopRight
+{
+	width:10px; 
+	height:41px;
+	background-color:#ffffff;
+	background-image:url(images/tableTopRight.gif);
+}
+
+
+div.tableBottomRight
+{
+	width:10px; 
+	height:32px;
+	background-color:#ffffff;
+	background-image:url(images/tableButtomRight.gif);
+}
+
+td.tableRight
+{
+	background-image:url('images/tableRight.gif');
+	background-repeat:repeat-y;
+	text-align:center;
+	font-size:1px;
+}
+
+
+td.tableLeft
+{
+	background-image:url(images/tableLeft.gif');
+	background-position:left;
+	background-repeat:repeat-y;
+	text-align:center;
+	font-size:1px;
+}
+
+.FromViowHolder
+{
+width:780px;
+margin-top:40px;    
+float:right;
+padding-right:20px;
+  text-align:right;
+  direction:rtl;  
+}
+.FromViowHolder .Header
+{
+    font-size:22px;
+    width:100%;
+    color:#065b9b;
+}
+.FromViowHolder .BackURLClass
+{
+   background:url('images/buttonBack.gif') no-repeat top right;
+   width:68px;
+   height:16px;
+   font-size:14px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:left;
+  padding:2px 0px;
+  text-align:center;
+}
+.FromViowHolder .savebuttonclass
+{
+    background:url('images/buttonBack.gif') no-repeat top right;
+   width:68px;
+   height:16px;
+   font-size:13px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:right;
+  padding:2px 0px; 
+  margin-right:200px;
+  margin-top:10px;
+  text-align:center;
+}
+.FromViowHolder .saveandbackbuttonclass
+{
+    background:url('images/buttonBack.gif') no-repeat top right;
+   width:68px;
+   height:16px;
+   font-size:13px;
+   color:White;
+   font-weight:bold;
+   display:block;
+   text-decoration:none;
+   float:right;
+  padding:2px 0px; 
+  margin-right:5px;
+  margin-top:10px;  
+  text-align:center;  
+}
+.FromViowHolder .MymsgLabelClass
+{
+    float:right;
+    width:100%;
+    color:Red;
+}
+
+.minititleclass
+{
+float:right;
+width:100%;
+text-decoration:underline;
+text-align:right;
+margin:10px 0px;    
+color:#065b9b;
+font-weight:bold;
+}
+
+.ManageTextBoxHolderDivClassLeft
+{  
+    width:100%;
+  float:right;
+  font-size:17px;
+  text-align:right;
+  direction:rtl;
+  margin:3px;
+}
+.ManageTextBoxHolderDivClassLeft .TextLabelClass
+{  
+    padding-top:14px;
+    width:200px;
+    float:right;
+}   
+.ManageTextBoxHolderDivClassLeft .TextBoxHolderClass
+{   
+  width:400px;
+    float:right;
+}
+.ManageTextBoxHolderDivClassLeft .validationHolderClass
+{  
+  width:400px;
+    float:right;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+.ManageTextBoxHolderDivClassLeft .ValidetorClass
+{  
+}
+ .ManageTextBoxHolderDivClassLeft .TextBoxWatermarkCssClass
+{   
+}   
+ .ManageTextBoxHolderDivClassLeft .MyTextBoxClass
+{   
+  text-align:left;
+     width:400px;    
+} 
+
+
+.ManageTextBoxHolderDivClass
+{  
+    width:100%;
+  float:right;
+  font-size:17px;
+  text-align:right;
+  direction:rtl;
+  margin:3px;
+}
+.ManageTextBoxHolderDivClass .TextLabelClass
+{  
+    padding-top:14px;
+    width:200px;
+    float:right;
+}   
+.ManageTextBoxHolderDivClass .TextBoxHolderClass
+{   
+  width:400px;
+    float:right;
+}
+.ManageTextBoxHolderDivClass .validationHolderClass
+{  
+  width:400px;
+    float:right;
+    height:14px;
+    font-size:11px;
+    color:Red;
+}
+.ManageTextBoxHolderDivClass .ValidetorClass
+{  
+}
+ .ManageTextBoxHolderDivClass .TextBoxWatermarkCssClass
+{   
+}   
+ .ManageTextBoxHolderDivClass .MyTextBoxClass
+{   
+  text-align:right;
+     width:400px;    
+} 
+
+
+.DropDownHolderDivClass
+{
+    width:100%;   
+   float:right;
+ 
+   margin-top:4px;
+    }
+.DropDownHolderDivClass   .MyDropDownClass
+    {
+}
+.DropDownHolderDivClass   .LabelTextClass
+{
+     width:200px;          
+     float:right;
+     display:block;
+     margin-left:10px;
+     font-size:16px;
+}
+.DropDownHolderDivClass .DropDownClass
+{
+}
+.DropDownHolderDivClass .UperBlockText
+{
+display:none;
+}
+.DropDownHolderDivClass .DropDownCoverClass
+{
+}
+.CheckBoxHolder2Class
+{
+float:right;
+width:100%;
+height:40px;  
+text-align:right;  
+margin:5px 0px;
+}  
+
+
+.RadioButtonHolderObjClass
+{
+float:right;
+width:400px;
+}
+.RadioButtonHolderObjClass .oneRadioHolderClass
+{
+float:right;
+width:160px;
+}
+.RadioButtonHolderObjClass .Radioclass
+{
+   float:right;
+   width:40px; 
+}
+.RadioButtonHolderObjClass .RadioFieldNameHolder
+{
+    float:right;
+    width:80px;  
+}
+.linedivclass
+{
+float:right;
+width:100%;    
+padding:4px 0px;    
+}
+
+.searchtableclass
+{
+   position:absolute;
+   top:30px;
+   left:20%;  
+    
+}
+
+ .AddButtonRightclass
+    {
+       
+        height:27px;
+         background:url('images/rightbutton.png') no-repeat right top; 
+        padding-right:24px;      
+        float:right;
+    }
+    .AddButtonLeftclass
+    {
+       
+        height:27px;
+         background:url('images/leftbutton.png') no-repeat left top; 
+        padding-left:12px;
+        float:right;
+        #float:none;
+        
+    }
+    .AddButtonClass
+    {
+       
+        height:24px;
+        background:url('images/middlebutton.png') repeat-x top;
+        display:block;
+        color:White;
+        text-decoration:none;       
+        font-weight:bold;
+        padding-top:3px;
+        min-width:30px;
+        max-width:400px;
+    }
+
+.Lang
+{
+    vertical-align:top;
+    
+    }
+.LangDropDownClass
+{
+    margin-top:10px;
+    width:200px;   
+   float:right; 
+   
+   margin-right:20px;
+    }
+.LangDropDownClass   .MyDropDownClass
+    {
+         font-size:20px;
+    line-height:30px;
+}
+.LangDropDownClass   .LabelTextClass
+{
+    
+}
+.LangDropDownClass .DropDownClass
+{
+ 
+}
+.LangDropDownClass .UperBlockText
+{
+display:none;
+}
+.LangDropDownClass .DropDownCoverClass
+{
+}
+.tableTopLeft
+{
+width:11px;    
+}
+.TopleftTable
+{
+background:url('images/tableTopLeft.gif') no-repeat left top;
+height:41px;
+padding-left:11px;    
+float:right;
+
+}
+.TopRightTable
+{
+background:url('images/tableTopRight.gif') no-repeat right top;
+height:41px;
+padding-right:10px;    
+    
+}
+.TopCenterTable
+{
+background:url('images/TableTopBack.gif') repeat-x right top;
+height:41px;
+ width:820px;
+    
+}
+.CenterleftTable
+{
+background:url('images/tableLeft.gif') repeat-y left top;
+height:41px;
+padding-left:11px;    
+float:right;
+
+}
+.CenterRightTable
+{
+background:url('images/tableRight.gif') repeat-y right top;
+height:41px;
+padding-right:10px;    
+    
+}
+.CenterCenterTable
+{
+
+height:41px;
+ width:820px;
+    
+}
+.BottomleftTable
+{
+background:url('images/tableButtomLeft.gif') no-repeat left top;
+height:41px;
+padding-left:11px;    
+float:right;
+
+}
+.BottomRightTable
+{
+background:url('images/tableButtomRight.gif') no-repeat right top;
+height:41px;
+padding-right:10px;    
+    
+}
+.BottomCenterTable
+{
+background:url('images/tableButtomBack.gif') repeat-x right top;
+height:41px;
+ width:820px;
+    
+}
+
+.tableTabDiv
+{
+   margin-right:1px;
+    width:134px;
+    height:34px;
+    font-size:14px;
+    padding-top:10px;
+    float:right;   
+    cursor:pointer;
+    line-height:34px;
+    background:url('images/Generaltab.png') no-repeat right top;
+      color:#0269b1;
+    font-weight:bold;
+}
+.tableTabDivSel
+{ 
+      background:url('images/Generaltab.png') no-repeat right bottom;
+    color:White;
+}
+.tableTabDivHolder
+{
+    margin-right:40px;
+    padding:0px 5px;  
+    float:right;   
+}
+.RemarkHolder
+{
+width:100%;
+height:30px;
+direction:rtl;
+color:White;
+font-weight:bold;    
+}
+.Searchtextbox
+{
+   direction:rtl;   
+}
+
+.langnameclass
+{
+   float:left;
+   width:200px;
+   text-align:left;
+   font-size:14px; 
+    
+}
+
+.MultTextbox
+{  
+    width:300px;
+  float:left;
+  font-size:14px;
+  text-align:left;
+  direction:ltr;
+ 
+}
+.MultTextbox .TextLabelClass
+{  
+    
+}   
+.MultTextbox .TextBoxHolderClass
+{   
+ 
+}
+.MultTextbox .validationHolderClass
+{  
+  
+}
+.MultTextbox .ValidetorClass
+{  
+}
+ .MultTextbox .TextBoxWatermarkCssClass
+{   
+    width:280px;
+  margin:10px;
+  height:80px;  
+}   
+ .MultTextbox .MyTextBoxClass
+{   
+  width:280px;
+  margin:10px;
+  height:80px;    
+} 
+.CkeHoldrclass
+{
+width:100%;
+height:100%;
+position:fixed;
+top:0px;
+left:0px;
+right:0px;
+bottom:0px;
+display:none;    
+background:url(images/fancy_title_over.png);
+border:solid 2px #c6c6c6;
+padding:40px;
+}
+.closeckeditor
+{
+  background:url(images/Erase.png) no-repeat center center;
+  width:24px;
+  height:24px;  
+float:right;
+margin:15px;
+border:outset 4px #d2d2d2;
+padding:4px;
+cursor:pointer;
+  
+  
+}
+.cketextboxclass
+{
+
+float:left; 
+width:620px;   
+}
+.setnone
+{
+display:none;    
+}
+.SaveLAngbtnclass
+{
+width:30px;
+height:30px;
+right:48%;
+ 
+position:fixed; 
+bottom:0px;
+background:url(images/ExportHtmlOver.gif) no-repeat center center;
+}
+

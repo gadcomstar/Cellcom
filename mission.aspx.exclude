@@ -1,0 +1,307 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="mission.aspx.cs" Inherits="mission" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js" type="text/javascript" charset="utf-8"></script>
+    <link href="Style/Connect.css" rel="stylesheet" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46208718-1', 'israelikers.org');
+        ga('send', 'pageview');
+
+    </script>
+
+
+    <script src="fancybox/jquery.fancybox-1.3.2.pack.js"></script>
+    <link href="fancybox/jquery.fancybox-1.3.2.css" rel="stylesheet" />
+    <title></title>
+    <style type="text/css">
+     
+
+       
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            //AjaxGivePts("111_222");
+            //AjaxGiveMailPts();
+        });
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function AjaxGivePts(FB_data) //pts by FB Share
+        {
+
+            $.ajax({
+                type: "POST",
+                url: "mission.aspx/AddPts",
+                data: "{'FB_Response':'" + FB_data + "','mail':'" + getUrlVars()["mail"] + "','MissionName':'" + getUrlVars()["name"] + "','fb_source':'" + getUrlVars()["fb_source"] + "'}",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (msg) {
+                    //alert(msg.d);
+                },
+                error: function (msg) {
+                    //alert(msg.status + " " + msg.text);
+                }
+            });
+
+
+        }
+
+    </script>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="fb-root"></div>
+
+            <script>
+                FB.init({
+                    appId: '556455487770171',
+                    status: true,
+                    cookie: true,
+                    xfbml: true
+
+                });
+
+                function share_prompt() {
+                    FB.ui(
+   {
+       method: 'feed',
+       name: '<%= PostHeader %>',
+       link: '<%= _newMission.FullArticle %>',
+       picture: '<%=JoinIMG %>',
+       caption: '<%= PostTitle %>',
+       description: '<%= PostText %>',
+       message: '',
+       actions: [
+   { name: '<%= JoinTEXT %>', link: '<%= JoinURL %>' }
+       ]
+
+   },
+   function (response) {
+
+       //alert(response.post_id);
+       //if (response && response.post_id) {
+       //    alert('Post ID: ');
+       //} else {
+       //    alert('Post was not published.');
+       //}
+       if (response && response.post_id) {
+
+           AjaxGivePts(response.post_id);
+           MailShare1();
+           nextFB();
+       }
+
+   }
+ );
+}
+            </script>
+            <asp:Panel ID="Panel_Mission" Visible="false" runat="server">
+                <asp:HiddenField runat="server" ID="HID_Pts" Value="0" />
+                <div style="width: 100px; height: 100px; background-color: black; border-radius: 5px; color: white; overflow: hidden; display: none;" onclick="share_prompt()">share</div>
+
+                <div class="ContainerDiv">
+                    <div class="MissionHolder">
+                        <div class="RightHolder">
+                            <%--<img src='<%#Eval("Img") %>' style="max-width: 100%;" alt="img" />--%>
+                            <img src="images/Mission_Images/Boy_Image.png" style="max-width: 100%;" />
+                        </div>
+                        <div class="LeftHolder">
+                            <div style="margin-bottom: 20px;">
+                                <img src="images/Mission_Images/Form_Header.png" style="width: 331px; height: 76px;" />
+                            </div>
+                            <div runat="server" class="ArticleHolder" style="margin-bottom: 50px; max-width: 90%; text-align: left; direction: ltr;"><%= _newMission.ArticleContent %></div>
+                            <div class="ThanksHolder" style="display: none; margin-top: 50px; margin-bottom: 50px; text-align: center;">
+                                <img src="images/Mission_Images/like.btn.png" style="width: 150px; height: 150px; margin-bottom: 25px;" />
+                                <br />
+                                <div style="font-size: 24px; color: white; text-align: left;">
+                                    <span>Thanks for your cooperation</span><br />
+                                    <span>See you on the next post</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <a href='<%= _newMission.FullArticle %>' target="_blank" class='<%= _newMission.FullArticle.ToString().IndexOf("https")>-1?"fancyButton readFullHolder":"fancyButton2 readFullHolder"  %>'>
+                                    <span runat="server" id="lbl_ReadFull" style="color: white;"></span>
+                                </a>
+                            </div>
+                            <div style="margin-top: 50px; margin-right: 25px;">
+                                <table style="">
+                                    <tr>
+                                        <td valign="top" runat="server" id="FB_Holder" style="text-align: left; padding-right: 20px;">
+                                            <div class="fb-share-button ButtonClass"
+                                                data-href='<%= _newMission.FullArticle %>' data-type="button" onclick="share_prompt()" style="cursor: pointer;">
+                                                <img class="FB_Img" src="images/Mission_Images/Facebook_Share_Send.png" style="width: 157px; height: 76px;" />
+                                            </div>
+                                            <div class="bubbleDiv">Share via Facebook</div>
+                                            <%--<a class="ButtonClass" href="window.open('https://www.facebook.com/sharer/sharer.php?u='+<%#Eval("FullArticle") %>,'facebook-share-dialog', 'width=626,height=436');return false;" target="_blank">
+                                                        <img src="Mission_Images/FB_Share_button.png" style="width: 76px; height: 76px;" />
+                                                    </a>--%>
+                                        </td>
+                                        <td valign="top" runat="server" id="FB_Login" visible="false">
+                                            <div class="ThankYouShareViaFbBtn" onclick="window.open('<%= siteDefaults.FbRedirectUrl %>', 'fbLogin', 'width=600, height=500'); return false;">
+                                                Connect with Facebook
+                                            </div>
+                                        </td>
+                                        <td valign="top" runat="server" id="MailHolder" style="text-align: left;">
+                                            <div id="MailBtn" style="cursor: pointer;" class="ButtonClass fancyMailButton" onclick="MailShare('<%= "mailto:?subject="+_newMission.MailAutoSubject+"&body=" + _newMission.MailAutoBody %>');">
+                                                <img src="images/Mission_Images/Share_mail_Button.png" style="width: 76px; height: 76px; padding-left: 15px;" />
+                                            </div>
+                                            <div class="bubbleDiv">Share via Mail</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="Clearer"></div>
+
+                    </div>
+                </div>
+
+            </asp:Panel>
+            <asp:Panel ID="Panel_Error" Visible="false" runat="server">
+            </asp:Panel>
+            <asp:Panel ID="Panel_Expired" Visible="false" runat="server">
+                <div class="ContainerDiv">
+                    <div class="MissionHolder">
+                        <div class="RightHolder">
+                            <%--<img src='<%#Eval("Img") %>' style="max-width: 100%;" alt="img" />--%>
+                            <img src="images/Mission_Images/Boy_Image.png" style="max-width: 100%;" />
+                        </div>
+                        <div class="LeftHolder">
+                            <div style="margin-bottom: 20px;">
+                                <img src="images/Mission_Images/Form_Header.png" style="width: 331px; height: 76px;" />
+                                <br />
+                                <img src="images/Mission_Images/MissionExpired_Logo.png" style="width: 299px; height: 194px;" />
+                            </div>
+                        </div>
+            </asp:Panel>
+            <asp:Panel ID="Panel_MissionNotStarted" Visible="false" runat="server">
+                <div style="color: white;">משימה לא החלה!</div>
+            </asp:Panel>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+
+    function ShowShare() {
+        FB.ui({
+            method: 'feed',
+            link: 'https://developers.facebook.com/docs/dialogs/',
+            caption: 'An example caption',
+        },
+        function (response) {
+            alert(response);
+        });
+    }
+
+
+    $(document).ready(function () {
+        editUserFancy();
+    });
+    function editUserFancy() {
+
+
+
+        $('.fancyButton').fancybox({
+            'speedIn': 600,
+            'speedOut': 200,
+            'width': 1000,
+            'height': 540,
+            'background-Color': 'transparent',
+            'border-width': 0,
+            'autoDimensions': false,
+            'overlayShow': true,
+            'titleShow': false,
+            type: 'iframe'
+        });
+
+
+    }
+    function OpenShare(site) {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + site, 'facebook-share-dialog', 'width=626,height=436');
+        $('.ArticleHolder').css("display", "none");
+        $('.ThanksHolder').css("display", "block");
+        nextFB();
+        return false;
+    }
+    function MailShare(URL) {
+        //alert(URL);
+        $('.ArticleHolder').css("display", "none");
+        $('.ThanksHolder').css("display", "block");
+        AjaxGiveMailPts(URL);
+
+
+    }
+    function MailShare1() {
+        //alert(URL);
+        $('.ArticleHolder').css("display", "none");
+        $('.ThanksHolder').css("display", "block");
+
+
+
+    }
+    function nextFB() {
+        $('.FB_Img').attr("src", "images/Mission_Images/Share_Button_Sent.png");
+        $('.FB_Img').css("height", "76px").css("width", "76px").css("margin-left", "13px");
+
+    }
+
+    function socialLogin(facebook, fbImage, fbName) {
+
+        $('.ThankYouShareViaFbBtn').text("Thank You " + fbName);
+        if (facebook != "") {
+            $('.ThankYouShareViaFbBtn').attr("onclick", "return false;");
+        }
+
+        window.location = window.location;
+    }
+    function AjaxGiveMailPts(URL) //pts by mail
+    {
+
+        $.ajax({
+            type: "POST",
+            url: "mission.aspx/AddPtsMail",
+            data: "{'mail':'" + getUrlVars()["mail"] + "','MissionName':'" + getUrlVars()["name"] + "'}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (msg) {
+                //alert(msg.d);
+                window.location = URL;
+            },
+            error: function (msg) {
+                //alert(msg.status);
+            }
+        });
+    }
+</script>
+</html>
